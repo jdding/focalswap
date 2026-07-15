@@ -22,19 +22,19 @@
       "sha256": "1d0dde41ece0f9620937f1a81a67e295ace0eae180c009d862006e8f3b288458"
     },
     {
-      "bytes": 2401,
+      "bytes": 8133,
       "path": "README.md",
-      "sha256": "bccbee782d08dc1262233699367a0d162864d3cf1e13557d14f5d65a92dbeb77"
+      "sha256": "089ffb25b20ca9e51dfc5dbf76e96a8cad6b5cdf4aacc9e81500441c515af5e5"
     },
     {
-      "bytes": 442,
+      "bytes": 252,
       "path": "README_REVIEWER.md",
-      "sha256": "c345b4a9ea16efa19f6bba030fd5da5b87f872a152649be2add525490001d55a"
+      "sha256": "a984b1828ad184d987f1fd8aaba7c2269be12c069abff3d5a1be85c046f3aa53"
     },
     {
       "bytes": 362,
       "path": "REPRO_CHECK.json",
-      "sha256": "772cc3c106d26db4f8a01af8b2314ee472d8849f4068f0661376f9550b703ceb"
+      "sha256": "cc2ae54880bf3751cdfb2d48a2759eca8bb5acd8595540d50d66eeb058163c27"
     },
     {
       "bytes": 4003,
@@ -532,9 +532,9 @@
       "sha256": "b0ee40d3285013d47b00b8a87d28d62e7a2080e78dfc40bd8f7a53744b5b1063"
     }
   ],
-  "generated_at": "2026-07-15T15:23:47+00:00",
+  "generated_at": "2026-07-15T16:31:00+00:00",
   "package_dir": "<package-root>",
-  "package_fingerprint": "156bd69e0e48c08b25cb7acc2a99ec9b95377c51a320e1d8afa0202acd00201a",
+  "package_fingerprint": "c187c353446459a70cd46c40f82fde0545bb19ca823c54070a22f2b685f96070",
   "package_name": "focalswap_reviewer_code",
   "schema": "focalswap.reviewer_artifact.v1",
   "source": "<source-project>"

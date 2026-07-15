@@ -1,9 +1,3 @@
-# focalswap_reviewer_code
+# Reviewer Entry Point
 
-This anonymous reviewer package contains the code needed to inspect or reproduce the submitted experiments.
-
-## Quick Start
-
-1. Create the environment described by `requirements.txt`, `environment.yml`, or `pyproject.toml` if present.
-2. Read the repository README or run scripts under `scripts/`.
-3. Use only the files in this package; author identity and private project metadata have been intentionally removed.
+Please begin with [`README.md`](README.md). It explains the artifact scope, the 60-second validation, the evidence-to-code map, optional figure regeneration, and the boundary around omitted third-party datasets and checkpoints.
