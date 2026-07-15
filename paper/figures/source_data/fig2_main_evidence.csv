@@ -1,0 +1,15 @@
+panel,regime,contrast,value,ci_low,ci_high,baseline,note
+calibration,KuaiSAR,observed_minus_null_p95,-0.033000,,,0,raw headroom below shuffled-search p95
+calibration,Qilin,observed_minus_null_p95,0.000501,,,0,BM25 observed gain marginally above pooled p95
+calibration,Qilin,observed_minus_null_p99,-0.000985,,,0,BM25 observed gain below p99
+specificity,KuaiSAR,category-broken source vs symmetry,0.001,-0.004,0.005,0,category-broken swap near symmetry
+specificity,KuaiSAR,same-category source vs symmetry,0.010,0.006,0.015,0,weak same-category/source readout
+specificity,Qilin,taxonomy share>=1 vs random,0.001059,-0.010604,0.012339,0,not separated from random placebo under the ten-bucket family
+specificity,Qilin,taxonomy share>=4 vs random,0.084,0.041,0.133,0,low-coverage local taxonomy subset
+gate,KuaiSAR,Oracle bound,0.279,,,0.242,raw oracle stress surface
+gate,KuaiSAR,History-only,0.242,,,0.242,fixed baseline
+gate,KuaiSAR,MLP soft,0.240,,,0.242,best nonlinear input-side gate
+gate,KuaiSAR,GBDT soft,0.231,,,0.242,tree router
+gate,KuaiSAR,Logistic soft,0.229,,,0.242,linear router
+gate,KuaiSAR,RF hard,0.227,,,0.242,hard tree router
+gate,KuaiSAR,Search-only,0.139,,,0.242,search-only control

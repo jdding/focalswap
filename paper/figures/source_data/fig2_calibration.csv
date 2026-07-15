@@ -1,0 +1,3 @@
+regime,observed_gain,null_mean,null_p95,null_p99,margin_vs_p95,margin_vs_p99,note
+KuaiSAR,0.037000,0.069000,0.070000,, -0.033000,,raw headroom below shuffled-search p95
+Qilin,0.124290,0.120212,0.123789,0.125275,0.000501,-0.000985,BM25 observed gain passes pooled p95 but fails p99 and TF-IDF sensitivity

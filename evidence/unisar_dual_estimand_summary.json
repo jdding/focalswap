@@ -1,0 +1,117 @@
+{
+  "bootstrap_iters": 10000,
+  "bootstrap_unit": "user",
+  "claim_ceiling": "Historical neutral-mask numerical provenance only. R233 shows that the positive all-source C0 margin does not survive the C1 profile-prioritized observed-support donor; no accumulated-use claim.",
+  "contract_id": "DUAL_ESTIMAND_SOURCE_DEPENDENCE",
+  "descriptive_across_seeds": {
+    "aggregate_delta": {
+      "max": 0.0035652962169091832,
+      "mean": 0.0025580325347512953,
+      "min": 0.0019187077782539213
+    },
+    "estimand_gap": {
+      "max": 0.003778081643982061,
+      "mean": 0.0026528404542368066,
+      "min": 0.0018299611514651648
+    },
+    "focal_delta": {
+      "max": 8.874662678875631e-05,
+      "mean": -9.480791948551141e-05,
+      "min": -0.0002127854270728771
+    }
+  },
+  "estimands": {
+    "aggregate_dependence": "legacy key: Full RR - all-source neutral-mask RR; intervention response only",
+    "estimand_gap": "all-source neutral-mask response - latest-slot neutral-mask response",
+    "focal_dependence": "Full RR - latest-source-slot-masked RR"
+  },
+  "model_seeds": [
+    20230601,
+    20230602,
+    20230603
+  ],
+  "promotion_rule": "historical numerical rule: all three seeds have all-source neutral-mask CI low > 0, latest-slot CI contains 0, and paired gap CI low > 0; R233 supersedes the accumulated-use interpretation",
+  "provenance_hashes": {
+    "checkpoint_sha256": {
+      "20230601": "67d335cdbc08a652f4eebd0e4f0493c01fa50ff388743a28cf34505ce0443de1",
+      "20230602": "c43bbd4614d51f8aaddc4a5984ad171e7e97d149da62131d9a8975d1c9c9040a",
+      "20230603": "538fa4b84bb46e4cfd97ec5c0a45843b03cf9e5d53bd52a4e539496e0d6a74c2"
+    },
+    "evaluator_sha256": "05a005bd89985a81cc77d04c8927def38ca16176f91acae207cfb3a6997de3d2",
+    "test_input_sha256": {
+      "item_vocab_np.pkl": "2790d9d9e88f6c553dc776cee847bcb61b0d9697057a35b41c5710622df4dd5c",
+      "rec_test.pkl": "ead6a99fda7c7a4068facedf87a3e4717bff38aa15ad766cd2a0396020fdcbed",
+      "src_session_vocab_np.pkl": "e7e6800ad550350743670392379b14090597788de685e9f768ad0309ea028197",
+      "user_vocab_np.pkl": "87eb6cb31ee2f6ec32a76db4a184820031ac5a29b2586f542450e1998c6ee2a4"
+    }
+  },
+  "rows": [
+    {
+      "aggregate_ci_high": 0.0042588704510676525,
+      "aggregate_ci_low": 0.002862966418109742,
+      "aggregate_delta": 0.0035652962169091832,
+      "aggregate_masked_rr": 0.3381212887526722,
+      "aggregate_positive": true,
+      "contract_pass": true,
+      "estimand_gap": 0.003778081643982061,
+      "focal_ci_high": 6.585119476993844e-05,
+      "focal_ci_low": -0.0005029661444169983,
+      "focal_delta": -0.0002127854270728771,
+      "focal_masked_rr": 0.34189937039665425,
+      "focal_unresolved": true,
+      "full_rr": 0.3416865849695814,
+      "gap_ci_high": 0.004398825796787112,
+      "gap_ci_low": 0.0031366594184910924,
+      "gap_positive": true,
+      "model_seed": 20230601,
+      "rows": 157192,
+      "user_clusters": 4852
+    },
+    {
+      "aggregate_ci_high": 0.0025754982230003364,
+      "aggregate_ci_low": 0.0012898601508734451,
+      "aggregate_delta": 0.0019187077782539213,
+      "aggregate_masked_rr": 0.3523304260460963,
+      "aggregate_positive": true,
+      "contract_pass": true,
+      "estimand_gap": 0.0018299611514651648,
+      "focal_ci_high": 0.00036734598579006155,
+      "focal_ci_low": -0.0001909617717458399,
+      "focal_delta": 8.874662678875631e-05,
+      "focal_masked_rr": 0.3541603871975615,
+      "focal_unresolved": true,
+      "full_rr": 0.35424913382435025,
+      "gap_ci_high": 0.002404225827816769,
+      "gap_ci_low": 0.0012296783831943438,
+      "gap_positive": true,
+      "model_seed": 20230602,
+      "rows": 157192,
+      "user_clusters": 4852
+    },
+    {
+      "aggregate_ci_high": 0.0028101877438473206,
+      "aggregate_ci_low": 0.001547631131608578,
+      "aggregate_delta": 0.002190093609090782,
+      "aggregate_masked_rr": 0.3381563404556751,
+      "aggregate_positive": true,
+      "contract_pass": true,
+      "estimand_gap": 0.002350478567263195,
+      "focal_ci_high": 0.00010492161028505141,
+      "focal_ci_low": -0.0004214098300306029,
+      "focal_delta": -0.00016038495817241347,
+      "focal_masked_rr": 0.3405068190229383,
+      "focal_unresolved": true,
+      "full_rr": 0.3403464340647659,
+      "gap_ci_high": 0.0029234146435174278,
+      "gap_ci_low": 0.0017621162119016553,
+      "gap_positive": true,
+      "model_seed": 20230603,
+      "rows": 157192,
+      "user_clusters": 4852
+    }
+  ],
+  "schema": "focalswap.dual_estimand_summary.v1",
+  "slot_strata_are_diagnostic_only": true,
+  "status": "PASS_NUMERICAL_PROVENANCE_INTERPRETATION_SUPERSEDED_R233",
+  "surface_id": "UNISAR_OFFICIAL_PROCESSED"
+}

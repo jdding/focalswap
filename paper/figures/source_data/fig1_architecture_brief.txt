@@ -1,0 +1,18 @@
+Figure 1 source brief
+
+Claim: FocalSwap converts behavior-level regimes into a search-centered audit row,
+five controlled views, gate tests, and separated evidence readouts.
+
+Architecture elements:
+- Regimes: KuaiSAR anonymous behavior S->R logs; Qilin real query text lexical scorer.
+- Search-centered row: pre-search history, focal search, post-search outcome,
+  leakage-safe candidate row, same-user ordered time window.
+- Controlled views: Full-SAR, History-only, Search-only, Search-masked,
+  Counterfactual-search.
+- Gate tests: G1 outcome availability, G2 calibrated opportunity,
+  G3 focal-search identifiability, G4 downstream recovery probe.
+- Evidence readout: ranking gain, search opportunity, search dependence, and
+  focal-search specificity kept separate.
+
+Scope: S->R FocalSwap architecture only. Feed2Search/R->S content is intentionally
+not represented.

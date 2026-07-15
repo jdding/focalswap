@@ -1,0 +1,237 @@
+{
+  "null_construction": {
+    "draws_per_seed": 5000,
+    "fixed_row_operator": "For each fixed evaluation row, sample one precomputed alternative-query RR column from same_user, time_near, tax_near, or random; keep the history RR and row set fixed.",
+    "row_resampling": false,
+    "seeds": 30
+  },
+  "r167_g2_robustness": {
+    "decision": "R167_MARGINAL_PASS_NOT_HEADLINE",
+    "null_mean": 0.12021169556920157,
+    "null_p95": 0.1237893677223243,
+    "null_p99": 0.12527521723506252,
+    "observed_gain": 0.12428962930252851,
+    "observed_gain_ci": [
+      0.11824304568539785,
+      0.12937516574921926
+    ],
+    "p_null_ge_observed": 0.030273333333333333,
+    "per_seed": [
+      {
+        "null_mean": 0.1201973557075734,
+        "null_p95": 0.12391185251239245,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0334,
+        "seed": 20260614
+      },
+      {
+        "null_mean": 0.1201988558376591,
+        "null_p95": 0.1237662940467116,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0302,
+        "seed": 20260615
+      },
+      {
+        "null_mean": 0.12022774751758959,
+        "null_p95": 0.12370148829278999,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0276,
+        "seed": 20260616
+      },
+      {
+        "null_mean": 0.12021403743667308,
+        "null_p95": 0.12387622013036528,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.033,
+        "seed": 20260617
+      },
+      {
+        "null_mean": 0.12018432229748031,
+        "null_p95": 0.12372867816107051,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0274,
+        "seed": 20260618
+      },
+      {
+        "null_mean": 0.12023365168517057,
+        "null_p95": 0.12378986585729321,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.032,
+        "seed": 20260619
+      },
+      {
+        "null_mean": 0.12024009427174151,
+        "null_p95": 0.12387507563695857,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0328,
+        "seed": 20260620
+      },
+      {
+        "null_mean": 0.12019725963380201,
+        "null_p95": 0.12373898619320263,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0316,
+        "seed": 20260621
+      },
+      {
+        "null_mean": 0.12016803515720867,
+        "null_p95": 0.1237046681060764,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0252,
+        "seed": 20260622
+      },
+      {
+        "null_mean": 0.1201616603605134,
+        "null_p95": 0.1237775322825929,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0286,
+        "seed": 20260623
+      },
+      {
+        "null_mean": 0.12022093609483074,
+        "null_p95": 0.12372780793201445,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0304,
+        "seed": 20260624
+      },
+      {
+        "null_mean": 0.12021404986519606,
+        "null_p95": 0.12380364657010937,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0294,
+        "seed": 20260625
+      },
+      {
+        "null_mean": 0.12017981227432808,
+        "null_p95": 0.12376582256300776,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.029,
+        "seed": 20260626
+      },
+      {
+        "null_mean": 0.12029089194045728,
+        "null_p95": 0.12384024832516795,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0312,
+        "seed": 20260627
+      },
+      {
+        "null_mean": 0.1201825547897999,
+        "null_p95": 0.12370256955914746,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0278,
+        "seed": 20260628
+      },
+      {
+        "null_mean": 0.12020954660707507,
+        "null_p95": 0.12387533121179777,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.032,
+        "seed": 20260629
+      },
+      {
+        "null_mean": 0.12023253284501452,
+        "null_p95": 0.12390051474603604,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.034,
+        "seed": 20260630
+      },
+      {
+        "null_mean": 0.12019441337923265,
+        "null_p95": 0.12378554498021453,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0296,
+        "seed": 20260631
+      },
+      {
+        "null_mean": 0.12029034367183374,
+        "null_p95": 0.12381913023941091,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0314,
+        "seed": 20260632
+      },
+      {
+        "null_mean": 0.12022200943965486,
+        "null_p95": 0.12374848164387789,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0266,
+        "seed": 20260633
+      },
+      {
+        "null_mean": 0.12025516479320614,
+        "null_p95": 0.1239105998601311,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0354,
+        "seed": 20260634
+      },
+      {
+        "null_mean": 0.12016470639083943,
+        "null_p95": 0.1237594577012835,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.027,
+        "seed": 20260635
+      },
+      {
+        "null_mean": 0.12020477165314623,
+        "null_p95": 0.1237370239955715,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0284,
+        "seed": 20260636
+      },
+      {
+        "null_mean": 0.1202165440508179,
+        "null_p95": 0.1237496122818608,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0294,
+        "seed": 20260637
+      },
+      {
+        "null_mean": 0.12021169266958784,
+        "null_p95": 0.12374227661926503,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0292,
+        "seed": 20260638
+      },
+      {
+        "null_mean": 0.12022577264988918,
+        "null_p95": 0.12376790818802379,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0314,
+        "seed": 20260639
+      },
+      {
+        "null_mean": 0.12019087509981886,
+        "null_p95": 0.12382058512858546,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0328,
+        "seed": 20260640
+      },
+      {
+        "null_mean": 0.12023221656352344,
+        "null_p95": 0.1237013354252788,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0304,
+        "seed": 20260641
+      },
+      {
+        "null_mean": 0.1202112602083966,
+        "null_p95": 0.1238338962409396,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0334,
+        "seed": 20260642
+      },
+      {
+        "null_mean": 0.12017775218398682,
+        "null_p95": 0.12369730791384892,
+        "observed_gt_p95": true,
+        "p_null_ge_observed": 0.0276,
+        "seed": 20260643
+      }
+    ],
+    "seed_null_p95_max": 0.12391185251239245,
+    "seed_null_p95_median": 0.12376710111736769,
+    "seed_null_p95_min": 0.12369730791384892,
+    "seed_pass_rate": 1.0
+  },
+  "schema": "focalswap.qilin_g2_null_robustness.v1"
+}

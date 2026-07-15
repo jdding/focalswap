@@ -1,0 +1,58 @@
+{
+  "bootstrap": {
+    "iterations": 10000,
+    "seed": 20260715,
+    "unit": "user_cluster"
+  },
+  "c2_population": {
+    "coverage": 0.42075296452745686,
+    "eligible_rows": 66139,
+    "eligible_users": 2170,
+    "ineligible_rows": 91053,
+    "ineligible_users": 2694
+  },
+  "latest_slot_validity": {
+    "c2_all_bad_changed_slot_rows": 0,
+    "c2_all_coverage": 0.42075296452745686,
+    "c2_all_eligible_rows": 66139,
+    "c2_latest_bad_changed_slot_rows": 0,
+    "c2_latest_changed_exactly_one": 87044,
+    "c2_latest_coverage": 0.5537431930378136,
+    "c2_latest_eligible_rows": 87044,
+    "candidate_counts": [
+      100
+    ],
+    "minimum_nonpadding_source_slots": 1,
+    "rows": 157192,
+    "rows_without_source_slot": 0,
+    "structure_identical_across_seeds": true,
+    "users": 4852
+  },
+  "outputs": {
+    "balance_csv": "<source-project>/reports/r250_review_evidence_closure_20260715/r250_c2_eligibility_balance.csv",
+    "latest_validity_json": "<source-project>/reports/r250_review_evidence_closure_20260715/r250_latest_slot_validity.json",
+    "margin_csv": "<source-project>/reports/r250_review_evidence_closure_20260715/r250_c0_margin_by_eligibility.csv"
+  },
+  "schema": "focalswap.r250.review_evidence_closure.v1",
+  "source_hashes": {
+    "r242_seed_20230601": "296087330378c201179724ac57afc7b77dbe9dd913bc4a5293cc8169c5e1cbcb",
+    "r242_seed_20230602": "4ad4b3613dfcf7f36e147789966373dd47cb9e8b5df4f9fd6d2b7cdea696508d",
+    "r242_seed_20230603": "4d4c249e6d2e836d072e66bd9fc23816411d07555fd4d2dee998eb4f8f91e8fb"
+  },
+  "status": "LOCAL_EVIDENCE_COMPLETE_TV_RUNNER_READY_AWAITING_HASHED_BUNDLE",
+  "tv_audit": {
+    "definition": "half the L1 distance between original and donor-induced exact-ID occurrence distributions on C2-eligible source-ID support",
+    "observed_tv": 0.11082421037637191,
+    "random_derangement_baseline_status": "requires_raw_source_occurrence_counts",
+    "reason": "the pulled audited artifacts retain the TV value and donor-map hash, but not the source-ID occurrence vector needed to simulate random bijections",
+    "required_processed_input_sha256": {
+      "<third-party-data-bundle>/dataset/rec_test.pkl": "ead6a99fda7c7a4068facedf87a3e4717bff38aa15ad766cd2a0396020fdcbed",
+      "<third-party-data-bundle>/vocab/item_vocab_np.pkl": "2790d9d9e88f6c553dc776cee847bcb61b0d9697057a35b41c5710622df4dd5c",
+      "<third-party-data-bundle>/vocab/query_vocab.pkl": "1d7adf550ce2c88d1d311f506fd3000e1af6f3fc7f6cbf967abd4ca1cea93c25",
+      "<third-party-data-bundle>/vocab/src_session_vocab_np.pkl": "e7e6800ad550350743670392379b14090597788de685e9f768ad0309ea028197",
+      "<third-party-data-bundle>/vocab/user_vocab.pkl": "8530693973a806069a5d52b89b2568ca0d95b269a4366d641fbd680446ca7dc2",
+      "<third-party-data-bundle>/vocab/user_vocab_np.pkl": "87eb6cb31ee2f6ec32a76db4a184820031ac5a29b2586f542450e1998c6ee2a4"
+    },
+    "runner": "tools/r250_tv_random_baseline.py"
+  }
+}

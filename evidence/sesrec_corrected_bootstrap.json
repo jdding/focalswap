@@ -1,0 +1,32 @@
+{
+  "dependence": {
+    "bootstrap_reps": 10000,
+    "bootstrap_seed": 20260711,
+    "ci_high": 0.0009359697511740672,
+    "ci_low": -0.0007433448952234561,
+    "point": 0.0001378470680896002,
+    "rows": 16788,
+    "user_clusters": 3677
+  },
+  "l1_half_tie": {
+    "bootstrap_reps": 10000,
+    "bootstrap_seed": 20260712,
+    "ci_high": 0.5052168337459465,
+    "ci_low": 0.4941437007481184,
+    "point": 0.4996420047732697,
+    "rows": 16760,
+    "user_clusters": 3673
+  },
+  "l2_half_tie": {
+    "bootstrap_reps": 10000,
+    "bootstrap_seed": 20260713,
+    "ci_high": 0.5064561340037785,
+    "ci_low": 0.4866404284704371,
+    "point": 0.49658208782296376,
+    "rows": 8631,
+    "user_clusters": 2134
+  },
+  "rr_tie_policy": "midpoint rank among exact candidate-score ties",
+  "schema": "focalswap.r230a.sesrec_corrected_bootstrap.v1",
+  "status": "PASS_R230A_SESREC_ROW_AND_BOOTSTRAP_CONTRACT"
+}

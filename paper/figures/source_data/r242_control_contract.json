@@ -1,0 +1,74 @@
+{
+  "schema": "focalswap.r242.control_contract.v1",
+  "contract_id": "R242_UNISAR_CATEGORY_CONTROL_LADDER",
+  "status": "PASS",
+  "processed_split_rows": 157192,
+  "candidate_count": 100,
+  "seeds": [20230601, 20230602, 20230603],
+  "terminology": {
+    "intervention_scopes": {
+      "latest_1": {
+        "canonical_name": "latest-slot intervention",
+        "operation": "change only the most recent non-padding source slot",
+        "estimand": "focal-source dependence"
+      },
+      "all": {
+        "canonical_name": "all-source intervention",
+        "operation": "change every non-padding source slot",
+        "estimand": "broader source-state response"
+      }
+    },
+    "controls": {
+      "C0_neutral": {
+        "canonical_name": "C0 neutral-mask control",
+        "operation": "replace each selected source slot with the neutral source ID"
+      },
+      "C1_profile_prioritized_valid": {
+        "canonical_name": "C1 profile-prioritized observed-support donor",
+        "operation": "replace each selected slot with an observed nonempty source ID prioritized by item-count, query-token-count, and occurrence-frequency buckets"
+      },
+      "C2_category_valid": {
+        "canonical_name": "C2 category/profile-matched observed-support donor",
+        "operation": "replace each selected slot through a one-to-one donor derangement that preserves source category and the three profile buckets"
+      },
+      "C3_same_user_temporal": {
+        "canonical_name": "C3 same-user temporal donor",
+        "operation": "replace selected slots with an observed source from the same user's temporal source history"
+      }
+    },
+    "paired_comparison": {
+      "canonical_name": "paired C0-C2 difference",
+      "operation": "subtract the C2 dependence margin from the C0 dependence margin on identical C2-eligible rows"
+    },
+    "reader_facing_rule": "Use only the canonical names above in prose, captions, legends, and paper-facing derived data."
+  },
+  "eligible_rows": {
+    "category_all": 66139,
+    "category_latest_1": 87044,
+    "same_user_all": 155678,
+    "same_user_latest_1": 155678
+  },
+  "eligible_user_clusters": {
+    "category_all": 2170,
+    "category_latest_1": 2843,
+    "same_user_all": 4787,
+    "same_user_latest_1": 4787
+  },
+  "category_donor_map": {
+    "eligible_source_ids": 45895,
+    "max_donor_reuse": 1,
+    "fixed_points": 0,
+    "category_overlap_failures": 0,
+    "profile_mismatch_failures": 0,
+    "future_label_or_score_used": false,
+    "induced_occurrence_total_variation_on_eligible_support": 0.11082421037637191,
+    "donor_map_sha256": "56e057b5b66d5fab74b4e24d41da957c3027cfba1aea2cffb94ce271e73816c8",
+    "category_contract_sha256": "fcee7c012b8b36d20060c80466dea4bc095dd920a57bce9d99f03442853a1eed"
+  },
+  "integrity": {
+    "all_pass": true,
+    "frozen_tensor_checks_per_seed": 616,
+    "rank_rr_checks_per_seed": 770
+  },
+  "claim_ceiling": "The C2 category/profile-matched observed-support donor is not a semantic gold standard; its disagreement with the C0 neutral-mask control establishes control sensitivity, not accumulated-source use."
+}

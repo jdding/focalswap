@@ -1,0 +1,3 @@
+source_data,family,display_scope,bootstrap_contract,multiplicity_contract,paper_role
+fig4_swap_specificity.csv,R179 ten-bucket matched family,10 displayed matched buckets,1000 user-cluster bootstraps plus 10000 one-sided user-cluster sign flips,Holm and BH adjustment across all 10 displayed buckets,Figure 3 and Table 3 main specificity readout
+qilin_tax_ladder_g4_robustness.csv,R213 five-rung taxonomy ladder,taxonomy overlap thresholds 1 through 5,1000 user-cluster bootstraps plus 10000 permutations,Holm adjustment across the 5 taxonomy rungs,G3 sensitivity and G4 subset robustness only

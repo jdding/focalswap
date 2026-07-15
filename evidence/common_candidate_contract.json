@@ -1,0 +1,16 @@
+{
+  "candidate_count": 100,
+  "claim_boundary": "Training retains every source-train row; validation/test use the fixed train-seen-target eligibility rule. Negatives come only from the training item universe and exclude row history, search positives, and post-rec positives. This is a shared data/candidate contract only, not a model result, an official-dataset reproduction, or evidence of architecture differences.",
+  "known_positive_negative_violations": 0,
+  "ledger_sha256": "d7b3b9c9f83da8b4d67074951e1bc9f2a3f4e0816804a1cbaafad87029e8a004",
+  "nontrain_negative_violations": 0,
+  "schema": "focalswap.r225.common_candidate_contract.v1",
+  "split_counts": {
+    "test": 3249,
+    "train": 68057,
+    "validation": 6355
+  },
+  "status": "PASS_COMMON_CANDIDATE_CONTRACT",
+  "surface_id": "K_COMMON_QBRIDGE_R225_SEEN_TARGET_CONTROLLED",
+  "train_item_universe": 481863
+}

@@ -1,0 +1,3 @@
+seed,metric,eligible_mean,ineligible_mean,smd_eligible_minus_ineligible
+structural,source_slot_count,14.723975264216271,18.692981011059494,-0.3826234341687424
+structural,user_test_rows,75.24902100122469,101.61315936871932,-0.33885087015315746

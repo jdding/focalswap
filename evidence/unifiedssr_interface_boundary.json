@@ -1,0 +1,19 @@
+{
+  "blocking_findings": [
+    "Current R162/R172 readouts mix search-branch Full/Search-only/Counterfactual views with recommendation-branch History-only/Search-masked views.",
+    "Official UnifiedSSR exposes separate recommendation and search task heads: next_product_predict for the recommendation branch and next_product_search for the query-conditioned search branch.",
+    "Keeping all views in the search branch is runnable but changes the estimand to query-conditioned search rather than native recommendation.",
+    "Keeping all views in the recommendation branch is runnable only by dropping focal query/source structure, so focal-source identity is no longer a runtime input.",
+    "A custom unified-head/source-augmented variant would be a derived model ablation, not a released UnifiedSSR checkpoint audit."
+  ],
+  "can_promote_as_same_protocol_official_audit": false,
+  "claim_ceiling": "bounded official-code compatibility/provenance only; no paper-facing UnifiedSSR FocalSwap result",
+  "native_scoring_paths": {
+    "query_conditioned_search": "next_product_search",
+    "recommendation": "next_product_predict"
+  },
+  "same_scorer_five_view_available": false,
+  "schema": "focalswap.interface_boundary.v1",
+  "status": "CLOSED_PROTOCOL_MISMATCH",
+  "surface_id": "UNIFIEDSSR_RELEASED_INTERFACE"
+}

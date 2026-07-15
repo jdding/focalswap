@@ -1,0 +1,8 @@
+setting,score,kind,note
+Oracle bound,0.279,upper,raw oracle stress surface
+History-only,0.242,baseline,fixed baseline
+MLP soft,0.240,gate,best nonlinear input-side gate
+GBDT soft,0.231,gate,tree router
+Logistic soft,0.229,gate,linear router
+RF hard,0.227,gate,hard tree router
+Search-only,0.139,control,search-only control

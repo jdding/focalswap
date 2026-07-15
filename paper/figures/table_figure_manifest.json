@@ -1,0 +1,86 @@
+[
+  {
+    "artifact": "figures/fig1_focalswap_architecture_drawio.pdf",
+    "audit_status": "visual_qa_pass",
+    "caption_claim": "FocalSwap separates ranking gain, opportunity, dependence, focal specificity, and downstream recovery.",
+    "claim_id": "protocol_architecture",
+    "core_conclusion": "FocalSwap converts behavior-level regimes into a search-centered row, five controlled views, three attribution gates, and a separate downstream recovery probe.",
+    "id": "fig1",
+    "script": "figures/source/fig1_focalswap_architecture_drawio.drawio",
+    "source_data": "figures/source_data/fig1_architecture_brief.txt",
+    "statistics": "none",
+    "visual_grammar": "left-to-right architecture diagram"
+  },
+  {
+    "artifact": "figures/fig2_main_evidence.pdf",
+    "audit_status": "visual_qa_pass",
+    "caption_claim": "Opportunity, specificity, and deployable gate evidence remain separated across regimes, with local specificity distinguished from broad evidence.",
+    "claim_id": "main_evidence_separation",
+    "core_conclusion": "KuaiSAR and Qilin differ in opportunity surface; Qilin has a low-coverage local taxonomy subset, but neither establishes stable wide-coverage focal-transfer evidence.",
+    "id": "fig2",
+    "script": "figures/make_fig2_main_evidence.py",
+    "source_data": "figures/source_data/fig2_main_evidence.csv",
+    "statistics": "bootstrap CI where available; shuffled-null p95/p99 thresholds",
+    "visual_grammar": "calibration-margin and point-range evidence grid"
+  },
+  {
+    "artifact": "figures/fig4_swap_specificity.pdf",
+    "audit_status": "visual_qa_pass",
+    "caption_claim": "Broad matched buckets stay near placebo; tax>=4 is the only Holm-stable row in the ten-bucket family and is a low-coverage local pocket.",
+    "claim_id": "qilin_swap_specificity_placebo",
+    "core_conclusion": "Qilin broad matched buckets remain near placebo, while only a low-coverage taxonomy bucket survives multiplicity.",
+    "id": "fig3",
+    "script": "figures/make_fig4_swap_specificity.py",
+    "source_data": "figures/source_data/fig4_swap_specificity.csv",
+    "statistics": "user-cluster bootstrap 95% CI plus Holm/BH adjustment across the ten displayed matched buckets from R179; distinct from the five-rung R213 G4 ladder",
+    "visual_grammar": "point-range placebo-specificity sweep"
+  },
+  {
+    "artifact": "figures/fig4_control_sensitivity.pdf",
+    "audit_status": "visual_qa_pass",
+    "caption_claim": "Latest-slot intervals cross zero, while the positive all-source C0 margin is control-sensitive on fixed UniSAR rows.",
+    "claim_id": "checkpoint_control_sensitivity",
+    "core_conclusion": "Latest-slot dependence is not established, while UniSAR's positive all-source C0 neutral-mask margin disappears under the C1 and C2 observed-support donors on the same rows.",
+    "id": "fig4",
+    "script": "figures/make_fig4_control_sensitivity.py",
+    "source_data": "figures/source_data/fig4_control_sensitivity.csv",
+    "statistics": "95% user-cluster bootstrap CIs for the latest-slot intervention, C0, and C1; C2 and paired C0-C2 endpoints use 97.5% CIs",
+    "visual_grammar": "two-panel forest plot with latest-slot estimates and all-source controls grouped by seed"
+  },
+  {
+    "artifact": "sections/table_protocol_requirements.tex",
+    "audit_status": "visual_qa_pass",
+    "caption_claim": "G1--G3 license focal attribution; recovery is reported separately.",
+    "claim_id": "gate_claim_standard",
+    "core_conclusion": "Focal attribution requires observability, calibrated opportunity, dependence, and matched specificity; downstream recovery is a separate usefulness probe.",
+    "id": "table1",
+    "script": "sections/table_protocol_requirements.tex",
+    "source_data": "sections/table_protocol_requirements.tex",
+    "statistics": "none",
+    "visual_grammar": "definition matrix"
+  },
+  {
+    "artifact": "sections/table_data_regimes.tex",
+    "audit_status": "visual_qa_pass",
+    "caption_claim": "The two regimes occupy different attribution and recovery layers under one audit.",
+    "claim_id": "cross_regime_evidence_map",
+    "core_conclusion": "KuaiSAR and Qilin occupy different evidence layers: broad proxy and lexical readouts do not establish a stable wide-coverage focal-transfer signal.",
+    "id": "table2",
+    "script": "sections/table_data_regimes.tex",
+    "source_data": "figures/source_data/table2_cross_regime_gate_readout.csv",
+    "statistics": "reported confidence intervals for G3 plus calibrated G2 and recovery deltas",
+    "visual_grammar": "compact gate evidence map"
+  },
+  {
+    "artifact": "sections/table_gate_ledger.tex",
+    "audit_status": "visual_qa_pass",
+    "caption_claim": "Only a low-coverage Qilin taxonomy bucket separates from its same-subset random reference after Holm correction.",
+    "claim_id": "matched_swap_bucket_ledger",
+    "core_conclusion": "Broad matched-swap estimates remain close to their references; only the low-coverage Qilin tax>=4 pocket survives Holm correction.",
+    "id": "table3",
+    "script": "sections/table_gate_ledger.tex",
+    "source_data": "figures/source_data/table3_matched_swap_readout.csv",
+    "statistics": "95% confidence intervals and Holm-adjusted p-values for the Qilin bucket family",
+    "visual_grammar": "bucket-level statistical ledger"
+  }
+]

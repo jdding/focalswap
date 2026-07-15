@@ -1,0 +1,17 @@
+{
+  "c2_all_bad_changed_slot_rows": 0,
+  "c2_all_coverage": 0.42075296452745686,
+  "c2_all_eligible_rows": 66139,
+  "c2_latest_bad_changed_slot_rows": 0,
+  "c2_latest_changed_exactly_one": 87044,
+  "c2_latest_coverage": 0.5537431930378136,
+  "c2_latest_eligible_rows": 87044,
+  "candidate_counts": [
+    100
+  ],
+  "minimum_nonpadding_source_slots": 1,
+  "rows": 157192,
+  "rows_without_source_slot": 0,
+  "structure_identical_across_seeds": true,
+  "users": 4852
+}

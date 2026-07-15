@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\setlength{\tabcolsep}{2.8pt}
+\renewcommand{\arraystretch}{1.08}
+\caption{Matched-swap specificity by bucket. KuaiSAR $\Delta$ is lift above
+0.500; Qilin $\Delta$ is matched-minus-random on the same subset. Holm
+correction covers ten Qilin buckets.}
+\label{tab:gate-ledger}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l L{0.20\textwidth} r r L{0.17\textwidth} L{0.20\textwidth} r@{}}
+\toprule
+Regime & Swap bucket & Paired \(N\) & Coverage & Half-tie [95\% CI] & \(\Delta\) vs. ref. [95\% CI] & Holm \(p\) \\
+\midrule
+\multirow{3}{*}{KuaiSAR} & L1 nuisance & 19,614 & 0.981 & 0.500 [0.498, 0.502] & 0 [-0.002, +0.002] & -- \\
+& category-broken/source & 10,315 & 1.000 & 0.501 [0.496, 0.505] & +0.001 [-0.004, +0.005] & -- \\
+& same-category/source & 10,312 & 1.000 & 0.510 [0.506, 0.515] & +0.010 [+0.006, +0.015] & -- \\
+\midrule
+\multirow{4}{*}{Qilin} & same-user all & 6,013 & 0.980 & 0.506 [0.496, 0.517] & -0.009 [-0.022, +0.003] & 1.000 \\
+& tax \(\geq\) 1 & 6,135 & 1.000 & 0.517 [0.507, 0.527] & +0.001 [-0.011, +0.012] & 1.000 \\
+& tax \(\geq\) 2 & 2,580 & 0.421 & 0.528 [0.512, 0.545] & +0.011 [-0.009, +0.031] & 1.000 \\
+& tax \(\geq\) 4 & 373 & 0.061 & 0.566 [0.525, 0.606] & +0.084 [+0.041, +0.133] & 0.003 \\
+\bottomrule
+\end{tabular*}
+\end{table*}

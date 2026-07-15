@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\setlength{\tabcolsep}{4.2pt}
+\renewcommand{\arraystretch}{1.12}
+\caption{Attribution standard and downstream recovery probe. G1--G3 license
+focal attribution; G4 tests operational recovery after attribution.}
+\label{tab:protocol-requirements}
+\begin{tabular}{@{}L{0.14\textwidth}L{0.34\textwidth}L{0.25\textwidth}L{0.19\textwidth}@{}}
+\toprule
+Layer & Required evidence & Established readout & Otherwise \\
+\midrule
+G1 observability & search-centered row plus leakage checks & auditable
+S\(\to\)R episode & coverage only \\
+G2 opportunity & row-oracle gain above the shuffled-search null & calibrated
+opportunity & raw headroom \\
+G3 specificity & positive dependence under a named control, then true focal
+search above matched/placebo swaps & focal-source identity & control-specific
+response \\
+G4 recovery probe & learned gate above fixed History-only & operationally
+recoverable signal & not established, or stress-only without G2 \\
+\bottomrule
+\end{tabular}
+\end{table*}

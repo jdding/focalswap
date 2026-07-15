@@ -1,0 +1,5 @@
+regime,contrast,baseline,estimate,ci_low,ci_high,margin,margin_low,margin_high,note
+KuaiSAR,category-broken source,symmetry 0.5,0.501,0.496,0.505,0.001,-0.004,0.005,category-broken swap near symmetry
+KuaiSAR,same-category source,symmetry 0.5,0.510,0.506,0.515,0.010,0.006,0.015,weak proxy same-category readout
+Qilin,taxonomy share>=1,random placebo,0.517,,,0.001,-0.011,0.012,broad bucket not separated from random placebo
+Qilin,taxonomy share>=4 (cov 0.061),random placebo,0.566,,,0.084,0.041,0.133,low-coverage local taxonomy subset

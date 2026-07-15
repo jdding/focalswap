@@ -1,0 +1,114 @@
+{
+  "contract_id": "R242_UNISAR_CATEGORY_CONTROL_LADDER",
+  "files": [
+    {
+      "bytes": 25943,
+      "path": "tools/r242_unisar_semantic_control_ladder.py",
+      "sha256": "70748b48f3e8742cb4a3ccb6e763f9e796f7b7bcc4c54ef81ff8117dcb8daa95"
+    },
+    {
+      "bytes": 15693,
+      "path": "tools/r242_control_ladder_analysis.py",
+      "sha256": "7ff257716c6eb6e57294597972e5d8da6229315f4fbe82d94cc96fadb9004552"
+    },
+    {
+      "bytes": 4579,
+      "path": "tools/r242_control_reversal_analysis.py",
+      "sha256": "a705192b2e5404f04d0bc3d32bfee75bc2a7f926661d395e5235d2a9e69dd51b"
+    },
+    {
+      "bytes": 4693,
+      "path": "tools/r242_seed1_continuation_gate.py",
+      "sha256": "a6695192401b54764c7af7ba69400f7871ee69582116b70d4ea44e4d8212b207"
+    },
+    {
+      "bytes": 6370,
+      "path": "tools/run_r242_semantic_control_autodl.sh",
+      "sha256": "7f871b369ffb51d030f04ae565d2671c64f218843034475348a200fc4485112a"
+    },
+    {
+      "bytes": 6017,
+      "path": "refine-logs/EXPERIMENT_PLAN_R242_SEMANTIC_CONTROL_LADDER_20260712.md",
+      "sha256": "f1a32f30df99d505ceca7bb777e0a0735fd6f078f56608db5be2a7904c3e2c4a"
+    },
+    {
+      "bytes": 1869,
+      "path": "refine-logs/PLAN_TO_RUN_GATE_R242_SEMANTIC_CONTROL_LADDER_20260712.json",
+      "sha256": "9d42e9ff2177b97d8599b24fa4fe4212f608905757852b35450a2619f37a56f2"
+    },
+    {
+      "bytes": 1088,
+      "path": "refine-logs/R242_R233_REFERENCE_MANIFEST_20260712.json",
+      "sha256": "23b90964394dbbe233ea9c6a520860799372a99f1850d397afa4d8d16b046e58"
+    },
+    {
+      "bytes": 1732,
+      "path": "refine-logs/R242_EXPERIMENT_CODE_REVIEW.json",
+      "sha256": "6be70e700577e012bd9cafa654e00d56aad4c9844f31c9642facc400b6cd1d14"
+    },
+    {
+      "bytes": 1047,
+      "path": "refine-logs/R242_EXPERIMENT_AUDIT_20260712.json",
+      "sha256": "91fae671c8ffc7b1812599ef641efb4278479c4849ceb93988734e595aa0edeb"
+    },
+    {
+      "bytes": 1235,
+      "path": "refine-logs/R242_CLAIM_DECISION_20260712.json",
+      "sha256": "aa32b0daa71d8569e4e1758c08b033e36faac0fe25bfaecc7280abc2ff4582ea"
+    },
+    {
+      "bytes": 2215,
+      "path": "reports/r242_semantic_control_ladder_20260712/remote_artifacts/r242_remote_output_manifest.json",
+      "sha256": "0b258f86fc04a8b8cc2141557dc160e5e97978f74318607af613abdc6cc5d050"
+    },
+    {
+      "bytes": 810,
+      "path": "reports/r242_semantic_control_ladder_20260712/remote_artifacts/r242_seed1_continuation_gate.json",
+      "sha256": "1c3de8ce071bcf0a38bea4752dc74a88fa76cd9f7f84c7e8177f802f1232e152"
+    },
+    {
+      "bytes": 6409,
+      "path": "reports/r242_semantic_control_ladder_20260712/remote_artifacts/r242_unisar_seed_20230601_integrity.json",
+      "sha256": "524ed856746d723062adc83b6aa4c17a2e83a79ff7b37e44646911e91a134edb"
+    },
+    {
+      "bytes": 6430,
+      "path": "reports/r242_semantic_control_ladder_20260712/remote_artifacts/r242_unisar_seed_20230602_integrity.json",
+      "sha256": "7c4d6e50377bbe4d41911498a79508ca757296d5554d5ae373941140d8212cf9"
+    },
+    {
+      "bytes": 6434,
+      "path": "reports/r242_semantic_control_ladder_20260712/remote_artifacts/r242_unisar_seed_20230603_integrity.json",
+      "sha256": "54b64170507026663fb73ceca80a8999faa22f7daba250d4eb8c785f1eae0870"
+    },
+    {
+      "bytes": 5640,
+      "path": "reports/r242_semantic_control_ladder_20260712/r242_control_ladder_summary.csv",
+      "sha256": "1948a48f1e604c4e0bb491989497dde6d46f1df017ff47da4969e7b338f04c9d"
+    },
+    {
+      "bytes": 20574,
+      "path": "reports/r242_semantic_control_ladder_20260712/r242_control_ladder_summary.json",
+      "sha256": "9d25a30cce89e01b4fa54176d30ab190badd065085fa92aee062857aca365f21"
+    },
+    {
+      "bytes": 2420,
+      "path": "reports/r242_semantic_control_ladder_20260712/r242_control_reversal_contrasts.csv",
+      "sha256": "29b13497a45738f4e8bde9dff3fd141fa528215898f96dd871897eb6db8938c5"
+    },
+    {
+      "bytes": 937,
+      "path": "reports/r242_semantic_control_ladder_20260712/r242_primary_positive_effect_bounds.csv",
+      "sha256": "7ba62d73915e1febf8348a1fa76e65f2f6c524b59295211c4740308f6eca786c"
+    },
+    {
+      "bytes": 2295,
+      "path": "paper/figures/source_data/table4_r242_control_reversal_readouts.csv",
+      "sha256": "e533bfc83c2ffdd1c3b0b7fec718d971b803593129fb29beb78f46e53c9e1dbc"
+    }
+  ],
+  "generated_at": "2026-07-12T15:03:21+00:00",
+  "schema": "focalswap.r242_run_manifest.v1",
+  "score_exports_bound_by": "remote_artifacts/r242_remote_output_manifest.json",
+  "status": "RUN_COMPLETE_AUDITED"
+}

@@ -1,0 +1,17 @@
+panel,condition,model,seed_label,seed,ranking_rows,user_clusters,coverage,estimate_x1e3,ci_low_x1e3,ci_high_x1e3,ci_level
+focal,latest-slot intervention,SESRec,--,,16788,3677,1.000,0.138,-0.743,0.936,0.950
+focal,latest-slot intervention,UniSAR,S1,20230601,157192,4852,1.000,-0.213,-0.495,0.072,0.950
+focal,latest-slot intervention,UniSAR,S2,20230602,157192,4852,1.000,0.089,-0.191,0.376,0.950
+focal,latest-slot intervention,UniSAR,S3,20230603,157192,4852,1.000,-0.160,-0.426,0.102,0.950
+control,C0 neutral-mask,UniSAR,S1,20230601,66139,2170,0.421,5.427,4.183,6.689,0.950
+control,C0 neutral-mask,UniSAR,S2,20230602,66139,2170,0.421,2.016,0.856,3.138,0.950
+control,C0 neutral-mask,UniSAR,S3,20230603,66139,2170,0.421,3.197,2.040,4.331,0.950
+control,C1 profile-prioritized donor,UniSAR,S1,20230601,66139,2170,0.421,-1.600,-2.516,-0.691,0.950
+control,C1 profile-prioritized donor,UniSAR,S2,20230602,66139,2170,0.421,-0.068,-0.959,0.830,0.950
+control,C1 profile-prioritized donor,UniSAR,S3,20230603,66139,2170,0.421,-0.132,-0.986,0.722,0.950
+control,C2 category/profile-matched donor,UniSAR,S1,20230601,66139,2170,0.421,-1.177,-2.074,-0.302,0.975
+control,C2 category/profile-matched donor,UniSAR,S2,20230602,66139,2170,0.421,-0.755,-1.647,0.131,0.975
+control,C2 category/profile-matched donor,UniSAR,S3,20230603,66139,2170,0.421,-0.354,-1.171,0.469,0.975
+control,paired C0-C2 difference,UniSAR,S1,20230601,66139,2170,0.421,6.604,5.238,7.951,0.975
+control,paired C0-C2 difference,UniSAR,S2,20230602,66139,2170,0.421,2.770,1.582,3.962,0.975
+control,paired C0-C2 difference,UniSAR,S3,20230603,66139,2170,0.421,3.551,2.272,4.819,0.975

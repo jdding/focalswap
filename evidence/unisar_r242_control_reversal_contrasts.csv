@@ -1,0 +1,13 @@
+seed,scope,contrast,rows,user_clusters,paired_delta_rr,ci_low,ci_high,ci_level,status,interpretation
+20230601,latest_1,C0_minus_C1,87044,2843,0.00012294235567933946,-0.0003198110630374427,0.0005545783407804081,0.95,not_established,positive means neutral masking yields a larger Full-minus-control margin
+20230601,latest_1,C0_minus_C2,87044,2843,-7.843945743067591e-05,-0.0005875800004441526,0.0004131530557654198,0.975,not_established,positive means neutral masking yields a larger Full-minus-control margin
+20230601,all,C0_minus_C1,66139,2170,0.007027404063066181,0.005881895102680128,0.0081752628051361,0.95,positive,positive means neutral masking yields a larger Full-minus-control margin
+20230601,all,C0_minus_C2,66139,2170,0.006604272287900633,0.005238243405454774,0.007951195272294634,0.975,positive,positive means neutral masking yields a larger Full-minus-control margin
+20230602,latest_1,C0_minus_C1,87044,2843,0.0002273080358723418,-0.00019444277416774035,0.0006355958064263318,0.95,not_established,positive means neutral masking yields a larger Full-minus-control margin
+20230602,latest_1,C0_minus_C2,87044,2843,0.00014651822642539235,-0.00035827732143158675,0.000667636704450607,0.975,not_established,positive means neutral masking yields a larger Full-minus-control margin
+20230602,all,C0_minus_C1,66139,2170,0.0020836735368400805,0.0010083805660065096,0.0031045901062074226,0.95,positive,positive means neutral masking yields a larger Full-minus-control margin
+20230602,all,C0_minus_C2,66139,2170,0.00277035618496039,0.0015815108160813559,0.0039620564037977065,0.975,positive,positive means neutral masking yields a larger Full-minus-control margin
+20230603,latest_1,C0_minus_C1,87044,2843,-0.00024389555231197805,-0.0006745842077347181,0.00018445557646899397,0.95,not_established,positive means neutral masking yields a larger Full-minus-control margin
+20230603,latest_1,C0_minus_C2,87044,2843,-0.00028160989410518924,-0.0007388758895873849,0.00017043284364501473,0.975,not_established,positive means neutral masking yields a larger Full-minus-control margin
+20230603,all,C0_minus_C1,66139,2170,0.0033290976691701005,0.002241796973964174,0.004405441273921307,0.95,positive,positive means neutral masking yields a larger Full-minus-control margin
+20230603,all,C0_minus_C2,66139,2170,0.0035514713306592574,0.0022716281532062597,0.004819293788940944,0.975,positive,positive means neutral masking yields a larger Full-minus-control margin

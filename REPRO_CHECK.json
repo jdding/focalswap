@@ -1,0 +1,17 @@
+{
+  "package_dir": "<package-root>",
+  "smoke": {
+    "argv": [
+      "scripts/run_smoke.sh"
+    ],
+    "command": "",
+    "cwd": "<package-root>",
+    "duration_sec": 1.577,
+    "mode": "script",
+    "returncode": 0,
+    "status": "pass",
+    "stderr_tail": "",
+    "stdout_tail": "FocalSwap reviewer artifact validation passed\n",
+    "timeout_sec": 120
+  }
+}

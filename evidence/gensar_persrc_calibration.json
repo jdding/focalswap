@@ -1,0 +1,76 @@
+{
+  "bootstrap": {
+    "cluster": "user_id",
+    "iters": 2000,
+    "seed": 244
+  },
+  "checkpoint_selection": {
+    "aggregation": "single_deterministic_checkpoint",
+    "checkpoint_epoch": 3,
+    "native_quality_gate": "passed",
+    "selected_before_focalswap_readout": true
+  },
+  "claim_ceiling": "Positive current-query calibration on GenSAR's native PerSrc source-item prediction task; not recommendation-side SeqRecWithSrcHis focal-search evidence.",
+  "completed_rows": 8958,
+  "evaluation_population": {
+    "current_query_in_history_exclusions": 1042,
+    "no_history_exclusions": 0,
+    "requested_rows": 10000,
+    "retained_rows": 8958,
+    "split": "official_validation"
+  },
+  "metrics": {
+    "delta_full_minus_focal_query_mask": {
+      "ci95": [
+        0.028850986871986898,
+        0.040768786494512696
+      ],
+      "point": 0.03482267296153121
+    },
+    "delta_full_minus_focal_query_swap": {
+      "ci95": [
+        0.09949059495893862,
+        0.11159710936307325
+      ],
+      "point": 0.10559589602341798
+    },
+    "delta_full_minus_focal_session_swap": {
+      "ci95": [
+        0.0006888431420216172,
+        0.0032615290721224144
+      ],
+      "point": 0.0020536525188234577
+    },
+    "half_tie_full_vs_focal_query_swap": {
+      "ci95": [
+        0.6272033377986158,
+        0.6426099575798169
+      ],
+      "point": 0.6352980576021433
+    },
+    "half_tie_full_vs_focal_session_swap": {
+      "ci95": [
+        0.5133958472873409,
+        0.5219929113641437
+      ],
+      "point": 0.5177494976557268
+    }
+  },
+  "provenance_hashes": {
+    "checkpoint_tree_sha256": "aea36735b2d4b17da67ef13b00b01b98f40967b8b35dfdecdf1e7a956119d33f",
+    "collaborate_index_sha256": "6b8b37f3b975da6f93c449a0f889cb22113a59d6a39b45abb397ca5c8a555032",
+    "semantic_index_sha256": "3cd0f4d279a6675f8dea9d37908bf86723e37056fdf1174cedf6aac07ed2cc78"
+  },
+  "schema": "focalswap.gensar_persrc_calibration.v1",
+  "status": "PASS",
+  "surface": "GenSAR PerSrcWithRecHis validation",
+  "task": "persrc",
+  "user_clusters": 8958,
+  "views": [
+    "full",
+    "no_source",
+    "focal_query_mask",
+    "focal_query_swap",
+    "focal_session_swap"
+  ]
+}
