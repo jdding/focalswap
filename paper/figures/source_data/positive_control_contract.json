@@ -1,0 +1,20 @@
+{
+  "schema": "focalswap.positive_control_contract.v1",
+  "purpose": "Review-visible implementation contract for the score-surface MLP positive control.",
+  "model": {
+    "type": "two_layer_mlp",
+    "hidden_units": [32, 16],
+    "alpha": 0.01,
+    "initial_learning_rate": 0.002,
+    "max_iterations": 350,
+    "early_stopping": true
+  },
+  "split": {
+    "training_subset_rows": 10000,
+    "fit_share": 0.70,
+    "threshold_tuning_share": 0.30,
+    "threshold_selection_metric": "RR"
+  },
+  "evaluation": "Threshold selection uses the tuning split; reported readouts use held-out validation/test rows.",
+  "source": "tools/r145_r148_calibration_audit.py"
+}

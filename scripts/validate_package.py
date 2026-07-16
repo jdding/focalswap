@@ -290,6 +290,26 @@ def main() -> None:
         if gates["g4_router_minus_best_fixed_ci_above_zero"]:
             raise AssertionError("R243 G4 recovery unexpectedly promotes")
 
+    numeric_example = json.loads(
+        require("paper/figures/source_data/planted_numeric_example.json").read_text()
+    )
+    example_row = numeric_example["representative_row"]
+    close(str(example_row["full_rr"]), 1.0)
+    close(str(example_row["history_only_rr"]), 1.0 / 3.0)
+    close(str(example_row["search_only_rr"]), 1.0)
+    close(str(example_row["focal_masked_rr"]), 1.0 / 3.0)
+    close(str(example_row["matched_donor_d1_rr"]), 1.0 / 3.0)
+    if example_row["true_vs_donor_outcome"] != "win":
+        raise AssertionError("planted numeric example no longer records a swap win")
+    example_aggregate = numeric_example["same_seed_aggregate"]
+    close(str(example_aggregate["opportunity_observed_oracle_gain"]), 0.1275636684)
+    close(str(example_aggregate["opportunity_shuffled_null_p95"]), 0.0678194220)
+    close(str(example_aggregate["dependence_full_minus_masked_rr"]["point"]), 0.0538630620)
+    close(str(example_aggregate["true_vs_donor_half_tie"]["point"]), 0.6473038141)
+    recovery = example_aggregate["router_minus_best_fixed_rr"]
+    if not recovery["ci95"][0] <= 0 <= recovery["ci95"][1]:
+        raise AssertionError("planted example recovery interval no longer crosses zero")
+
     r242 = rows("evidence/unisar_r242_control_ladder_summary.csv")
     c2_latest = [
         row for row in r242
@@ -392,12 +412,43 @@ def main() -> None:
     if max(float(row["score_rr"]) for row in learned) >= 0.2421895035:
         raise AssertionError("KuaiSAR learned gate unexpectedly beats History-only")
 
+    learned_non_oracle = [
+        row for row in gate_curve
+        if row["gate"] in {
+            "gbdt_soft", "logistic_soft", "mlp_soft",
+            "gbdt_hard", "logistic_hard", "mlp_hard",
+        }
+    ]
+    max_excess = max(float(row["score_minus_passive"]) for row in learned_non_oracle)
+    if not 0 < max_excess < 2.0e-7:
+        raise AssertionError("KuaiSAR numerical-tie recovery contract changed")
+
     positive_curve = rows("evidence/positive_control_dose_curve.csv")
     positive_rows = [row for row in positive_curve if float(row["strength"]) > 0]
     if [float(row["strength"]) for row in positive_rows] != [0.01, 0.02, 0.04, 0.08, 0.16]:
         raise AssertionError("positive-control dose grid changed")
     if any(float(row["best_gate_headroom_recovery"]) != 1.0 for row in positive_rows):
         raise AssertionError("positive-control recovery is no longer complete")
+
+    positive_contract = json.loads(
+        require("paper/figures/source_data/positive_control_contract.json").read_text()
+    )
+    if positive_contract["model"] != {
+        "type": "two_layer_mlp",
+        "hidden_units": [32, 16],
+        "alpha": 0.01,
+        "initial_learning_rate": 0.002,
+        "max_iterations": 350,
+        "early_stopping": True,
+    }:
+        raise AssertionError("positive-control MLP contract changed")
+    if positive_contract["split"] != {
+        "training_subset_rows": 10000,
+        "fit_share": 0.70,
+        "threshold_tuning_share": 0.30,
+        "threshold_selection_metric": "RR",
+    }:
+        raise AssertionError("positive-control split contract changed")
 
     qilin_g2_payload = json.loads(
         require("evidence/qilin_g2_null_robustness.json").read_text()

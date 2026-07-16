@@ -1,8 +1,8 @@
 # FocalSwap Reviewer Artifact
 
 This is the anonymous code and evidence artifact for the paper **Do
-Search-Augmented Recommenders Use the Focal Search? A Transfer-Validity
-Audit**. FocalSwap holds the target, candidate set, history, and scorer fixed,
+Search-Augmented Recommenders Use the Latest Search Episode? Search Dependence
+Is Not Enough**. FocalSwap holds the target, candidate set, history, and scorer fixed,
 then changes only the focal search input. The audit separates ranking gain,
 search-input dependence, matched focal specificity, and recovery instead of
 treating them as one claim.

@@ -1,0 +1,41 @@
+{
+  "schema": "focalswap.planted_numeric_example.v1",
+  "purpose": "Review-visible source for the sanitized numeric example in Section 3.",
+  "run": {
+    "dose": 1.0,
+    "seed": 20260713,
+    "split": "validation"
+  },
+  "representative_row": {
+    "episode_id_sha256": "47bbd4569042bf55ab1656c9b7eff92c7fcc86db13633254157d918a5ad06d5a",
+    "candidate_set_sha256": "40c17dfd8ccc990ba1d7a429013b00f1be179d51cedae85ceb3276f42f0dda51",
+    "full_rr": 1.0,
+    "history_only_rr": 0.3333333333333333,
+    "search_only_rr": 1.0,
+    "focal_masked_rr": 0.3333333333333333,
+    "matched_donor_d1_rr": 0.3333333333333333,
+    "true_vs_donor_outcome": "win"
+  },
+  "same_seed_aggregate": {
+    "opportunity_observed_oracle_gain": 0.12756366841993524,
+    "opportunity_shuffled_null_p95": 0.06781942203250514,
+    "dependence_full_minus_masked_rr": {
+      "point": 0.05386306201651232,
+      "ci95": [0.04244108805646849, 0.06555139297298405]
+    },
+    "true_vs_donor_half_tie": {
+      "point": 0.6473038141166155,
+      "ci95": [0.6326169397659478, 0.6618359077040428]
+    },
+    "router_minus_best_fixed_rr": {
+      "point": 0.0014361658206359796,
+      "ci95": [-0.0037887116790370308, 0.006686180044704453]
+    },
+    "user_clusters": 2264
+  },
+  "raw_sources": [
+    "reports/r243_full_chain_planted_control_20260713/remote_runs/r243_full_dose1_seed20260713_20260713_full1/r243_row_scores.csv",
+    "reports/r243_full_chain_planted_control_20260713/remote_runs/r243_full_dose1_seed20260713_20260713_full1/r243_metrics.json"
+  ],
+  "interpretation": "The row is a sanitized representative example. Aggregate gate values come from the complete validation split of the same planted-control run, not from that single row."
+}

@@ -1,5 +1,5 @@
 {
-  "file_count": 106,
+  "file_count": 108,
   "files": [
     {
       "bytes": 101,
@@ -22,9 +22,9 @@
       "sha256": "1d0dde41ece0f9620937f1a81a67e295ace0eae180c009d862006e8f3b288458"
     },
     {
-      "bytes": 8133,
+      "bytes": 8148,
       "path": "README.md",
-      "sha256": "089ffb25b20ca9e51dfc5dbf76e96a8cad6b5cdf4aacc9e81500441c515af5e5"
+      "sha256": "01c981874f740ad3b08e08bac45036d8fde2e92a9f0568be6716319439c84d33"
     },
     {
       "bytes": 252,
@@ -34,7 +34,7 @@
     {
       "bytes": 362,
       "path": "REPRO_CHECK.json",
-      "sha256": "cc2ae54880bf3751cdfb2d48a2759eca8bb5acd8595540d50d66eeb058163c27"
+      "sha256": "0958b9bb10f55bb9d74f34d4535d08d78f64cdb71125c05651473d370f51ca12"
     },
     {
       "bytes": 4003,
@@ -257,9 +257,19 @@
       "sha256": "046f23eae7fd6e6676ad9ed331fd8a7319294481a3173d677e25d2b741f31813"
     },
     {
-      "bytes": 24048,
+      "bytes": 25372,
       "path": "paper/figures/source_data/paper_numeric_claim_support.csv",
-      "sha256": "3ea40833605c305ab1004bf706f2a619ac0f0c088fc681a329df9b302a225af1"
+      "sha256": "4035d3fb91225cee8e4c63db2f4149818352f5220a2d57ea70c962aa0a73e28c"
+    },
+    {
+      "bytes": 1722,
+      "path": "paper/figures/source_data/planted_numeric_example.json",
+      "sha256": "e923dcaac400cf656487d343c0c2ed5f8ee49b6396e1186dd67d0ad4d43df069"
+    },
+    {
+      "bytes": 660,
+      "path": "paper/figures/source_data/positive_control_contract.json",
+      "sha256": "8bef6072d0e6b81c050924c62bb2f78cbe242299ae3a1bf2e4efeecbb8f88301"
     },
     {
       "bytes": 594,
@@ -362,9 +372,9 @@
       "sha256": "c8876ed2cc73e2c7f88f233555758302a9c3d75abb04c69e090fc2e73a51f02c"
     },
     {
-      "bytes": 21918,
+      "bytes": 24252,
       "path": "scripts/validate_package.py",
-      "sha256": "0ff8d435b4c6b53dd546e0b575744e4687d05ac03cadb6cd022ea4ee320ef5a1"
+      "sha256": "e77c77d167195837f8d081cdf096d3b31cee72db1b085f2861d4b70e8c888ad9"
     },
     {
       "bytes": 28194,
@@ -532,9 +542,9 @@
       "sha256": "b0ee40d3285013d47b00b8a87d28d62e7a2080e78dfc40bd8f7a53744b5b1063"
     }
   ],
-  "generated_at": "2026-07-15T16:31:00+00:00",
+  "generated_at": "2026-07-16T08:09:44+00:00",
   "package_dir": "<package-root>",
-  "package_fingerprint": "c187c353446459a70cd46c40f82fde0545bb19ca823c54070a22f2b685f96070",
+  "package_fingerprint": "e31a803bb7992948856b80ed488337e98862bdd20263ae7442e35c8bdd402943",
   "package_name": "focalswap_reviewer_code",
   "schema": "focalswap.reviewer_artifact.v1",
   "source": "<source-project>"
