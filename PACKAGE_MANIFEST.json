@@ -32,9 +32,9 @@
       "sha256": "a984b1828ad184d987f1fd8aaba7c2269be12c069abff3d5a1be85c046f3aa53"
     },
     {
-      "bytes": 362,
+      "bytes": 361,
       "path": "REPRO_CHECK.json",
-      "sha256": "2a4f41a0634433ce83f21e206f347047ca99750b8350b75b6648ca3e8a33e31a"
+      "sha256": "4709bd561f4e059a034a21f3452d4e1a371539bef26f70e2c5253e76ba328294"
     },
     {
       "bytes": 4691,
@@ -367,9 +367,9 @@
       "sha256": "219235d3a3be2b9d815ec4062774c00ae3b59c37d805972ca8b4e7b153dd01f4"
     },
     {
-      "bytes": 1009,
+      "bytes": 1059,
       "path": "paper/sections/table_tier_a.tex",
-      "sha256": "5187301ceeceaa458606bb890ac3a11af347deb534ae821127c78224d8f44aa2"
+      "sha256": "0e4d607241b50a9e9d910cbbb67af5d83bb17fad89fc03f923c0c49b672500c7"
     },
     {
       "bytes": 81,
@@ -557,9 +557,9 @@
       "sha256": "b0ee40d3285013d47b00b8a87d28d62e7a2080e78dfc40bd8f7a53744b5b1063"
     }
   ],
-  "generated_at": "2026-07-20T03:28:00+00:00",
+  "generated_at": "2026-07-20T04:24:00+00:00",
   "package_dir": "<package-root>",
-  "package_fingerprint": "6ac56d0cc433a536ddb512fb98cb4dd08bd4322fc1fccd8e87703cf829be26d9",
+  "package_fingerprint": "32db7c24382cc07bf0940a0e1541c67173d7622e1b894ea75f2c1f25df9fb4c0",
   "package_name": "focalswap_reviewer_code",
   "schema": "focalswap.reviewer_artifact.v1",
   "source": "<source-project>"
