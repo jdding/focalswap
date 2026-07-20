@@ -264,6 +264,19 @@ def main() -> None:
     if gensar_metrics["delta_full_minus_focal_query_swap"]["ci95"][0] <= 0:
         raise AssertionError("GenSAR current-query swap interval changed")
 
+    gensar_seqrec = json.loads(
+        require("evidence/gensar_seqrec_boundary.json").read_text()
+    )
+    if gensar_seqrec["status"] != "FAIL_NATIVE_QUALITY":
+        raise AssertionError("GenSAR SeqRec quality-boundary status changed")
+    if gensar_seqrec["paper_claim_eligible"]:
+        raise AssertionError("underqualified GenSAR SeqRec checkpoint promoted")
+    if any(
+        metric["pass"]
+        for metric in gensar_seqrec["native_quality_gate"].values()
+    ):
+        raise AssertionError("GenSAR SeqRec checkpoint unexpectedly clears a quality gate")
+
     planted = json.loads(
         require("evidence/r243_full_chain_planted_control.json").read_text()
     )
@@ -367,6 +380,30 @@ def main() -> None:
         raise AssertionError("latest-slot eligible count changed")
     if slot_validity["c2_latest_bad_changed_slot_rows"] != 0:
         raise AssertionError("latest-slot intervention no longer changes exactly one slot")
+
+    r259 = rows("evidence/r259_c2_slot_stratified_control.csv")
+    if len(r259) != 18:
+        raise AssertionError("R259 source-slot stratification must contain 18 rows")
+    long_history = [
+        row for row in r259
+        if row["source_slot_stratum"] in {"4-7", "8-15", "16-29", "30"}
+    ]
+    short_history = [
+        row for row in r259
+        if row["source_slot_stratum"] in {"1", "2-3"}
+    ]
+    if len(long_history) != 12 or sum(
+        row["point_positive"] == "True" for row in long_history
+    ) != 12:
+        raise AssertionError("R259 long-history point-estimate direction changed")
+    if sum(
+        row["ci_excludes_zero_positive"] == "True" for row in long_history
+    ) != 11:
+        raise AssertionError("R259 long-history interval count changed")
+    if len(short_history) != 6 or any(
+        row["ci_excludes_zero_positive"] == "True" for row in short_history
+    ):
+        raise AssertionError("R259 short-history intervals must remain unresolved")
 
     common = rows("evidence/common_surface_summary.csv")
     expected = {(method, str(seed)) for method in ("sesrec", "unisar") for seed in (20230601, 20230602, 20230603)}

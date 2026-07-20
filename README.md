@@ -15,6 +15,12 @@ The repository is designed for two reviewer tasks:
 It is not a redistributed copy of third-party datasets or model repositories,
 and it is not a one-command replacement for obtaining their released code.
 
+Anonymous reviewer access:
+https://anonymous.4open.science/r/focalswap-5D6D/
+
+Open the page in a browser and use its ZIP download when a local copy is
+needed.
+
 ## 60-Second Validation
 
 **Requirement:** Python 3.10 or newer. From the repository root, run:
@@ -63,9 +69,9 @@ For the exact checks performed, see
 | How are fixed rows and controlled views constructed? | `paper/figures/source_data/kuaisar_g1_contract.json`, `paper/figures/source_data/r242_control_contract.json` | `tools/controlled_view_ranking.py`, `tools/focal_source_views.py` |
 | What do the behavior and lexical surfaces show? | `paper/figures/source_data/table2_cross_regime_gate_readout.csv`, `paper/figures/source_data/table3_matched_swap_readout.csv`, `evidence/kuaisar_*`, `evidence/qilin_*` | `tools/calibration_audit.py`, `tools/swap_ladder_category_broken.py`, `tools/row_level_power_bootstrap.py` |
 | What do released recommendation checkpoints show under a latest-slot intervention? | `paper/figures/source_data/table4_checkpoint_anchor_readouts.csv`, `evidence/sesrec_corrected_bootstrap.json`, `evidence/unisar_corrected_multiseed_summary.csv` | `tools/sesrec_five_view_readout.py`, `tools/unisar_five_view_readout.py`, `tools/unisar_source_scope_localization.py` |
-| Why does dependence change with the control? | `paper/figures/source_data/fig4_control_sensitivity.csv`, `evidence/unisar_r242_control_ladder_summary.csv`, `evidence/unisar_r242_control_reversal_contrasts.csv`, `evidence/r250_*` | `tools/control_ladder_analysis.py`, `tools/control_reversal_analysis.py`, `tools/source_scope_analysis.py` |
+| Why does dependence change with the control? | `paper/figures/source_data/fig4_control_sensitivity.csv`, `evidence/unisar_r242_control_ladder_summary.csv`, `evidence/unisar_r242_control_reversal_contrasts.csv`, `evidence/r250_*`, `evidence/r259_c2_slot_stratified_control.*` | `tools/control_ladder_analysis.py`, `tools/control_reversal_analysis.py`, `tools/source_scope_analysis.py` |
 | Can the protocol return a positive focal readout? | `evidence/r243_full_chain_planted_control.json`, `paper/figures/source_data/r243_full_chain_planted_control.csv` | `tools/full_chain_planted_control.py`, `tools/summarize_planted_control.py` |
-| Is there released-code positive calibration outside the recommendation-side claim? | `evidence/gensar_persrc_calibration.json` | `tools/gensar_persrc_readout_analysis.py` |
+| Is there released-code positive calibration outside the recommendation-side claim? | `evidence/gensar_persrc_calibration.json`, `evidence/gensar_seqrec_boundary.json` | `tools/gensar_persrc_readout_analysis.py` |
 | What happens on a common SESRec/UniSAR surface? | `evidence/common_surface_summary.csv`, `evidence/common_candidate_contract.json`, `evidence/common_surface_integrity.md` | `tools/common_surface_preflight.py`, `tools/unisar_common_surface_readout.py`, `tools/common_surface_summary.py` |
 | Which methods do not expose a valid same-scorer audit interface? | `evidence/unifiedssr_interface_boundary.json`, `evidence/runtime_boundary_dependence_bootstrap.csv` | `tools/official_adapter.py` |
 

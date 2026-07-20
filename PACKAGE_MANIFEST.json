@@ -1,5 +1,5 @@
 {
-  "file_count": 108,
+  "file_count": 111,
   "files": [
     {
       "bytes": 101,
@@ -12,9 +12,9 @@
       "sha256": "7b20e988cb7db37c73be2f0dbf4d90eafe37ef676c6e310485241082d758f202"
     },
     {
-      "bytes": 984,
+      "bytes": 1140,
       "path": "ARTIFACT_QUICKSTART.md",
-      "sha256": "8889086d960c87b94483335fcce829177da571b134026ab4f0b6a99237d0706a"
+      "sha256": "5567ede5b207cbb5ecb6a40e755181f2666ce67c5fdd5207dedae8c49009b053"
     },
     {
       "bytes": 1074,
@@ -22,9 +22,9 @@
       "sha256": "1d0dde41ece0f9620937f1a81a67e295ace0eae180c009d862006e8f3b288458"
     },
     {
-      "bytes": 8148,
+      "bytes": 8394,
       "path": "README.md",
-      "sha256": "01c981874f740ad3b08e08bac45036d8fde2e92a9f0568be6716319439c84d33"
+      "sha256": "d520cdfe84c90d1190f0bc9d13fa1cf1667b6302d3f01384a744c37e9c99cb93"
     },
     {
       "bytes": 252,
@@ -34,12 +34,12 @@
     {
       "bytes": 362,
       "path": "REPRO_CHECK.json",
-      "sha256": "0958b9bb10f55bb9d74f34d4535d08d78f64cdb71125c05651473d370f51ca12"
+      "sha256": "2a4f41a0634433ce83f21e206f347047ca99750b8350b75b6648ca3e8a33e31a"
     },
     {
-      "bytes": 4003,
+      "bytes": 4691,
       "path": "evidence/README.md",
-      "sha256": "19605d588d9677c7416bb7969324ef42a5c1fbec38b9e6d4358b2337b9c7a330"
+      "sha256": "222a49c1a9359cbfbc0f83fe11f7d4a966359a775615302b9dfa6338f7c5ce1c"
     },
     {
       "bytes": 875,
@@ -65,6 +65,11 @@
       "bytes": 2165,
       "path": "evidence/gensar_persrc_calibration.json",
       "sha256": "3d104e3d7333016325a44e902430bcbaf20aa3b6d99b5c32ca1c714ad0729627"
+    },
+    {
+      "bytes": 797,
+      "path": "evidence/gensar_seqrec_boundary.json",
+      "sha256": "30a8ccae959de5ee66a542b1120ba6644b9258a4f595f49c3468a4b96c5ce71f"
     },
     {
       "bytes": 9993,
@@ -120,6 +125,16 @@
       "bytes": 1546,
       "path": "evidence/r250_review_evidence_closure.md",
       "sha256": "53bcda44c8c8b2d9297949cfc08b75fb570448839d4bc07edde4b192ecfe2322"
+    },
+    {
+      "bytes": 2384,
+      "path": "evidence/r259_c2_slot_stratified_control.csv",
+      "sha256": "48eb0b530720bd7f69827fd61156d2561c8eb069ab5a12e63e4c0ab0c3004e83"
+    },
+    {
+      "bytes": 2893,
+      "path": "evidence/r259_c2_slot_stratified_control.json",
+      "sha256": "6c572b5d491786ed18fc83a8329df75a81a36a0f3f99e4d80e3b88f2561494e1"
     },
     {
       "bytes": 828,
@@ -372,9 +387,9 @@
       "sha256": "c8876ed2cc73e2c7f88f233555758302a9c3d75abb04c69e090fc2e73a51f02c"
     },
     {
-      "bytes": 24252,
+      "bytes": 25812,
       "path": "scripts/validate_package.py",
-      "sha256": "e77c77d167195837f8d081cdf096d3b31cee72db1b085f2861d4b70e8c888ad9"
+      "sha256": "847755f9072017559326fcf54378ab2da67deffaf125807ad77ac904cbc13f5b"
     },
     {
       "bytes": 28194,
@@ -542,9 +557,9 @@
       "sha256": "b0ee40d3285013d47b00b8a87d28d62e7a2080e78dfc40bd8f7a53744b5b1063"
     }
   ],
-  "generated_at": "2026-07-16T08:09:44+00:00",
+  "generated_at": "2026-07-20T03:28:00+00:00",
   "package_dir": "<package-root>",
-  "package_fingerprint": "e31a803bb7992948856b80ed488337e98862bdd20263ae7442e35c8bdd402943",
+  "package_fingerprint": "6ac56d0cc433a536ddb512fb98cb4dd08bd4322fc1fccd8e87703cf829be26d9",
   "package_name": "focalswap_reviewer_code",
   "schema": "focalswap.reviewer_artifact.v1",
   "source": "<source-project>"

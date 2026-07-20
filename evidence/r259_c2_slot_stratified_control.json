@@ -1,0 +1,92 @@
+{
+  "bootstrap": {
+    "ci_level": 0.975,
+    "iterations": 10000,
+    "seed": 20260720,
+    "unit": "user_cluster_within_stratum"
+  },
+  "decision": {
+    "all_seed_stratum_intervals_exclude_zero_positive": false,
+    "all_seed_stratum_point_estimates_positive": false,
+    "four_to_thirty_slot_intervals_exclude_zero_positive": "11/12",
+    "four_to_thirty_slot_point_estimates_positive": "12/12",
+    "one_to_three_slot_intervals_exclude_zero_positive": "0/6",
+    "paper_facing_scope": "diagnostic localization to longer accumulated source histories; no stratum-specific promotion claim"
+  },
+  "integrity": {
+    "overall_reproduction": {
+      "20230601": {
+        "absolute_difference": 3.382710778154774e-17,
+        "pass": true,
+        "recomputed": 0.0066042722879006335,
+        "reference": 0.0066042722879006
+      },
+      "20230602": {
+        "absolute_difference": 9.020562075079397e-17,
+        "pass": true,
+        "recomputed": 0.00277035618496039,
+        "reference": 0.0027703561849603
+      },
+      "20230603": {
+        "absolute_difference": 5.724587470723463e-17,
+        "pass": true,
+        "recomputed": 0.0035514713306592574,
+        "reference": 0.0035514713306592
+      }
+    },
+    "strata_partition_all_rows": true,
+    "structure_identical_across_seeds": true
+  },
+  "outputs": {
+    "csv": "<source-project>/reports/r259_c2_slot_stratified_control_20260720/r259_c2_slot_stratified_control.csv"
+  },
+  "population": {
+    "candidate_count": 100,
+    "eligible_rows": 66139,
+    "eligible_users": 2170
+  },
+  "question": "Does the paired all-source C0-minus-C2 contrast keep the same direction across registered source-slot-count strata?",
+  "schema": "focalswap.r259.c2_slot_stratified_control.v1",
+  "source_hashes": {
+    "r233_seed_20230601": "f6380a4ae1a0743031b40a190f3e12da580f00bae903082460b6ae5b97bb7003",
+    "r233_seed_20230602": "435f984750d86f1b861d9aec930e0761be6ce8baefaba25d41008a166e1a594f",
+    "r233_seed_20230603": "c5655b6d0e6acdf6e337da805248e0b6310414d6cbfed996c4490d3e379f72cd",
+    "r242_seed_20230601": "296087330378c201179724ac57afc7b77dbe9dd913bc4a5293cc8169c5e1cbcb",
+    "r242_seed_20230602": "4ad4b3613dfcf7f36e147789966373dd47cb9e8b5df4f9fd6d2b7cdea696508d",
+    "r242_seed_20230603": "4d4c249e6d2e836d072e66bd9fc23816411d07555fd4d2dee998eb4f8f91e8fb",
+    "reference_contrasts": "29b13497a45738f4e8bde9dff3fd141fa528215898f96dd871897eb6db8938c5"
+  },
+  "status": "COMPLETE",
+  "strata": [
+    {
+      "label": "1",
+      "lower": 1,
+      "upper": 1
+    },
+    {
+      "label": "2-3",
+      "lower": 2,
+      "upper": 3
+    },
+    {
+      "label": "4-7",
+      "lower": 4,
+      "upper": 7
+    },
+    {
+      "label": "8-15",
+      "lower": 8,
+      "upper": 15
+    },
+    {
+      "label": "16-29",
+      "lower": 16,
+      "upper": 29
+    },
+    {
+      "label": "30",
+      "lower": 30,
+      "upper": 30
+    }
+  ]
+}

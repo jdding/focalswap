@@ -1,10 +1,14 @@
 # Artifact Quickstart
 
+Anonymous reviewer access:
+https://anonymous.4open.science/r/focalswap-5D6D/
+
 Run `bash scripts/run_smoke.sh` from the extracted package root. The check
 verifies the figure/table manifest, the corrected SESRec latest-slot bootstrap,
 three UniSAR latest-slot checks, the C0-versus-C1 observed-support control rows,
 the nine-run planted focal control, the GenSAR PerSrc current-query
-calibration, historical neutral-mask
+calibration, the GenSAR SeqRec native-quality boundary, the C2 source-slot
+stratification, historical neutral-mask
 provenance, reverse-source diagnostics, all six
 common-surface SESRec/UniSAR rows, Python syntax, and local-module dependency
 closure. It requires no private data, checkpoint, or third-party Python package.

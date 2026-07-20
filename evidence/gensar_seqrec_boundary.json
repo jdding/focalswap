@@ -1,0 +1,27 @@
+{
+  "candidate_contract": "one target plus 99 frozen negatives",
+  "candidate_count": 100,
+  "claim_ceiling": "The available recommendation-side checkpoint did not clear the registered native-quality gate and is excluded from claim-bearing intervention evidence.",
+  "native_quality_gate": {
+    "hit@10": {
+      "observed": 0.27269437275666697,
+      "pass": false,
+      "threshold": 0.290985
+    },
+    "ndcg@10": {
+      "observed": 0.1856612284153359,
+      "pass": false,
+      "threshold": 0.191425
+    },
+    "ndcg@5": {
+      "observed": 0.16312298098516603,
+      "pass": false,
+      "threshold": 0.16606
+    }
+  },
+  "paper_claim_eligible": false,
+  "schema": "focalswap.gensar_seqrec_boundary.v1",
+  "split": "test",
+  "status": "FAIL_NATIVE_QUALITY",
+  "task": "SeqRecWithSrcHis"
+}

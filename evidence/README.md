@@ -47,7 +47,10 @@ GenSAR's native source-item prediction task. It shows that the audit detects
 explicit current-query identity and separates it from retained source-history
 perturbations. The record also fixes the pre-readout checkpoint selection and
 the official validation-sample filtering contract. It is not recommendation-side
-`SeqRecWithSrcHis` focal evidence.
+`SeqRecWithSrcHis` focal evidence. `gensar_seqrec_boundary.json` records that
+the available recommendation-side checkpoint failed its registered native
+quality gate and is therefore excluded from claim-bearing intervention
+evidence.
 
 `r243_full_chain_planted_control.json` reports a three-dose by three-seed
 calibration on fixed Qilin rows. Dose one clears calibrated opportunity,
@@ -61,6 +64,14 @@ trivial population artifact and whether the latest-slot intervention actually
 changes one non-padding slot. C0 response remains positive in both eligible and
 non-eligible populations; every latest-slot-eligible row changes exactly one
 slot. Exact C0--C2 reversal remains scoped to common support.
+
+`r259_c2_slot_stratified_control.csv` and its JSON counterpart localize the
+same-row all-source C0--C2 contrast by source-slot count. The contrast is
+positive across all 12 seed-by-stratum estimates for 4--30 slots, with 11
+97.5% intervals excluding zero; the 1--3-slot strata are unresolved. These
+stratum-level intervals are descriptive and are not multiplicity-adjusted. This
+supports source-history-length heterogeneity, not a slot-count-invariant
+mechanism or focal-dependence claim.
 
 `unifiedssr_interface_boundary.json` records why the released recommendation
 and query-conditioned search heads do not provide one native scorer for all
