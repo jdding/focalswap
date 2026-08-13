@@ -324,8 +324,8 @@ def extract_quality_anchor(reports_dir: Path) -> dict[str, Any]:
     """Extract existing bounded UniSAR quality metrics without upgrading them."""
     r208 = (
         reports_dir
-        / "r208_unisar_official_original_autodl_20260620"
-        / "R208_UNISAR_OFFICIAL_ORIGINAL_AUTODL_CLOSURE.md"
+        / "r208_unisar_official_original_remote_20260620"
+        / "R208_UNISAR_OFFICIAL_ORIGINAL_REMOTE_CLOSURE.md"
     )
     r157 = reports_dir / "r157_unisar_official_quality.md"
     r132 = reports_dir / "r132_official_gpu_batch_summary.md"

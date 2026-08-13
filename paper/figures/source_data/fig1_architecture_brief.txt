@@ -9,10 +9,11 @@ Architecture elements:
   leakage-safe candidate row, same-user ordered time window.
 - Controlled views: Full-SAR, History-only, Search-only, Search-masked,
   Counterfactual-search.
-- Gate tests: G1 outcome availability, G2 calibrated opportunity,
-  G3 focal-search identifiability, G4 downstream recovery probe.
-- Evidence readout: ranking gain, search opportunity, search dependence, and
-  focal-search specificity kept separate.
+- Evidence tests: G1 outcome availability, G2 calibrated opportunity, and
+  G3 focal-search identifiability form the attribution group; G4 is a visually
+  separate downstream recovery probe.
+- Evidence readout: ranking gain, calibrated opportunity, named-control
+  response, focal specificity, and input-side recovery kept separate.
 
 Scope: S->R FocalSwap architecture only. Feed2Search/R->S content is intentionally
 not represented.

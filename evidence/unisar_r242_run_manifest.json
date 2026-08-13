@@ -23,7 +23,7 @@
     },
     {
       "bytes": 6370,
-      "path": "tools/run_r242_semantic_control_autodl.sh",
+      "path": "tools/run_r242_semantic_control_remote.sh",
       "sha256": "7f871b369ffb51d030f04ae565d2671c64f218843034475348a200fc4485112a"
     },
     {

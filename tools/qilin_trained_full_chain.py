@@ -1587,7 +1587,7 @@ def main() -> int:
         "preflight_code": ROOT / "tools" / "r239_qilin_full_chain_preflight.py",
         "artifact_builder_code": ROOT / "tools" / "r239_qilin_prepare_artifacts.py",
         "training_code": Path(__file__).resolve(),
-        "wrapper_code": ROOT / "tools" / "run_qilin_trained_full_chain_autodl.sh",
+        "wrapper_code": ROOT / "tools" / "run_qilin_trained_full_chain_remote.sh",
     }
     embedding_summary = args.data_dir / "embedding_summary.json"
     if embedding_summary.exists():

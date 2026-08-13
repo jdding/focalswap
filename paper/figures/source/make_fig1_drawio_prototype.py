@@ -137,6 +137,18 @@ GATE_DESC = (
     "strokeWidth=2;fontFamily=Helvetica;fontSize=12;fontColor=#111827;"
 )
 GATE_DESC_ORANGE = GATE_DESC.replace("#2563EB", "#F97316")
+ATTRIBUTION_GROUP = (
+    "rounded=0;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#93C5FD;"
+    "strokeWidth=1.25;"
+)
+RECOVERY_GROUP = (
+    "rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#FDBA74;"
+    "strokeWidth=1.25;"
+)
+GROUP_LABEL = (
+    "text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;"
+    "fontFamily=Helvetica;fontSize=11;fontStyle=1;fontColor=#475569;"
+)
 READOUT_BOX = (
     "rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;"
     "strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;fontColor=#111827;"
@@ -191,18 +203,23 @@ def build() -> ET.ElementTree:
     for i, (label, style) in enumerate(views):
         view_ids.append(d.vertex(label, 735, 94 + 52 * i, 170, 42, style))
 
-    # Gates.
+    # Attribution gates and the separate downstream recovery probe.
+    d.vertex("", 1006, 88, 198, 180, ATTRIBUTION_GROUP)
+    d.vertex("Attribution (G1--G3)", 1016, 92, 170, 16, GROUP_LABEL)
+    d.vertex("", 1006, 278, 198, 66, RECOVERY_GROUP)
+    d.vertex("Recovery probe", 1016, 282, 120, 14, GROUP_LABEL)
     gate_rows = [
         ("G1", "outcome\navailability", GATE_ID, GATE_DESC),
         ("G2", "calibrated\nopportunity", GATE_ID, GATE_DESC),
         ("G3", "focal-search\nidentifiability", GATE_ID_ORANGE, GATE_DESC_ORANGE),
-        ("G4", "recovery\nprobe", GATE_ID_ORANGE, GATE_DESC_ORANGE),
     ]
     gate_ids = []
     for i, (gate, desc, gate_style, desc_style) in enumerate(gate_rows):
-        y = 94 + 70 * i
-        gate_ids.append(d.vertex(gate, 1018, y, 56, 42, gate_style))
-        d.vertex(desc, 1082, y, 118, 42, desc_style)
+        y = 116 + 51 * i
+        gate_ids.append(d.vertex(gate, 1018, y, 56, 38, gate_style))
+        d.vertex(desc, 1082, y, 110, 38, desc_style)
+    d.vertex("G4", 1018, 300, 56, 34, GATE_ID_ORANGE)
+    d.vertex("input-side\nrecovery", 1082, 300, 110, 34, GATE_DESC_ORANGE)
 
     # Cross-container arrows.
     label_style = "text;html=1;strokeColor=none;fillColor=#FFFFFF;align=center;verticalAlign=middle;" + SMALL_FONT
@@ -232,7 +249,8 @@ def build() -> ET.ElementTree:
     for i, label in enumerate(readouts):
         d.vertex(label, 44 + 230 * i, 476, 210, 34, READOUT_BOX)
 
-    d.edge("", gate_ids[-1], readout, ARROW + "curved=1;", [(1115, 395), (640, 395)])
+    evidence_out = d.vertex("", 1105, 346, 1, 1, ANCHOR)
+    d.edge("", evidence_out, readout, ARROW + "curved=1;", [(1115, 395), (640, 395)])
 
     model = ET.Element(
         "mxGraphModel",

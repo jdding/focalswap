@@ -1,0 +1,93 @@
+{
+  "donor_integrity": {
+    "all_donors_observed_and_nonempty": true,
+    "bijection_on_eligible_support": true,
+    "category_overlap_failures": 0,
+    "eligible_source_ids": 45895,
+    "fixed_points": 0,
+    "forbidden_inputs": [
+      "user",
+      "target",
+      "candidate",
+      "rank",
+      "label",
+      "model score"
+    ],
+    "future_label_or_score_used": false,
+    "max_donor_reuse": 1,
+    "profile_mismatch_failures": 0,
+    "route_counts": {
+      "no_category": 36501,
+      "strict_category_profile_cycle": 45895,
+      "strict_profile_singleton": 396
+    },
+    "selection_inputs": [
+      "observed source-session ID",
+      "source item-count bucket",
+      "query token-count bucket",
+      "test-slot occurrence-count bucket",
+      "source first-level item categories",
+      "fixed intervention seed"
+    ]
+  },
+  "interpretation": "The RR contrasts are aggregates of discrete target-rank changes, not floating-point jitter. C2 uses a one-to-one observed-support derangement with no donor reuse or fixed points. The slot-stratified pattern remains descriptive and does not make C2 a lexical-semantic gold standard.",
+  "outputs": {
+    "csv": "<source-project>/reports/r261_rank_change_c2_donor_diagnostics_20260812/r261_rank_change_by_slot_stratum.csv"
+  },
+  "population": {
+    "candidate_count": 100,
+    "model_seeds": [
+      20230601,
+      20230602,
+      20230603
+    ],
+    "rows": 66139
+  },
+  "rank_integrity": {
+    "all_rr_values_map_to_registered_half_tie_ranks": true,
+    "c0_median_absolute_shift_changed": [
+      2.0
+    ],
+    "c0_rank_changed_fraction_range": [
+      0.5971514537564826,
+      0.6165046341795309
+    ],
+    "c0_worse_given_changed_fraction_range": [
+      0.5329932819109231,
+      0.5529123237277743
+    ],
+    "c2_median_absolute_shift_changed": [
+      1.0
+    ],
+    "c2_rank_changed_fraction_range": [
+      0.44101059889021604,
+      0.4475422972829949
+    ],
+    "c2_worse_given_changed_fraction_range": [
+      0.47739864864864867,
+      0.4908118486012068
+    ],
+    "control_outcomes_differ_fraction_range": [
+      0.5786147356325315,
+      0.6028818095223696
+    ],
+    "rank_range": [
+      1,
+      100
+    ],
+    "shift_direction": "positive means the target ranks worse under the control than under Full"
+  },
+  "schema": "focalswap.r261.rank_change_c2_donor_diagnostics.v1",
+  "source_sha256": {
+    "integrity_seed_20230601": "524ed856746d723062adc83b6aa4c17a2e83a79ff7b37e44646911e91a134edb",
+    "integrity_seed_20230602": "7c4d6e50377bbe4d41911498a79508ca757296d5554d5ae373941140d8212cf9",
+    "integrity_seed_20230603": "54b64170507026663fb73ceca80a8999faa22f7daba250d4eb8c785f1eae0870",
+    "r233_seed_20230601": "f6380a4ae1a0743031b40a190f3e12da580f00bae903082460b6ae5b97bb7003",
+    "r233_seed_20230602": "435f984750d86f1b861d9aec930e0761be6ce8baefaba25d41008a166e1a594f",
+    "r233_seed_20230603": "c5655b6d0e6acdf6e337da805248e0b6310414d6cbfed996c4490d3e379f72cd",
+    "r242_seed_20230601": "296087330378c201179724ac57afc7b77dbe9dd913bc4a5293cc8169c5e1cbcb",
+    "r242_seed_20230602": "4ad4b3613dfcf7f36e147789966373dd47cb9e8b5df4f9fd6d2b7cdea696508d",
+    "r242_seed_20230603": "4d4c249e6d2e836d072e66bd9fc23816411d07555fd4d2dee998eb4f8f91e8fb"
+  },
+  "status": "COMPLETE"
+}

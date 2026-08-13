@@ -120,7 +120,7 @@ def fixed_negs(
     # Avoid rebuilding and shuffling the full item universe for every row.
     # The bounded official-code runs can have thousands of rows and 99 eval
     # negatives; repeated full-list filtering makes bundle generation
-    # CPU-bound on AutoDL before training starts.
+    # CPU-bound on remote compute before training starts.
     attempts = 0
     max_attempts = max(1000, 20 * k)
     while len(negs) < k and all_items and attempts < max_attempts:

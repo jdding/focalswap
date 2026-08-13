@@ -405,6 +405,30 @@ def main() -> None:
     ):
         raise AssertionError("R259 short-history intervals must remain unresolved")
 
+    r261 = json.loads(
+        require("evidence/r261_rank_change_c2_donor_diagnostics.json").read_text()
+    )
+    if r261["status"] != "COMPLETE":
+        raise AssertionError("R261 rank-change diagnostics are incomplete")
+    if not r261["rank_integrity"]["all_rr_values_map_to_registered_half_tie_ranks"]:
+        raise AssertionError("R261 half-tie rank integrity failed")
+    rank_integrity = r261["rank_integrity"]
+    if rank_integrity["c0_median_absolute_shift_changed"] != [2.0]:
+        raise AssertionError("R261 C0 median rank shift changed")
+    if rank_integrity["c2_median_absolute_shift_changed"] != [1.0]:
+        raise AssertionError("R261 C2 median rank shift changed")
+    c0_worse = rank_integrity["c0_worse_given_changed_fraction_range"]
+    c2_worse = rank_integrity["c2_worse_given_changed_fraction_range"]
+    if not (0.532 < c0_worse[0] <= c0_worse[1] < 0.554):
+        raise AssertionError("R261 C0 direction range changed")
+    if not (0.476 < c2_worse[0] <= c2_worse[1] < 0.492):
+        raise AssertionError("R261 C2 direction range changed")
+    donor = r261["donor_integrity"]
+    if not donor["bijection_on_eligible_support"] or donor["fixed_points"] != 0:
+        raise AssertionError("R261 donor derangement integrity failed")
+    if donor["max_donor_reuse"] != 1:
+        raise AssertionError("R261 donor reuse contract changed")
+
     common = rows("evidence/common_surface_summary.csv")
     expected = {(method, str(seed)) for method in ("sesrec", "unisar") for seed in (20230601, 20230602, 20230603)}
     if {(row["method"], row["seed"]) for row in common} != expected:
@@ -545,7 +569,7 @@ def main() -> None:
     for path in [
         "paper/sections/table_data_regimes.tex",
         "paper/sections/table_gate_ledger.tex",
-        "paper/sections/table_tier_a.tex",
+        "paper/sections/figure_control_sensitivity.tex",
         "tools/unisar_five_view_readout.py",
         "tools/sesrec_five_view_readout.py",
         "tools/common_surface_summary.py",
@@ -561,6 +585,7 @@ def main() -> None:
         "tools/summarize_planted_control.py",
         "tools/review_evidence_closure.py",
         "tools/tv_random_baseline.py",
+        "tools/rank_change_diagnostics.py",
         "scripts/check_tool_imports.py",
     ]:
         require(path)

@@ -1,27 +1,39 @@
 # FocalSwap Reviewer Artifact
 
-This is the anonymous code and evidence artifact for the paper **Do
-Search-Augmented Recommenders Use the Latest Search Episode? Search Dependence
-Is Not Enough**. FocalSwap holds the target, candidate set, history, and scorer fixed,
-then changes only the focal search input. The audit separates ranking gain,
-search-input dependence, matched focal specificity, and recovery instead of
-treating them as one claim.
+This repository accompanies the anonymous WSDM submission **Do
+Search-Augmented Recommenders Use the Latest Search Episode?** The paper asks a
+narrower question than ordinary ranking evaluation: when search signals help a
+recommender, can the gain be attributed to the immediately preceding search
+episode?
 
-The repository is designed for two reviewer tasks:
+FocalSwap audits that question by keeping the target, candidate set, history,
+and scorer fixed while intervening on the focal search input. It reports
+ranking gain, intervention response, matched focal specificity, and downstream
+recovery as separate claims.
 
-1. trace paper-facing numbers and claim boundaries to compact source tables;
-2. inspect and smoke-test the audit/readout implementation without private data.
+## What Reviewers Can Verify
 
-It is not a redistributed copy of third-party datasets or model repositories,
-and it is not a one-command replacement for obtaining their released code.
+The package supports three paper-level conclusions:
 
-Anonymous reviewer access:
-https://anonymous.4open.science/r/focalswap-5D6D/
+1. **The protocol is capable of a positive focal readout.** A planted control
+   clears the attribution gates at its highest dose. A released GenSAR
+   source-item task also recovers current-query identity. These are protocol
+   calibrations, not recommendation-side positive evidence.
+2. **Behavioral, lexical, and checkpoint evidence do not collapse into one
+   verdict.** KuaiSAR and Qilin provide bounded surface-level results, while the
+   released recommendation checkpoints test the latest-slot intervention
+   directly.
+3. **Search dependence is control-sensitive.** On the same 66,139 UniSAR rows
+   and three retained checkpoints, an all-source neutral mask yields positive
+   RR margins, whereas an observed-support donor matched by category and source
+   profile removes them. Latest-slot dependence is not established.
 
-Open the page in a browser and use its ZIP download when a local copy is
-needed.
+The repository lets reviewers trace these statements to compact source tables,
+inspect the corresponding implementations, and run a data-free consistency
+check. It intentionally does not redistribute third-party datasets,
+checkpoints, model repositories, raw user logs, or the submission PDF.
 
-## 60-Second Validation
+## Quick Validation
 
 **Requirement:** Python 3.10 or newer. From the repository root, run:
 
@@ -30,9 +42,9 @@ bash scripts/run_smoke.sh
 ```
 
 The command uses only the Python standard library and normally finishes in
-under five seconds. It checks the paper source-data manifest, evidence
-invariants, corrected intervention scope, positive controls, Python syntax, and
-local import closure.
+under five seconds. It verifies the package manifest, paper-facing source-data
+contracts, claim-sensitive evidence invariants, Python syntax, and local import
+closure.
 
 Expected output:
 
@@ -40,27 +52,29 @@ Expected output:
 FocalSwap reviewer artifact validation passed
 ```
 
-For the exact checks performed, see
+No installation, network access, private data, checkpoint, or GPU is required.
+The exact checks are listed in
 [`ARTIFACT_QUICKSTART.md`](ARTIFACT_QUICKSTART.md).
 
-## Recommended Review Path
+## Recommended Five-Minute Review Path
 
-1. Read
-   [`paper/figures/source_data/r242_control_contract.json`](paper/figures/source_data/r242_control_contract.json)
-   for the canonical latest-slot/all-source and C0--C3 terminology.
-2. Open
+1. Open
    [`paper/figures/table_figure_manifest.json`](paper/figures/table_figure_manifest.json)
-   to map each paper figure/table to its source data and claim.
-3. Inspect the cross-regime sources
+   to map every paper figure and table to its packaged source data and claim.
+2. Read
+   [`r242_control_contract.json`](paper/figures/source_data/r242_control_contract.json)
+   for the canonical latest-slot versus all-source intervention scopes and the
+   C0--C3 controls.
+3. Inspect the two compact surface-level tables
    [`table2_cross_regime_gate_readout.csv`](paper/figures/source_data/table2_cross_regime_gate_readout.csv)
    and
    [`table3_matched_swap_readout.csv`](paper/figures/source_data/table3_matched_swap_readout.csv).
-4. Inspect
+4. Inspect the checkpoint summary
    [`table4_checkpoint_anchor_readouts.csv`](paper/figures/source_data/table4_checkpoint_anchor_readouts.csv)
-   together with the control-sensitivity and latest-slot evidence described
-   below.
-5. Run `bash scripts/run_smoke.sh` to replay the package-level consistency
-   checks.
+   and the Figure 4 source
+   [`fig4_control_sensitivity.csv`](paper/figures/source_data/fig4_control_sensitivity.csv).
+5. Run `bash scripts/run_smoke.sh` to verify that the packaged evidence still
+   satisfies the paper's registered contracts.
 
 ## Evidence-to-Code Map
 
@@ -69,21 +83,21 @@ For the exact checks performed, see
 | How are fixed rows and controlled views constructed? | `paper/figures/source_data/kuaisar_g1_contract.json`, `paper/figures/source_data/r242_control_contract.json` | `tools/controlled_view_ranking.py`, `tools/focal_source_views.py` |
 | What do the behavior and lexical surfaces show? | `paper/figures/source_data/table2_cross_regime_gate_readout.csv`, `paper/figures/source_data/table3_matched_swap_readout.csv`, `evidence/kuaisar_*`, `evidence/qilin_*` | `tools/calibration_audit.py`, `tools/swap_ladder_category_broken.py`, `tools/row_level_power_bootstrap.py` |
 | What do released recommendation checkpoints show under a latest-slot intervention? | `paper/figures/source_data/table4_checkpoint_anchor_readouts.csv`, `evidence/sesrec_corrected_bootstrap.json`, `evidence/unisar_corrected_multiseed_summary.csv` | `tools/sesrec_five_view_readout.py`, `tools/unisar_five_view_readout.py`, `tools/unisar_source_scope_localization.py` |
-| Why does dependence change with the control? | `paper/figures/source_data/fig4_control_sensitivity.csv`, `evidence/unisar_r242_control_ladder_summary.csv`, `evidence/unisar_r242_control_reversal_contrasts.csv`, `evidence/r250_*`, `evidence/r259_c2_slot_stratified_control.*` | `tools/control_ladder_analysis.py`, `tools/control_reversal_analysis.py`, `tools/source_scope_analysis.py` |
+| Why does dependence change with the control? | `paper/figures/source_data/fig4_control_sensitivity.csv`, `evidence/unisar_r242_control_ladder_summary.csv`, `evidence/unisar_r242_control_reversal_contrasts.csv`, `evidence/r250_*`, `evidence/r259_c2_slot_stratified_control.*`, `evidence/r261_rank_change_*` | `tools/control_ladder_analysis.py`, `tools/control_reversal_analysis.py`, `tools/source_scope_analysis.py`, `tools/rank_change_diagnostics.py` |
 | Can the protocol return a positive focal readout? | `evidence/r243_full_chain_planted_control.json`, `paper/figures/source_data/r243_full_chain_planted_control.csv` | `tools/full_chain_planted_control.py`, `tools/summarize_planted_control.py` |
 | Is there released-code positive calibration outside the recommendation-side claim? | `evidence/gensar_persrc_calibration.json`, `evidence/gensar_seqrec_boundary.json` | `tools/gensar_persrc_readout_analysis.py` |
 | What happens on a common SESRec/UniSAR surface? | `evidence/common_surface_summary.csv`, `evidence/common_candidate_contract.json`, `evidence/common_surface_integrity.md` | `tools/common_surface_preflight.py`, `tools/unisar_common_surface_readout.py`, `tools/common_surface_summary.py` |
 | Which methods do not expose a valid same-scorer audit interface? | `evidence/unifiedssr_interface_boundary.json`, `evidence/runtime_boundary_dependence_bootstrap.csv` | `tools/official_adapter.py` |
 
-The planted control is a protocol calibration, not a real-system result.
-Likewise, the GenSAR record is a positive current-query calibration on its
-native source-item prediction surface; it is not recommendation-side
-`SeqRecWithSrcHis` focal evidence. The common-surface experiment is a
-controlled comparison, not an official leaderboard reproduction.
+The planted control is a protocol calibration, not a real-system result. The
+GenSAR record is a current-query calibration on its native source-item
+prediction task, not recommendation-side `SeqRecWithSrcHis` focal evidence.
+The common-surface experiment is a controlled comparison, not an official
+leaderboard reproduction.
 
 ## Reproduction Levels
 
-### Level 1: Data-Free Package Validation
+### Level 1: Data-Free Validation
 
 ```bash
 bash scripts/run_smoke.sh
@@ -92,7 +106,7 @@ bash scripts/run_smoke.sh
 No network access, private data, checkpoint, GPU, or third-party Python package
 is required.
 
-### Level 2: Paper Figure Regeneration
+### Level 2: Figure Regeneration
 
 Figures 2 and 4 can be regenerated directly from the packaged source CSVs:
 
@@ -118,8 +132,8 @@ python3 scripts/check_tool_imports.py
 The `tools/` directory contains the audit, adapter, bootstrap, and readout
 implementations used for the registered surfaces. Full executions require the
 corresponding third-party dataset, released repository, processed-data
-contract, and checkpoint. These assets are not redistributed here. After the
-optional dependencies are installed, each command-line entry point documents
+contract, and checkpoint. These assets are not redistributed here. After
+installing the optional dependencies, each command-line entry point documents
 its inputs with `--help`.
 
 ## Repository Layout
@@ -128,8 +142,8 @@ its inputs with `--help`.
   diagnostics, positive calibrations, and interface-boundary records.
 - `paper/figures/source_data/`: authoritative CSV/JSON sources for paper
   figures, tables, and numeric claims.
-- `paper/sections/`: reviewer-visible LaTeX table sources; the manuscript and
-  submission PDF are intentionally absent.
+- `paper/sections/`: reviewer-visible LaTeX table and figure-panel sources; the
+  manuscript and submission PDF are intentionally absent.
 - `paper/figures/`: deterministic plotting scripts and the editable Figure 1
   source.
 - `tools/`: audit and released-checkpoint readout implementations.
@@ -150,10 +164,9 @@ current-query calibration, reverse-source diagnostics, and common-surface
 claim boundary reported by the paper.
 
 Some evidence files retain identifiers such as `r242`, `r243`, or `r250`.
-These are immutable experiment-provenance identifiers used to bind derived
-tables to audited runs; they are not extra methods, metrics, or competing claim
-vocabularies. Reader-facing terminology is fixed by
-`r242_control_contract.json`.
+These immutable provenance labels bind derived tables to audited runs; they are
+not methods, metrics, or alternative claim vocabularies. Reader-facing
+terminology is fixed by `r242_control_contract.json`.
 
 ## Artifact Integrity
 

@@ -73,6 +73,16 @@ stratum-level intervals are descriptive and are not multiplicity-adjusted. This
 supports source-history-length heterogeneity, not a slot-count-invariant
 mechanism or focal-dependence claim.
 
+`r261_rank_change_by_slot_stratum.csv` and its JSON counterpart verify that
+the C0/C2 mean contrasts aggregate discrete half-tie target-rank changes rather
+than floating-point jitter. C0 changes are slightly more likely to worsen the
+target rank and have a median absolute shift of two positions; C2 changes are
+approximately direction-balanced with a median absolute shift of one. They
+also record the C2 donor-map safeguards: a
+one-to-one observed-support derangement, no fixed points, and no donor reuse.
+This does not upgrade C2 from a behavioral-category sensitivity control to a
+lexical-semantic match.
+
 `unifiedssr_interface_boundary.json` records why the released recommendation
 and query-conditioned search heads do not provide one native scorer for all
 five audit views. It is interface provenance, not a focal-transfer result.

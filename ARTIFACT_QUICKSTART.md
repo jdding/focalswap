@@ -1,8 +1,5 @@
 # Artifact Quickstart
 
-Anonymous reviewer access:
-https://anonymous.4open.science/r/focalswap-5D6D/
-
 Run `bash scripts/run_smoke.sh` from the extracted package root. The check
 verifies the figure/table manifest, the corrected SESRec latest-slot bootstrap,
 three UniSAR latest-slot checks, the C0-versus-C1 observed-support control rows,
