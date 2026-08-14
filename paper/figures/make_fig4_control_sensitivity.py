@@ -14,6 +14,8 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from matplotlib.ticker import MultipleLocator
 
+from focalswap_figure_style import FONT, TITLE_COLOR, apply_figure_style
+
 
 FIG_DIR = Path(__file__).resolve().parent
 DATA_PATH = FIG_DIR / "source_data" / "fig4_control_sensitivity.csv"
@@ -50,21 +52,7 @@ def read_rows() -> list[dict[str, str]]:
 
 
 def setup_style() -> None:
-    mpl.rcParams.update(
-        {
-            "font.family": "DejaVu Sans",
-            "font.size": 7.8,
-            "axes.labelsize": 8.0,
-            "xtick.labelsize": 7.2,
-            "ytick.labelsize": 7.2,
-            "axes.spines.top": False,
-            "axes.spines.right": False,
-            "axes.linewidth": 0.8,
-            "pdf.fonttype": 42,
-            "ps.fonttype": 42,
-            "svg.fonttype": "none",
-        }
-    )
+    apply_figure_style(COLORS["grid"])
 
 
 def point_range(
@@ -88,7 +76,7 @@ def point_range(
             textcoords="offset points",
             ha="left" if estimate >= 0 else "right",
             va="bottom",
-            fontsize=6.0,
+            fontsize=FONT["note"],
             color=color,
             clip_on=False,
         )
@@ -113,7 +101,7 @@ def draw_focal(ax, rows: list[dict[str, str]]) -> None:
     ax.set_ylim(-0.65, 3.65)
     ax.set_xlim(-1.05, 1.05)
     ax.xaxis.set_major_locator(MultipleLocator(0.5))
-    ax.text(0.0, 1.23, "(a) Latest-slot intervention", transform=ax.transAxes, ha="left", va="bottom", fontsize=8.8, fontweight="bold", color=COLORS["ink"])
+    ax.text(0.0, 1.23, "(a) Latest-slot intervention", transform=ax.transAxes, ha="left", va="bottom", fontsize=FONT["panel"], fontweight="bold", color=TITLE_COLOR)
     style_axis(ax, r"Dependence margin $\Delta$RR ($\times 10^{-3}$)")
 
 
@@ -152,7 +140,7 @@ def draw_controls(ax, rows: list[dict[str, str]]) -> None:
     ax.set_ylim(-0.55, 2.55)
     ax.set_xlim(-3.1, 8.35)
     ax.xaxis.set_major_locator(MultipleLocator(2.0))
-    ax.text(0.0, 1.23, "(b) All-source controls", transform=ax.transAxes, ha="left", va="bottom", fontsize=8.8, fontweight="bold", color=COLORS["ink"])
+    ax.text(0.0, 1.23, "(b) All-source controls", transform=ax.transAxes, ha="left", va="bottom", fontsize=FONT["panel"], fontweight="bold", color=TITLE_COLOR)
 
     handles = [
         Line2D(
@@ -174,7 +162,7 @@ def draw_controls(ax, rows: list[dict[str, str]]) -> None:
         bbox_to_anchor=(0.0, 1.015),
         ncol=2,
         frameon=False,
-        fontsize=6.4,
+        fontsize=FONT["legend"],
         handlelength=1.8,
         columnspacing=1.1,
         handletextpad=0.45,

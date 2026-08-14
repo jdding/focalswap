@@ -1,5 +1,5 @@
 {
-  "file_count": 115,
+  "file_count": 116,
   "files": [
     {
       "bytes": 101,
@@ -22,9 +22,9 @@
       "sha256": "1d0dde41ece0f9620937f1a81a67e295ace0eae180c009d862006e8f3b288458"
     },
     {
-      "bytes": 9443,
+      "bytes": 9514,
       "path": "README.md",
-      "sha256": "f5887af0f7eade9ad5007612e7c676e8f1085be2ed81019751e0f9b89b73cad4"
+      "sha256": "fc636b756efe6e6fecd43594c81578c9d4fd547ebb1927902fec7bcd2b06913d"
     },
     {
       "bytes": 252,
@@ -34,7 +34,7 @@
     {
       "bytes": 362,
       "path": "REPRO_CHECK.json",
-      "sha256": "eea86c603fd2b6fac93223c8365bd16e7aeae25ab58625be25720d87be35fa16"
+      "sha256": "66f46f222db5d4183f1612b6f0c359ff3d63016a4c00f99493c7cb64ae95f5d4"
     },
     {
       "bytes": 5301,
@@ -222,19 +222,19 @@
       "sha256": "8f9ab9b15a55419ef3b171656d0fe0d50ab78ac63531a5a33216ad92061e217a"
     },
     {
-      "bytes": 7963,
+      "bytes": 7598,
       "path": "paper/figures/make_fig2_main_evidence.py",
-      "sha256": "4f61ca4036466528bca20584f194e74fc972925deb2d268ace38dd8b6c0a4121"
+      "sha256": "0da3d613970168a58c3bacbb3ca8fc9767bb9147028f17179a371d9dd6a01ad5"
     },
     {
-      "bytes": 6389,
+      "bytes": 6096,
       "path": "paper/figures/make_fig4_control_sensitivity.py",
-      "sha256": "7e6d9c7dbcae7e5477a93104eecd8ddacaadd5afba0b7d3d8efebfcc059cafda"
+      "sha256": "a2ea689406d6b150324bfd38f9e52cf2d664ba76c0ae96dfd9d18b617d9f3007"
     },
     {
-      "bytes": 9503,
+      "bytes": 9191,
       "path": "paper/figures/make_fig4_swap_specificity.py",
-      "sha256": "99f3ef09d9ee5f1aebf4d69ae66e97c427340eb13df9bef666813f8cac69fd2c"
+      "sha256": "3260b27aaab97543076ac7ecbfbf98e843710a8c9479e1d56b54c9c595554068"
     },
     {
       "bytes": 17968,
@@ -327,6 +327,11 @@
       "sha256": "8a8271ebd16ed11714270afd24a2a1ebf3db2aa0c64cdfc0bb1f62ce8a793727"
     },
     {
+      "bytes": 209,
+      "path": "paper/figures/source_data/table2_audit_surface_scale.csv",
+      "sha256": "ab67d122e5def4cd3bf73285375ca1690c4d9ac0e6d3e5d4f980ccc71aa8f718"
+    },
+    {
       "bytes": 782,
       "path": "paper/figures/source_data/table2_cross_regime_gate_readout.csv",
       "sha256": "b2fb7f239a5f9f7e0717f19c7fc29165428362faf6540d0e786e00da3f60b212"
@@ -362,9 +367,9 @@
       "sha256": "e446940cc8381201232c172453bd7cfb684cb28937ecc0a4583d5363387984be"
     },
     {
-      "bytes": 5314,
+      "bytes": 5385,
       "path": "paper/figures/table_figure_manifest.json",
-      "sha256": "62b7d608fb051b82bae7796b19954d8276522336e02686e6c46c560b4d6728be"
+      "sha256": "8454f43dc819a4cf4bce41e0cce586b65f363fd8fc5415fab3a1117aae98551d"
     },
     {
       "bytes": 1070,
@@ -372,9 +377,9 @@
       "sha256": "e82c4123287d5cfed7f9c7e5708f876263661e5a1bb1c0909d4c215734c7957e"
     },
     {
-      "bytes": 1069,
-      "path": "paper/sections/table_data_regimes.tex",
-      "sha256": "2fa0673a4fc007047ef07346f30801e266ec986d586d13b42c6e063dfabd0acc"
+      "bytes": 467,
+      "path": "paper/sections/table_audit_surface_scale.tex",
+      "sha256": "e3980f9d3077b98bbd7d5c8ca6258c602064d88bdd3d2d09662a0cff552e063f"
     },
     {
       "bytes": 1299,
@@ -382,9 +387,9 @@
       "sha256": "7de309863954291df465adb239eaf8c4bf9485e002b19bf5558bbcc3e148f596"
     },
     {
-      "bytes": 1016,
+      "bytes": 745,
       "path": "paper/sections/table_protocol_requirements.tex",
-      "sha256": "8602494f6b167bb3f306f5ef7969066483a6526b2c2290379d68b445edb58384"
+      "sha256": "90400546809908a3871474eeda10a0becffb8f1cb0ae6cff8f0a0ce867a5b697"
     },
     {
       "bytes": 81,
@@ -402,9 +407,9 @@
       "sha256": "c8876ed2cc73e2c7f88f233555758302a9c3d75abb04c69e090fc2e73a51f02c"
     },
     {
-      "bytes": 27238,
+      "bytes": 27245,
       "path": "scripts/validate_package.py",
-      "sha256": "462a4e900e3eb25d45739a36e2a9eb938fb5116a9dcfaa7985ee0bd7e35f5504"
+      "sha256": "b0d534e5886006b4bdb4faff0d39261c9a076b3fbff15acb155e8ad96e30e6d8"
     },
     {
       "bytes": 28194,
@@ -577,9 +582,9 @@
       "sha256": "b0ee40d3285013d47b00b8a87d28d62e7a2080e78dfc40bd8f7a53744b5b1063"
     }
   ],
-  "generated_at": "2026-08-13T01:10:31+00:00",
+  "generated_at": "2026-08-14T17:01:04+00:00",
   "package_dir": "<package-root>",
-  "package_fingerprint": "aec49806f037bd42b93691dd138a473ddb59b3cc9760cc56dd9640746c554d67",
+  "package_fingerprint": "a40329cc965d6624071e5886f4a962bca3ebc1fc5d046f83ca0250cbaa408737",
   "package_name": "focalswap_reviewer_code",
   "schema": "focalswap.reviewer_artifact.v1",
   "source": "<source-project>"

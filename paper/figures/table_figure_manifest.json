@@ -1,15 +1,15 @@
 [
   {
-    "artifact": "figures/fig1_focalswap_architecture_drawio.pdf",
+    "artifact": "figures/fig1_focalswap_problem_led_image2.png",
     "audit_status": "visual_qa_pass",
-    "caption_claim": "FocalSwap separates ranking gain, opportunity, dependence, focal specificity, and downstream recovery.",
-    "claim_id": "protocol_architecture",
-    "core_conclusion": "FocalSwap converts behavior-level regimes into a search-centered row, five controlled views, three attribution gates, and a separate downstream recovery probe.",
+    "caption_claim": "FocalSwap turns attribution ambiguity into a fixed-row intervention test whose conclusion names the intervention, control, and evidence layer.",
+    "claim_id": "attribution_problem_and_control_sensitivity",
+    "core_conclusion": "The same ranking gain admits different source explanations; fixed-row interventions separate positive calibration, unestablished latest-slot dependence, and control-sensitive all-source dependence.",
     "id": "fig1",
-    "script": "figures/source/fig1_focalswap_architecture_drawio.drawio",
+    "script": "",
     "source_data": "figures/source_data/fig1_architecture_brief.txt",
     "statistics": "none",
-    "visual_grammar": "left-to-right architecture diagram"
+    "visual_grammar": "attribution ambiguity to fixed-row intervention to connected evidence map"
   },
   {
     "artifact": "figures/fig2_main_evidence.pdf",
@@ -57,19 +57,19 @@
     "script": "sections/table_protocol_requirements.tex",
     "source_data": "sections/table_protocol_requirements.tex",
     "statistics": "none",
-    "visual_grammar": "definition matrix"
+    "visual_grammar": "two-column stage-purpose lookup"
   },
   {
-    "artifact": "sections/table_data_regimes.tex",
+    "artifact": "sections/table_audit_surface_scale.tex",
     "audit_status": "visual_qa_pass",
-    "caption_claim": "The two regimes occupy different attribution and recovery layers under one audit.",
-    "claim_id": "cross_regime_evidence_map",
-    "core_conclusion": "KuaiSAR and Qilin occupy different evidence layers: broad proxy and lexical readouts do not establish a stable wide-coverage focal-transfer signal.",
+    "caption_claim": "The table reports users, valid post-search recommendation episodes, and analyzed episodes for both datasets.",
+    "claim_id": "audit_surface_scale",
+    "core_conclusion": "KuaiSAR provides the larger behavior surface, while Qilin provides a smaller real-query lexical surface; the paper-facing readout size is explicit for both.",
     "id": "table2",
-    "script": "sections/table_data_regimes.tex",
-    "source_data": "figures/source_data/table2_cross_regime_gate_readout.csv",
-    "statistics": "reported confidence intervals for G3 plus calibrated G2 and recovery deltas",
-    "visual_grammar": "compact gate evidence map"
+    "script": "sections/table_audit_surface_scale.tex",
+    "source_data": "figures/source_data/table2_audit_surface_scale.csv",
+    "statistics": "none",
+    "visual_grammar": "compact audit-surface scale table"
   },
   {
     "artifact": "sections/table_gate_ledger.tex",

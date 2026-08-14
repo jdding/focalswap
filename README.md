@@ -65,9 +65,9 @@ The exact checks are listed in
    [`r242_control_contract.json`](paper/figures/source_data/r242_control_contract.json)
    for the canonical latest-slot versus all-source intervention scopes and the
    C0--C3 controls.
-3. Inspect the two compact surface-level tables
-   [`table2_cross_regime_gate_readout.csv`](paper/figures/source_data/table2_cross_regime_gate_readout.csv)
-   and
+3. Inspect the audit-surface scale table
+   [`table2_audit_surface_scale.csv`](paper/figures/source_data/table2_audit_surface_scale.csv)
+   and the matched-swap result table
    [`table3_matched_swap_readout.csv`](paper/figures/source_data/table3_matched_swap_readout.csv).
 4. Inspect the checkpoint summary
    [`table4_checkpoint_anchor_readouts.csv`](paper/figures/source_data/table4_checkpoint_anchor_readouts.csv)
@@ -81,7 +81,7 @@ The exact checks are listed in
 | Paper-facing question | Primary evidence | Main implementation |
 | --- | --- | --- |
 | How are fixed rows and controlled views constructed? | `paper/figures/source_data/kuaisar_g1_contract.json`, `paper/figures/source_data/r242_control_contract.json` | `tools/controlled_view_ranking.py`, `tools/focal_source_views.py` |
-| What do the behavior and lexical surfaces show? | `paper/figures/source_data/table2_cross_regime_gate_readout.csv`, `paper/figures/source_data/table3_matched_swap_readout.csv`, `evidence/kuaisar_*`, `evidence/qilin_*` | `tools/calibration_audit.py`, `tools/swap_ladder_category_broken.py`, `tools/row_level_power_bootstrap.py` |
+| What do the behavior and lexical surfaces show? | `paper/figures/source_data/table2_audit_surface_scale.csv`, `paper/figures/source_data/table2_cross_regime_gate_readout.csv`, `paper/figures/source_data/table3_matched_swap_readout.csv`, `evidence/kuaisar_*`, `evidence/qilin_*` | `tools/calibration_audit.py`, `tools/swap_ladder_category_broken.py`, `tools/row_level_power_bootstrap.py` |
 | What do released recommendation checkpoints show under a latest-slot intervention? | `paper/figures/source_data/table4_checkpoint_anchor_readouts.csv`, `evidence/sesrec_corrected_bootstrap.json`, `evidence/unisar_corrected_multiseed_summary.csv` | `tools/sesrec_five_view_readout.py`, `tools/unisar_five_view_readout.py`, `tools/unisar_source_scope_localization.py` |
 | Why does dependence change with the control? | `paper/figures/source_data/fig4_control_sensitivity.csv`, `evidence/unisar_r242_control_ladder_summary.csv`, `evidence/unisar_r242_control_reversal_contrasts.csv`, `evidence/r250_*`, `evidence/r259_c2_slot_stratified_control.*`, `evidence/r261_rank_change_*` | `tools/control_ladder_analysis.py`, `tools/control_reversal_analysis.py`, `tools/source_scope_analysis.py`, `tools/rank_change_diagnostics.py` |
 | Can the protocol return a positive focal readout? | `evidence/r243_full_chain_planted_control.json`, `paper/figures/source_data/r243_full_chain_planted_control.csv` | `tools/full_chain_planted_control.py`, `tools/summarize_planted_control.py` |

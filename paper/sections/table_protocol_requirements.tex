@@ -1,24 +1,19 @@
-\begin{table*}[t]
+\begin{table}[t]
 \centering
-\setlength{\tabcolsep}{4.2pt}
-\renewcommand{\arraystretch}{1.12}
-\caption{Attribution standard and downstream recovery probe. G1--G3 license
-focal attribution; G4 tests operational recovery after attribution.}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{\tool{} stages and their roles.}
 \label{tab:protocol-requirements}
-\begin{tabular}{@{}L{0.14\textwidth}L{0.34\textwidth}L{0.25\textwidth}L{0.19\textwidth}@{}}
+\begin{tabular}{@{}L{0.27\columnwidth}L{0.67\columnwidth}@{}}
 \toprule
-Layer & Required evidence & Established readout & Otherwise \\
+Stage & Purpose \\
 \midrule
-G1 observability & search-centered row plus leakage checks & auditable
-S\(\to\)R episode & coverage only \\
-G2 opportunity & row-oracle gain above the shuffled-search null & calibrated
-opportunity & raw headroom \\
-G3 specificity & positive dependence under a named control, then true focal
-search above matched/placebo swaps & focal-source identity & control-specific
-response \\
-\midrule
-G4 recovery probe & learned gate above fixed History-only & operationally
-recoverable signal & not established, or stress-only without G2 \\
+G1 Availability & Confirm that a valid search-centered recommendation row exists. \\
+G2 Opportunity & Test whether search offers headroom beyond a shuffled-search null. \\
+G3 Attribution & Test whether the scorer responds to a named search intervention
+and prefers the true latest episode to matched replacements. \\
+G4 Recovery & Test whether pre-outcome features can route an identified signal;
+this probe is separate from attribution. \\
 \bottomrule
 \end{tabular}
-\end{table*}
+\end{table}

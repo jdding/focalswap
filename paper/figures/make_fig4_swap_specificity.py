@@ -14,6 +14,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.ticker import FuncFormatter
 
+from focalswap_figure_style import FONT, TITLE_COLOR, apply_figure_style
+
 
 FIG_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = FIG_DIR.parents[1]
@@ -71,22 +73,7 @@ def fmt3_signed(x: float) -> str:
 
 
 def setup_style() -> None:
-    mpl.rcParams.update(
-        {
-            "font.family": "DejaVu Sans",
-            "font.size": 8.9,
-            "axes.labelsize": 9.0,
-            "xtick.labelsize": 8.2,
-            "ytick.labelsize": 8.3,
-            "legend.fontsize": 7.4,
-            "axes.spines.top": False,
-            "axes.spines.right": False,
-            "axes.linewidth": 0.8,
-            "pdf.fonttype": 42,
-            "ps.fonttype": 42,
-            "svg.fonttype": "none",
-        }
-    )
+    apply_figure_style(COLORS["grid"])
 
 
 def to_float(row: dict[str, str], key: str) -> float:
@@ -170,9 +157,9 @@ def panel_label(ax, label: str, title: str) -> None:
         transform=ax.transAxes,
         ha="left",
         va="bottom",
-        fontsize=9.2,
+        fontsize=FONT["panel"],
         fontweight="bold",
-        color=COLORS["ink"],
+        color=TITLE_COLOR,
     )
 
 
@@ -188,7 +175,7 @@ def point_label(ax, x: float, y: float, text: str, color: str, alpha: float) -> 
             textcoords="offset points",
             ha="right",
             va="bottom",
-            fontsize=7.2,
+            fontsize=FONT["annotation"],
             color=color,
             alpha=alpha,
             clip_on=False,
@@ -201,7 +188,7 @@ def point_label(ax, x: float, y: float, text: str, color: str, alpha: float) -> 
             textcoords="offset points",
             ha="right",
             va="bottom",
-            fontsize=7.2,
+            fontsize=FONT["annotation"],
             color=color,
             alpha=alpha,
             clip_on=True,
@@ -214,7 +201,7 @@ def point_label(ax, x: float, y: float, text: str, color: str, alpha: float) -> 
             textcoords="offset points",
             ha="left",
             va="bottom",
-            fontsize=7.2,
+            fontsize=FONT["annotation"],
             color=color,
             alpha=alpha,
             clip_on=True,

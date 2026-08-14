@@ -567,7 +567,7 @@ def main() -> None:
             raise AssertionError("invalid artifact hash")
 
     for path in [
-        "paper/sections/table_data_regimes.tex",
+        "paper/sections/table_audit_surface_scale.tex",
         "paper/sections/table_gate_ledger.tex",
         "paper/sections/figure_control_sensitivity.tex",
         "tools/unisar_five_view_readout.py",

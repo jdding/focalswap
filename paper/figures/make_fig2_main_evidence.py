@@ -14,6 +14,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.ticker import FuncFormatter
 
+from focalswap_figure_style import FONT, TITLE_COLOR, apply_figure_style
+
 
 FIG_DIR = Path(__file__).resolve().parent
 DATA_DIR = FIG_DIR / "source_data"
@@ -56,24 +58,7 @@ def fmt3_signed(x: float) -> str:
 
 
 def setup_style() -> None:
-    mpl.rcParams.update(
-        {
-            "font.family": "DejaVu Sans",
-            "font.size": 7.8,
-            "axes.labelsize": 8.0,
-            "xtick.labelsize": 7.2,
-            "ytick.labelsize": 7.3,
-            "legend.fontsize": 7.0,
-            "axes.spines.top": False,
-            "axes.spines.right": False,
-            "axes.linewidth": 0.8,
-            "grid.color": COLORS["grid"],
-            "grid.linewidth": 0.8,
-            "pdf.fonttype": 42,
-            "ps.fonttype": 42,
-            "svg.fonttype": "none",
-        }
-    )
+    apply_figure_style(COLORS["grid"])
 
 
 def panel_label(ax, label: str, title: str) -> None:
@@ -84,9 +69,9 @@ def panel_label(ax, label: str, title: str) -> None:
         transform=ax.transAxes,
         ha="left",
         va="bottom",
-        fontsize=9.0,
+        fontsize=FONT["panel"],
         fontweight="bold",
-        color=COLORS["ink"],
+        color=TITLE_COLOR,
     )
 
 
@@ -102,7 +87,7 @@ def draw_panel_a(ax, rows: list[dict[str, str]]) -> None:
         assert margin is not None
         if row["regime"] == "KuaiSAR":
             ax.scatter([margin], [yi], s=54, color=color, zorder=3, edgecolor="white", linewidth=0.7)
-            ax.text(margin + 0.002, yi + 0.10, fmt3_signed(margin), ha="left", va="center", fontsize=7.0, color=color, fontweight="bold")
+            ax.text(margin + 0.002, yi + 0.10, fmt3_signed(margin), ha="left", va="center", fontsize=FONT["annotation"], color=color, fontweight="bold")
         else:
             ax.scatter([margin], [yi], s=58, facecolor="white", edgecolor=color, linewidth=1.4, zorder=3)
             ax.text(
@@ -111,7 +96,7 @@ def draw_panel_a(ax, rows: list[dict[str, str]]) -> None:
                 f"p95 {fmt3_signed(margin)}",
                 ha="right",
                 va="center",
-                fontsize=6.8,
+                fontsize=FONT["annotation"],
                 color=color,
                 fontweight="bold",
             )
@@ -134,7 +119,7 @@ def draw_panel_a(ax, rows: list[dict[str, str]]) -> None:
                 f"p99 {fmt3_signed(p99_margin)}",
                 ha="right",
                 va="center",
-                fontsize=6.5,
+                fontsize=FONT["note"],
                 color=color,
             )
 
@@ -185,7 +170,7 @@ def draw_panel_b(ax, rows: list[dict[str, str]]) -> None:
             fmt3_signed(margin),
             ha="left",
             va="center",
-            fontsize=6.8,
+            fontsize=FONT["annotation"],
             color=color,
         )
 
@@ -215,7 +200,7 @@ def draw_panel_c(ax, rows: list[dict[str, str]]) -> None:
     for yi, label, score, kind in zip(y, labels, scores, kinds):
         color = color_map[kind]
         ax.scatter([score], [yi], s=44, color=color, edgecolor="white", linewidth=0.7, zorder=3)
-        ax.text(score + 0.006, yi, f"{score:.3f}", ha="left", va="center", fontsize=6.8, color=color)
+        ax.text(score + 0.006, yi, f"{score:.3f}", ha="left", va="center", fontsize=FONT["annotation"], color=color)
 
     ax.set_yticks(y, labels)
     ax.set_xlabel("RR on stress surface")
