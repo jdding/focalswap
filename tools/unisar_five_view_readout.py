@@ -506,7 +506,7 @@ def main() -> None:
     work_dir = (
         Path(args.work_dir)
         if str(args.work_dir).strip()
-        else Path(f"/private/tmp/focalswap_r208_unisar_official_processed_{os.getpid()}")
+        else ROOT / ".work" / f"unisar_official_processed_{os.getpid()}"
     )
     work_dir.mkdir(parents=True, exist_ok=True)
     prep = prepare_work_data(processed_root, work_dir)

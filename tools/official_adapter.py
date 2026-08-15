@@ -42,10 +42,10 @@ except ImportError:  # pragma: no cover - checked in runtime reports
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS = ROOT / "reports"
 EXAMPLES = ROOT / "data/processed/backbone_audit/examples.jsonl"
-DEFAULT_OFFICIAL = Path("/private/tmp/sarcheck_r127_official_repos_20260611")
-DEFAULT_WORK = Path("/private/tmp/sarcheck_r128_unisar_official_smoke")
-DEFAULT_UNIFIEDSSR_WORK = Path("/private/tmp/sarcheck_r129_unifiedssr_official_smoke")
-DEFAULT_SESREC_WORK = Path("/private/tmp/sarcheck_r130_sesrec_official_smoke")
+DEFAULT_OFFICIAL = ROOT / "external" / "official_repos"
+DEFAULT_WORK = ROOT / ".work" / "unisar_official_smoke"
+DEFAULT_UNIFIEDSSR_WORK = ROOT / ".work" / "unifiedssr_official_smoke"
+DEFAULT_SESREC_WORK = ROOT / ".work" / "sesrec_official_smoke"
 
 
 def read_jsonl(path: Path, limit: int | None = None) -> list[dict[str, Any]]:

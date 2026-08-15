@@ -36,9 +36,8 @@ REFINE = ROOT / "refine-logs"
 EXAMPLES = ROOT / "data/processed/backbone_audit/examples.jsonl"
 ITEM_METADATA = ROOT / "data/processed/item_metadata.parquet"
 DEFAULT_OFFICIAL_CANDIDATES = [
-    Path("/private/tmp/focalswap_r225_official_20260710"),
-    Path("/private/tmp/focalswap_r172_official_repos_20260618"),
-    Path("/private/tmp/sarcheck_r127_official_repos_20260611"),
+    ROOT / "external" / "focalswap_official",
+    ROOT / "external" / "official_repos",
 ]
 EXPECTED_SWAP_LEVELS = [
     "l1_nuisance",
@@ -880,7 +879,7 @@ def main() -> None:
     work_dir = (
         Path(args.work_dir)
         if str(args.work_dir).strip()
-        else Path(f"/private/tmp/focalswap_unisar_preflight_{prefix}_{os.getpid()}")
+        else ROOT / ".work" / f"unisar_local_preflight_{prefix}_{os.getpid()}"
     )
     args.work_dir = str(work_dir)
     paths = {

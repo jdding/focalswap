@@ -31,8 +31,8 @@ from unisar_preflight import ladder_aware_sample  # noqa: E402
 from common_candidate_contract import file_sha256, load_candidate_ledger  # noqa: E402
 
 
-DEFAULT_OFFICIAL = Path("/private/tmp/focalswap_r225_official_20260710")
-DEFAULT_WORK = Path("/private/tmp/focalswap_r225_preflight_20260710")
+DEFAULT_OFFICIAL = ROOT / "external" / "focalswap_official"
+DEFAULT_WORK = ROOT / ".work" / "common_surface_preflight"
 
 
 def parse_args() -> argparse.Namespace:

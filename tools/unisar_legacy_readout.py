@@ -31,8 +31,8 @@ ROOT = Path(__file__).resolve().parents[1]
 TOOLS = ROOT / "tools"
 REPORTS = ROOT / "reports"
 EXAMPLES = ROOT / "data/processed/backbone_audit/examples.jsonl"
-DEFAULT_OFFICIAL = Path("/private/tmp/sarcheck_r127_official_repos_20260611")
-DEFAULT_WORK = Path("/private/tmp/sarcheck_r136_unisar_five_view")
+DEFAULT_OFFICIAL = ROOT / "external" / "official_repos"
+DEFAULT_WORK = ROOT / ".work" / "unisar_five_view"
 
 if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))

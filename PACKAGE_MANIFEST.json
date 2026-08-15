@@ -34,7 +34,7 @@
     {
       "bytes": 362,
       "path": "REPRO_CHECK.json",
-      "sha256": "5bd369caf2a17221bff8868b88374aa64bbde3e9623f5903725a8c05f323d6df"
+      "sha256": "fea53b35c594785c6aad0c9f22477f6aab7dd161a4018e0cdaba2e3201961c90"
     },
     {
       "bytes": 5301,
@@ -432,9 +432,9 @@
       "sha256": "6076cdf87e5aa58727cda2cc597d91d1dfaca760ffe3faf42feeffa500547d10"
     },
     {
-      "bytes": 10670,
+      "bytes": 10646,
       "path": "tools/common_surface_preflight.py",
-      "sha256": "c1cd7650a24c09b82682b651e6a8abe3c9416ae26c3b32c6786e2941b65ef448"
+      "sha256": "3074e1897c4e68dc486705998d56c7425f72b30267b1a7c6f7312b1c26507491"
     },
     {
       "bytes": 13415,
@@ -487,9 +487,9 @@
       "sha256": "5ca13532243f0fc50d2429fac157d822da287f1205651d7c9d819a9949f9ba38"
     },
     {
-      "bytes": 64021,
+      "bytes": 63951,
       "path": "tools/official_adapter.py",
-      "sha256": "9c8d242f37a5a03f0a0637483bb84c6154e71e0c8f6fc5b9525425e9488d883c"
+      "sha256": "7ff9d6fb9245de00cc31526ac2b9943dd29b3c4e826fd07c59672e0c46113f79"
     },
     {
       "bytes": 21834,
@@ -552,19 +552,19 @@
       "sha256": "a2e5828a10e38be2a8dc6c985aa7659bb2b7be5177c26dd0846466cf3d3ae611"
     },
     {
-      "bytes": 45919,
+      "bytes": 45902,
       "path": "tools/unisar_five_view_readout.py",
-      "sha256": "a201618c87b9785ed99aeb6be685d9de62d47ee3b60f09d6cc105c8827f3b222"
+      "sha256": "c8f0e3efefa2d43bceb2cca0133ef3fa5c31c171fc30fc1542b1943c3b07b105"
     },
     {
-      "bytes": 15376,
+      "bytes": 15338,
       "path": "tools/unisar_legacy_readout.py",
-      "sha256": "04d599285b9fbb06e5218e3ce7f63ad6e55a9a990c40b1844cff13824147ac7d"
+      "sha256": "3b545cbbd59dfbf878f1d2ffb1fb2863e797ff704a10154922645ab211ea9daa"
     },
     {
-      "bytes": 43577,
+      "bytes": 43471,
       "path": "tools/unisar_preflight.py",
-      "sha256": "927266f114ed73e01e1f5eaa7d7b97704b043fcdd46eb4cfbd269fde3efcc642"
+      "sha256": "6db0410fc7a8839aa18aa94934e0dd47a3a225a7477948b69f4f65922caceb0c"
     },
     {
       "bytes": 25869,
@@ -577,9 +577,9 @@
       "sha256": "b0ee40d3285013d47b00b8a87d28d62e7a2080e78dfc40bd8f7a53744b5b1063"
     }
   ],
-  "generated_at": "2026-08-15T07:13:49+00:00",
+  "generated_at": "2026-08-15T09:10:01+00:00",
   "package_dir": "<package-root>",
-  "package_fingerprint": "9cf31f1de3a75b0c2307c104f50257362e1505cb9650f3f684b76d7c177212ad",
+  "package_fingerprint": "3ec7cc9f9b326cd7c5450e456bd130af511f76111a25b4429ff77282e3689da3",
   "package_name": "focalswap_reviewer_code",
   "schema": "focalswap.reviewer_artifact.v1",
   "source": "<source-project>"
