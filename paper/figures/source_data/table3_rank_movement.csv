@@ -1,0 +1,4 @@
+diagnostic_quantity,neutral_masking_c0,matched_donor_c2,source
+Rows with changed target rank,59.7-61.7%,44.1-44.8%,R261 rank-change diagnostics over three UniSAR checkpoints on 66139 C2-eligible rows
+Changed rows where target rank worsens,53.3-55.3%,47.7-49.1%,R261 rank-change diagnostics over changed target-rank rows
+Median absolute target-rank shift,2,1,R261 rank-change diagnostics over changed target-rank rows

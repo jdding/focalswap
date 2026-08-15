@@ -72,15 +72,15 @@
     "visual_grammar": "compact audit-surface scale table"
   },
   {
-    "artifact": "sections/table_gate_ledger.tex",
+    "artifact": "sections/table_rank_movement.tex",
     "audit_status": "visual_qa_pass",
-    "caption_claim": "Only a low-coverage Qilin taxonomy bucket separates from its same-subset random reference after Holm correction.",
-    "claim_id": "matched_swap_bucket_ledger",
-    "core_conclusion": "Broad matched-swap estimates remain close to their references; only the low-coverage Qilin tax>=4 pocket survives Holm correction.",
+    "caption_claim": "Rank movement under all-source controls across three UniSAR checkpoints.",
+    "claim_id": "rank_movement_control_sensitivity",
+    "core_conclusion": "The small RR contrasts in Figure 4 aggregate many discrete target-rank movements; C0 perturbs more rows and more often worsens rank, while C2 is smaller and nearly balanced.",
     "id": "table3",
-    "script": "sections/table_gate_ledger.tex",
-    "source_data": "figures/source_data/table3_matched_swap_readout.csv",
-    "statistics": "95% confidence intervals and Holm-adjusted p-values for the Qilin bucket family",
-    "visual_grammar": "bucket-level statistical ledger"
+    "script": "sections/table_rank_movement.tex",
+    "source_data": "figures/source_data/table3_rank_movement.csv",
+    "statistics": "ranges over three UniSAR checkpoints on 66,139 C2-eligible rows",
+    "visual_grammar": "control-by-diagnostic rank-movement summary"
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "file_count": 116,
+  "file_count": 115,
   "files": [
     {
       "bytes": 101,
@@ -12,9 +12,9 @@
       "sha256": "7b20e988cb7db37c73be2f0dbf4d90eafe37ef676c6e310485241082d758f202"
     },
     {
-      "bytes": 1062,
+      "bytes": 1130,
       "path": "ARTIFACT_QUICKSTART.md",
-      "sha256": "1265425308edbcd06e0bdc1ea99ce9f35f2da2bbe6b7da9dfca2e3b26a33e9fa"
+      "sha256": "3de24b57c9aad0f40ac142d1325d487784621fc1b391fd34ced0cb3b833a5143"
     },
     {
       "bytes": 1074,
@@ -22,9 +22,9 @@
       "sha256": "1d0dde41ece0f9620937f1a81a67e295ace0eae180c009d862006e8f3b288458"
     },
     {
-      "bytes": 9514,
+      "bytes": 9617,
       "path": "README.md",
-      "sha256": "fc636b756efe6e6fecd43594c81578c9d4fd547ebb1927902fec7bcd2b06913d"
+      "sha256": "56021476756010cb22bef71e399b5d624fc6eedcabaa1e133a6bd24e055c6c84"
     },
     {
       "bytes": 252,
@@ -34,7 +34,7 @@
     {
       "bytes": 362,
       "path": "REPRO_CHECK.json",
-      "sha256": "66f46f222db5d4183f1612b6f0c359ff3d63016a4c00f99493c7cb64ae95f5d4"
+      "sha256": "5bd369caf2a17221bff8868b88374aa64bbde3e9623f5903725a8c05f323d6df"
     },
     {
       "bytes": 5301,
@@ -237,11 +237,6 @@
       "sha256": "3260b27aaab97543076ac7ecbfbf98e843710a8c9479e1d56b54c9c595554068"
     },
     {
-      "bytes": 17968,
-      "path": "paper/figures/source/fig1_focalswap_architecture_drawio.drawio",
-      "sha256": "79bce17548de65e3bc9f5f7fb6a7035358c5dae1f6d91c9cff65c309bc6323cb"
-    },
-    {
       "bytes": 10310,
       "path": "paper/figures/source/make_fig1_drawio_prototype.py",
       "sha256": "e47cfd97643f3646cf88b5909cccf72edbdcaf412f7a9872a0576aa7869f4419"
@@ -337,9 +332,9 @@
       "sha256": "b2fb7f239a5f9f7e0717f19c7fc29165428362faf6540d0e786e00da3f60b212"
     },
     {
-      "bytes": 1151,
-      "path": "paper/figures/source_data/table3_matched_swap_readout.csv",
-      "sha256": "52ce75ccab5e90438ed76d715aac7d507124e50ac7fd0c8fda565d0aa665c020"
+      "bytes": 417,
+      "path": "paper/figures/source_data/table3_rank_movement.csv",
+      "sha256": "d0707ec94ffc45713890f83da2e670ccda020b746c662a0f83317d7fec0d5cea"
     },
     {
       "bytes": 2395,
@@ -367,9 +362,9 @@
       "sha256": "e446940cc8381201232c172453bd7cfb684cb28937ecc0a4583d5363387984be"
     },
     {
-      "bytes": 5385,
+      "bytes": 5388,
       "path": "paper/figures/table_figure_manifest.json",
-      "sha256": "8454f43dc819a4cf4bce41e0cce586b65f363fd8fc5415fab3a1117aae98551d"
+      "sha256": "15768d922a37ef3b1c1d9b39d9295775235ee91f83c069285f8641f154a6a005"
     },
     {
       "bytes": 1070,
@@ -382,14 +377,14 @@
       "sha256": "e3980f9d3077b98bbd7d5c8ca6258c602064d88bdd3d2d09662a0cff552e063f"
     },
     {
-      "bytes": 1299,
-      "path": "paper/sections/table_gate_ledger.tex",
-      "sha256": "7de309863954291df465adb239eaf8c4bf9485e002b19bf5558bbcc3e148f596"
-    },
-    {
       "bytes": 745,
       "path": "paper/sections/table_protocol_requirements.tex",
       "sha256": "90400546809908a3871474eeda10a0becffb8f1cb0ae6cff8f0a0ce867a5b697"
+    },
+    {
+      "bytes": 683,
+      "path": "paper/sections/table_rank_movement.tex",
+      "sha256": "e1ffe79b93f3856b80cbd7ed71b548c780266ef88be44e059cb4bfa3a7610871"
     },
     {
       "bytes": 81,
@@ -407,9 +402,9 @@
       "sha256": "c8876ed2cc73e2c7f88f233555758302a9c3d75abb04c69e090fc2e73a51f02c"
     },
     {
-      "bytes": 27245,
+      "bytes": 27247,
       "path": "scripts/validate_package.py",
-      "sha256": "b0d534e5886006b4bdb4faff0d39261c9a076b3fbff15acb155e8ad96e30e6d8"
+      "sha256": "ccb246c8ee281633f61c80b40f6976ce766ba48d4f0fe9b48e22f8cbb6869d45"
     },
     {
       "bytes": 28194,
@@ -582,9 +577,9 @@
       "sha256": "b0ee40d3285013d47b00b8a87d28d62e7a2080e78dfc40bd8f7a53744b5b1063"
     }
   ],
-  "generated_at": "2026-08-14T17:01:04+00:00",
+  "generated_at": "2026-08-15T07:13:49+00:00",
   "package_dir": "<package-root>",
-  "package_fingerprint": "a40329cc965d6624071e5886f4a962bca3ebc1fc5d046f83ca0250cbaa408737",
+  "package_fingerprint": "9cf31f1de3a75b0c2307c104f50257362e1505cb9650f3f684b76d7c177212ad",
   "package_name": "focalswap_reviewer_code",
   "schema": "focalswap.reviewer_artifact.v1",
   "source": "<source-project>"

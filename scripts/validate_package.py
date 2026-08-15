@@ -568,7 +568,7 @@ def main() -> None:
 
     for path in [
         "paper/sections/table_audit_surface_scale.tex",
-        "paper/sections/table_gate_ledger.tex",
+        "paper/sections/table_rank_movement.tex",
         "paper/sections/figure_control_sensitivity.tex",
         "tools/unisar_five_view_readout.py",
         "tools/sesrec_five_view_readout.py",
