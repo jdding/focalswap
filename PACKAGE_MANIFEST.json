@@ -34,7 +34,7 @@
     {
       "bytes": 362,
       "path": "REPRO_CHECK.json",
-      "sha256": "92e5a2e3ec940f9989d086c5afec435eb8379569daa0154e77267da7a9e22478"
+      "sha256": "3767ac3bcc07a3a79e13b843b058fb92c9ff5f762db0bf2fed194a54439aec57"
     },
     {
       "bytes": 5791,
@@ -252,9 +252,9 @@
       "sha256": "e47cfd97643f3646cf88b5909cccf72edbdcaf412f7a9872a0576aa7869f4419"
     },
     {
-      "bytes": 955,
+      "bytes": 1049,
       "path": "paper/figures/source_data/fig1_architecture_brief.txt",
-      "sha256": "458f48bd28397fb8d5b6433631cc488e60a86ce85b851fcc4e613dda2439fa88"
+      "sha256": "c248fdfaf8fd31c89bc2defa7894d093c27cf56aaa0303431899341cd779de7b"
     },
     {
       "bytes": 304,
@@ -602,9 +602,9 @@
       "sha256": "b0ee40d3285013d47b00b8a87d28d62e7a2080e78dfc40bd8f7a53744b5b1063"
     }
   ],
-  "generated_at": "2026-09-12T09:45:00+00:00",
+  "generated_at": "2026-09-12T09:50:46+00:00",
   "package_dir": "<package-root>",
-  "package_fingerprint": "4c2e32c74d99d3552b51fff68f96ef26dbd89603982772e08fc3fd15ca93903f",
+  "package_fingerprint": "1702e9564124bf92a7271e4b93fa04dd804250ca9eb94ad7f7543aee91843b75",
   "package_name": "focalswap_reviewer_code",
   "schema": "focalswap.reviewer_artifact.v1",
   "source": "<source-project>"
