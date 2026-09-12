@@ -8,7 +8,7 @@ raw evidence retains its original field keys for hash and replay compatibility;
 those keys are provenance identifiers, not alternative reader-facing terms.
 
 `unisar_corrected_multiseed_summary.csv` reports the corrected latest-slot
-dependence and swap diagnostics for three retained checkpoints on one
+signed-contribution and swap diagnostics for three retained checkpoints on one
 official-processed surface. `unisar_source_scope_summary.csv` and
 `unisar_mechanism_contrasts.csv` retain the R233 C0-versus-C1
 control calibration. `unisar_r242_control_ladder_summary.csv` and
@@ -16,17 +16,17 @@ control calibration. `unisar_r242_control_ladder_summary.csv` and
 control ladder. `unisar_dual_estimand_summary.csv` and its JSON counterpart
 retain the earlier neutral-mask result as numerical provenance.
 `sesrec_corrected_bootstrap.json` reports the
-finite-neutral SESRec latest-slot dependence and matched-swap intervals. The two
+finite-neutral SESRec latest-slot contribution and matched-swap intervals. The two
 `common_surface_*` files report six SESRec/UniSAR rows under identical rows,
 candidates, donors, and metrics.
 
-On the registered checkpoint surfaces, no latest-slot intervention establishes
-positive dependence. For UniSAR, the all-source C0 neutral-mask control produces a positive
-RR reduction on 66,139 C2-eligible rows, but the C2 category/profile-matched
-observed-support donor does not. All three paired C0--C2
-97.5% intervals are positive. The active claim is therefore control
-sensitivity, not accumulated-source use. Matched-swap rows remain diagnostics
-because latest-slot dependence does not clear its gate.
+On the prespecified checkpoint surfaces, no latest-slot intervention establishes
+positive signed contribution. For UniSAR, the all-source C0 neutral-mask
+control produces a positive RR contribution on 66,139 C2-eligible rows, but
+the C2 category/profile-matched observed-support donor does not. All three
+paired C0--C2 97.5% intervals are positive. The active claim is therefore
+control-sensitive contribution. Matched true-over-donor comparisons remain a
+separate focal-specificity readout.
 The package validator enforces these distinctions.
 
 The common-surface experiment is a controlled surface check. It is not an
@@ -54,14 +54,14 @@ evidence.
 
 `r243_full_chain_planted_control.json` reports a three-dose by three-seed
 calibration on fixed Qilin rows. Dose one clears calibrated opportunity,
-dependence, and matched specificity for every seed; the separate downstream
+signed contribution, and matched specificity for every seed; the separate downstream
 recovery probe is not established. It is a protocol calibration, not a
 real-system result.
 
 `r250_c2_eligibility_balance.csv`, `r250_c0_margin_by_eligibility.csv`, and
 `r250_latest_slot_validity.json` test whether the control-reversal support is a
 trivial population artifact and whether the latest-slot intervention actually
-changes one non-padding slot. C0 response remains positive in both eligible and
+changes one non-padding slot. C0 signed contribution remains positive in both eligible and
 non-eligible populations; every latest-slot-eligible row changes exactly one
 slot. Exact C0--C2 reversal remains scoped to common support.
 
@@ -71,7 +71,7 @@ positive across all 12 seed-by-stratum estimates for 4--30 slots, with 11
 97.5% intervals excluding zero; the 1--3-slot strata are unresolved. These
 stratum-level intervals are descriptive and are not multiplicity-adjusted. This
 supports source-history-length heterogeneity, not a slot-count-invariant
-mechanism or focal-dependence claim.
+mechanism or focal-contribution claim.
 
 `r261_rank_change_by_slot_stratum.csv` and its JSON counterpart verify that
 the C0/C2 mean contrasts aggregate discrete half-tie target-rank changes rather

@@ -220,7 +220,7 @@ def main() -> None:
         if float(row["aggregate_ci_low"]) <= 0:
             raise AssertionError("all-source C0 dependence interval does not clear zero")
         if not float(row["focal_ci_low"]) <= 0 <= float(row["focal_ci_high"]):
-            raise AssertionError("latest-slot dependence interval unexpectedly clears zero")
+            raise AssertionError("latest-slot contribution interval unexpectedly clears zero")
         if float(row["gap_ci_low"]) <= 0:
             raise AssertionError("paired aggregate-minus-focal gap does not clear zero")
 

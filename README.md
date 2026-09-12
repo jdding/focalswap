@@ -10,8 +10,8 @@ attributed to the immediately preceding search episode?
 
 FocalSwap audits that question by keeping the target, candidate set, history,
 and scorer fixed while intervening on the focal search input. It reports
-ranking gain, intervention response, matched focal specificity, and downstream
-recovery as separate claims.
+ranking utility, target-rank response, signed contribution, matched focal
+specificity, and downstream routing as separate claims.
 
 ## What Reviewers Can Verify
 
@@ -25,12 +25,12 @@ The package supports three paper-level conclusions:
    verdict.** KuaiSAR and Qilin provide bounded surface-level results, while the
    released recommendation checkpoints test the latest-slot intervention
    directly.
-3. **Search dependence is control-sensitive.** On the same 66,139 UniSAR rows
+3. **Signed search contribution is control-sensitive.** On the same 66,139 UniSAR rows
    and three retained checkpoints, an all-source neutral mask yields positive
-   RR margins, whereas an observed-support donor matched by category and source
-   profile removes them. The neutral masks change 59.7--61.7% of target ranks,
-   showing that the small mean contrast aggregates frequent rank movement.
-   Latest-slot dependence is not established.
+   RR contributions, whereas an observed-support donor matched by category and
+   source profile does not. Neutral masks change 59.7--61.7% of target ranks
+   and matched donors change 44.1--44.8%, with different effect shape and
+   directional balance. Positive latest-slot contribution is not established.
 
 The repository lets reviewers trace these statements to compact source tables,
 inspect the corresponding implementations, and run a data-free consistency

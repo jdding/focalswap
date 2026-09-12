@@ -22,9 +22,9 @@
       "sha256": "1d0dde41ece0f9620937f1a81a67e295ace0eae180c009d862006e8f3b288458"
     },
     {
-      "bytes": 9626,
+      "bytes": 9685,
       "path": "README.md",
-      "sha256": "130ce60243d0bb8bc6056d4706ac7b07ba9a85b294532388bf06d173bc7ed638"
+      "sha256": "0796eafbfcaef1ff2e939216d7b3666d9615d5bbbbff5f935e134b063b1de848"
     },
     {
       "bytes": 252,
@@ -34,12 +34,12 @@
     {
       "bytes": 362,
       "path": "REPRO_CHECK.json",
-      "sha256": "14e29fee398da70599ad024f7a5d57f279267025d20499fe84ceba659c428f83"
+      "sha256": "92e5a2e3ec940f9989d086c5afec435eb8379569daa0154e77267da7a9e22478"
     },
     {
-      "bytes": 5773,
+      "bytes": 5791,
       "path": "evidence/README.md",
-      "sha256": "2cfdb7d65c23d8ac3dc78840c04042340d60224127365e6fc56c4fb29eb8f355"
+      "sha256": "d29eca26ce4ec814d6e63c61186692bba13e5a3dde2a9b79e89bd515deb040b0"
     },
     {
       "bytes": 875,
@@ -377,9 +377,9 @@
       "sha256": "e446940cc8381201232c172453bd7cfb684cb28937ecc0a4583d5363387984be"
     },
     {
-      "bytes": 5571,
+      "bytes": 5680,
       "path": "paper/figures/table_figure_manifest.json",
-      "sha256": "7026ca9269445cdd9a6eb2bbea080f2bfe6d3d2450e9eff0508a6907305bb45b"
+      "sha256": "f1cd1f2eeacfcfe3e21767c8a0bd71da6e6a14c8cf9566ccb1af58ba4688b07d"
     },
     {
       "bytes": 1113,
@@ -422,9 +422,9 @@
       "sha256": "c8876ed2cc73e2c7f88f233555758302a9c3d75abb04c69e090fc2e73a51f02c"
     },
     {
-      "bytes": 28738,
+      "bytes": 28740,
       "path": "scripts/validate_package.py",
-      "sha256": "1425a87ff6e5dd203ebda1a5fc54dd836749ae2fa2363a08fc9dca5d13c469b8"
+      "sha256": "a7dc41ab41cda9e629e3147837ef6cd38654b1a87396b753df2024012fbf2326"
     },
     {
       "bytes": 28194,
@@ -602,9 +602,9 @@
       "sha256": "b0ee40d3285013d47b00b8a87d28d62e7a2080e78dfc40bd8f7a53744b5b1063"
     }
   ],
-  "generated_at": "2026-09-12T09:31:15+00:00",
+  "generated_at": "2026-09-12T09:45:00+00:00",
   "package_dir": "<package-root>",
-  "package_fingerprint": "a085b69087e35e24af815d55181fd7cc84364adeee672e41dbf4bd5724581826",
+  "package_fingerprint": "4c2e32c74d99d3552b51fff68f96ef26dbd89603982772e08fc3fd15ca93903f",
   "package_name": "focalswap_reviewer_code",
   "schema": "focalswap.reviewer_artifact.v1",
   "source": "<source-project>"
