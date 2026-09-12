@@ -429,6 +429,29 @@ def main() -> None:
     if donor["max_donor_reuse"] != 1:
         raise AssertionError("R261 donor reuse contract changed")
 
+    r264 = json.loads(require("evidence/r264_response_effect_shape.json").read_text())
+    if r264["status"] != "COMPLETE":
+        raise AssertionError("R264 response-effect diagnostics are incomplete")
+    if r264["population"]["rows_per_checkpoint"] != 66139:
+        raise AssertionError("R264 common-support row count changed")
+    r264_rows = rows("evidence/r264_response_effect_shape.csv")
+    if len(r264_rows) != 6:
+        raise AssertionError("R264 response-effect table must contain six rows")
+    r264_ranges = r264["ranges_across_checkpoints"]
+    if r264_ranges["C0_neutral_mask"]["p50_absolute_rank_shift_changed"] != [2.0, 2.0]:
+        raise AssertionError("R264 C0 median rank shift changed")
+    if r264_ranges["C2_observed_support"]["p50_absolute_rank_shift_changed"] != [1.0, 1.0]:
+        raise AssertionError("R264 C2 median rank shift changed")
+    if not (0.060 < r264_ranges["C0_neutral_mask"]["top10_hit_flip_fraction"][0] < 0.065):
+        raise AssertionError("R264 C0 Top-10 flip range changed")
+    if not (0.026 < r264_ranges["C2_observed_support"]["top10_hit_flip_fraction"][0] < 0.029):
+        raise AssertionError("R264 C2 Top-10 flip range changed")
+    if max(
+        r264_ranges[control]["max_absolute_leave_one_user_out_change"][1]
+        for control in ("C0_neutral_mask", "C2_observed_support")
+    ) >= 0.000148:
+        raise AssertionError("R264 leave-one-user-out sensitivity changed")
+
     common = rows("evidence/common_surface_summary.csv")
     expected = {(method, str(seed)) for method in ("sesrec", "unisar") for seed in (20230601, 20230602, 20230603)}
     if {(row["method"], row["seed"]) for row in common} != expected:
@@ -568,6 +591,7 @@ def main() -> None:
 
     for path in [
         "paper/sections/table_audit_surface_scale.tex",
+        "paper/sections/table_checkpoint_summary.tex",
         "paper/sections/table_rank_movement.tex",
         "paper/sections/figure_control_sensitivity.tex",
         "tools/unisar_five_view_readout.py",

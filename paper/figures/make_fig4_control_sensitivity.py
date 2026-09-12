@@ -102,7 +102,7 @@ def draw_focal(ax, rows: list[dict[str, str]]) -> None:
     ax.set_xlim(-1.05, 1.05)
     ax.xaxis.set_major_locator(MultipleLocator(0.5))
     ax.text(0.0, 1.23, "(a) Latest-slot intervention", transform=ax.transAxes, ha="left", va="bottom", fontsize=FONT["panel"], fontweight="bold", color=TITLE_COLOR)
-    style_axis(ax, r"Dependence margin $\Delta$RR ($\times 10^{-3}$)")
+    style_axis(ax, r"Signed contribution $\Delta$RR ($\times 10^{-3}$)")
 
 
 def draw_controls(ax, rows: list[dict[str, str]]) -> None:
@@ -168,7 +168,7 @@ def draw_controls(ax, rows: list[dict[str, str]]) -> None:
         handletextpad=0.45,
         borderaxespad=0.0,
     )
-    style_axis(ax, r"Dependence margin $\Delta$RR ($\times 10^{-3}$)")
+    style_axis(ax, r"Signed contribution $\Delta$RR ($\times 10^{-3}$)")
 
 
 def main() -> None:

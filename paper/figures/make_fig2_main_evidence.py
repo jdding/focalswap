@@ -143,9 +143,9 @@ def draw_panel_b(ax, rows: list[dict[str, str]]) -> None:
             .replace("same-category source", "same-category")
         )
         if regime == "KuaiSAR":
-            labels.append(f"{regime}\n{contrast}")
+            labels.append(f"{regime}\n{contrast}\n(vs 0.500)")
         else:
-            labels.append(f"{regime} {contrast}")
+            labels.append(f"{regime} {contrast}\n(vs random)")
     y = np.arange(len(rows))[::-1]
 
     ax.axvline(0, color=COLORS["ink"], lw=0.9)
@@ -175,7 +175,7 @@ def draw_panel_b(ax, rows: list[dict[str, str]]) -> None:
         )
 
     ax.set_yticks(y, labels)
-    ax.set_xlabel("Specificity margin")
+    ax.set_xlabel(r"Reference-adjusted specificity $\Delta$")
     ax.set_xlim(-0.030, 0.146)
     ax.set_ylim(-0.55, len(rows) - 0.38)
     ax.xaxis.set_major_formatter(FuncFormatter(fmt3))

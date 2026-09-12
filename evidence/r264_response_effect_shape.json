@@ -1,0 +1,137 @@
+{
+  "interpretation": "Response rate and effect shape are descriptive diagnostics on the registered common support. They explain the signed RR means but do not add a new promotion endpoint.",
+  "outputs": {
+    "csv": "<source-project>/reports/r264_response_effect_shape_20260912/r264_response_effect_shape.csv"
+  },
+  "population": {
+    "candidate_count": 100,
+    "model_seeds": [
+      20230601,
+      20230602,
+      20230603
+    ],
+    "rows_per_checkpoint": 66139,
+    "support": "C2 all-source common support"
+  },
+  "quantile_method": "higher",
+  "ranges_across_checkpoints": {
+    "C0_neutral_mask": {
+      "changed_at_least_10_positions_fraction": [
+        0.0888973287757944,
+        0.10816123413784523
+      ],
+      "changed_at_least_5_positions_fraction": [
+        0.2597290796303329,
+        0.2856431948245832
+      ],
+      "changed_fraction": [
+        0.5971514537564826,
+        0.6165046341795309
+      ],
+      "max_absolute_leave_one_user_out_change": [
+        7.614272451137577e-05,
+        0.00014713323517734226
+      ],
+      "p50_absolute_rank_shift_changed": [
+        2.0,
+        2.0
+      ],
+      "p90_absolute_rank_shift_changed": [
+        9.0,
+        10.0
+      ],
+      "p95_absolute_rank_shift_changed": [
+        12.0,
+        14.0
+      ],
+      "positive_user_mean_fraction": [
+        0.5133640552995392,
+        0.5470046082949309
+      ],
+      "signed_delta_rr": [
+        0.0020156471377422176,
+        0.005427370416468759
+      ],
+      "top10_hit_flip_fraction": [
+        0.06094739866039704,
+        0.06385037572385431
+      ],
+      "top20_hit_flip_fraction": [
+        0.043363219885392885,
+        0.04738505269205764
+      ],
+      "top5_hit_flip_fraction": [
+        0.06723718229788778,
+        0.07361768396861156
+      ],
+      "worse_given_changed_fraction": [
+        0.5329932819109231,
+        0.5529123237277743
+      ]
+    },
+    "C2_observed_support": {
+      "changed_at_least_10_positions_fraction": [
+        0.01058684255031287,
+        0.011348052660449809
+      ],
+      "changed_at_least_5_positions_fraction": [
+        0.09438425671969282,
+        0.09856248943006934
+      ],
+      "changed_fraction": [
+        0.44101059889021604,
+        0.4475422972829949
+      ],
+      "max_absolute_leave_one_user_out_change": [
+        5.302097383010025e-05,
+        5.907784919172024e-05
+      ],
+      "p50_absolute_rank_shift_changed": [
+        1.0,
+        1.0
+      ],
+      "p90_absolute_rank_shift_changed": [
+        4.0,
+        4.0
+      ],
+      "p95_absolute_rank_shift_changed": [
+        6.0,
+        6.0
+      ],
+      "positive_user_mean_fraction": [
+        0.44377880184331797,
+        0.4488479262672811
+      ],
+      "signed_delta_rr": [
+        -0.0011769018714318732,
+        -0.0003540256243076779
+      ],
+      "top10_hit_flip_fraction": [
+        0.02612679357111538,
+        0.027986513252392688
+      ],
+      "top20_hit_flip_fraction": [
+        0.01797729025234733,
+        0.018476239435129046
+      ],
+      "top5_hit_flip_fraction": [
+        0.03170595261494731,
+        0.03474500672825413
+      ],
+      "worse_given_changed_fraction": [
+        0.47739864864864867,
+        0.4908118486012068
+      ]
+    }
+  },
+  "schema": "focalswap.r264.response_effect_shape.v1",
+  "source_sha256": {
+    "r233_seed_20230601": "f6380a4ae1a0743031b40a190f3e12da580f00bae903082460b6ae5b97bb7003",
+    "r233_seed_20230602": "435f984750d86f1b861d9aec930e0761be6ce8baefaba25d41008a166e1a594f",
+    "r233_seed_20230603": "c5655b6d0e6acdf6e337da805248e0b6310414d6cbfed996c4490d3e379f72cd",
+    "r242_seed_20230601": "296087330378c201179724ac57afc7b77dbe9dd913bc4a5293cc8169c5e1cbcb",
+    "r242_seed_20230602": "4ad4b3613dfcf7f36e147789966373dd47cb9e8b5df4f9fd6d2b7cdea696508d",
+    "r242_seed_20230603": "4d4c249e6d2e836d072e66bd9fc23816411d07555fd4d2dee998eb4f8f91e8fb"
+  },
+  "status": "COMPLETE"
+}

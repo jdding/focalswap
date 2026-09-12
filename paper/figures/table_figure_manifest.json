@@ -48,16 +48,16 @@
     "visual_grammar": "two-panel forest plot with latest-slot estimates and all-source controls grouped by seed"
   },
   {
-    "artifact": "sections/table_protocol_requirements.tex",
+    "artifact": "sections/table_evidence_map.tex",
     "audit_status": "visual_qa_pass",
-    "caption_claim": "G1--G3 license focal attribution; recovery is reported separately.",
-    "claim_id": "gate_claim_standard",
-    "core_conclusion": "Focal attribution requires observability, calibrated opportunity, dependence, and matched specificity; downstream recovery is a separate usefulness probe.",
+    "caption_claim": "The audit's calibration and empirical conclusions are recoverable before the reader reaches the detailed result sections.",
+    "claim_id": "cross_surface_evidence_map",
+    "core_conclusion": "Positive calibrations, bounded behavioral and lexical evidence, unestablished latest-slot dependence, and control-sensitive all-source dependence occupy distinct evidence roles.",
     "id": "table1",
-    "script": "sections/table_protocol_requirements.tex",
-    "source_data": "sections/table_protocol_requirements.tex",
-    "statistics": "none",
-    "visual_grammar": "two-column stage-purpose lookup"
+    "script": "sections/table_evidence_map.tex",
+    "source_data": "sections/table_evidence_map.tex",
+    "statistics": "status summary with explicit support counts where claim-bearing",
+    "visual_grammar": "surface-by-role evidence-status map"
   },
   {
     "artifact": "sections/table_audit_surface_scale.tex",
@@ -72,15 +72,15 @@
     "visual_grammar": "compact audit-surface scale table"
   },
   {
-    "artifact": "sections/table_rank_movement.tex",
+    "artifact": "sections/table_checkpoint_summary.tex",
     "audit_status": "visual_qa_pass",
-    "caption_claim": "Rank movement under all-source controls across three UniSAR checkpoints.",
-    "claim_id": "rank_movement_control_sensitivity",
-    "core_conclusion": "The small RR contrasts in Figure 4 aggregate many discrete target-rank movements; C0 perturbs more rows and more often worsens rank, while C2 is smaller and nearly balanced.",
+    "caption_claim": "Checkpoint intervention estimates on their stated supports and confidence levels, with C0 and C2 defined in the caption.",
+    "claim_id": "checkpoint_intervention_summary",
+    "core_conclusion": "Registered latest-slot readouts do not establish dependence, while all-source conclusions differ between neutral masking and observed-support donors.",
     "id": "table3",
-    "script": "sections/table_rank_movement.tex",
-    "source_data": "figures/source_data/table3_rank_movement.csv",
-    "statistics": "ranges over three UniSAR checkpoints on 66,139 C2-eligible rows",
-    "visual_grammar": "control-by-diagnostic rank-movement summary"
+    "script": "sections/table_checkpoint_summary.tex",
+    "source_data": "figures/source_data/table3_checkpoint_summary.csv",
+    "statistics": "user-cluster bootstrap intervals; 95% for latest-slot and C0, 97.5% for C2 and paired C0-C2",
+    "visual_grammar": "checkpoint-by-intervention estimate grid"
   }
 ]

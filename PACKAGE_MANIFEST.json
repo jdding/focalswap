@@ -1,5 +1,5 @@
 {
-  "file_count": 115,
+  "file_count": 120,
   "files": [
     {
       "bytes": 101,
@@ -22,9 +22,9 @@
       "sha256": "1d0dde41ece0f9620937f1a81a67e295ace0eae180c009d862006e8f3b288458"
     },
     {
-      "bytes": 9617,
+      "bytes": 9626,
       "path": "README.md",
-      "sha256": "56021476756010cb22bef71e399b5d624fc6eedcabaa1e133a6bd24e055c6c84"
+      "sha256": "130ce60243d0bb8bc6056d4706ac7b07ba9a85b294532388bf06d173bc7ed638"
     },
     {
       "bytes": 252,
@@ -34,12 +34,12 @@
     {
       "bytes": 362,
       "path": "REPRO_CHECK.json",
-      "sha256": "fea53b35c594785c6aad0c9f22477f6aab7dd161a4018e0cdaba2e3201961c90"
+      "sha256": "14e29fee398da70599ad024f7a5d57f279267025d20499fe84ceba659c428f83"
     },
     {
-      "bytes": 5301,
+      "bytes": 5773,
       "path": "evidence/README.md",
-      "sha256": "d784cda5751bcc566b29711b588916ddd6a816c6aa4e49ece5509cbeebd21a7d"
+      "sha256": "2cfdb7d65c23d8ac3dc78840c04042340d60224127365e6fc56c4fb29eb8f355"
     },
     {
       "bytes": 875,
@@ -147,6 +147,16 @@
       "sha256": "741d38f2acd368fa8ca61114671cec4b9de2f9bcb1678de0a7cf86e222efd768"
     },
     {
+      "bytes": 2668,
+      "path": "evidence/r264_response_effect_shape.csv",
+      "sha256": "bf7b971a5fe9124dff538d2057dbfffeccd2532efd3cd8eee94015d6411d81a4"
+    },
+    {
+      "bytes": 3895,
+      "path": "evidence/r264_response_effect_shape.json",
+      "sha256": "7ef9a749e3ec05ba958dd74e5cca7016cf76ed1db5a08800ddcc96d5ef87e7c2"
+    },
+    {
       "bytes": 828,
       "path": "evidence/runtime_boundary_dependence_bootstrap.csv",
       "sha256": "7713a000f3e1b2c483de1c866c36b86454cb568414410cba8e15159a160545c4"
@@ -222,14 +232,14 @@
       "sha256": "8f9ab9b15a55419ef3b171656d0fe0d50ab78ac63531a5a33216ad92061e217a"
     },
     {
-      "bytes": 7598,
+      "bytes": 7645,
       "path": "paper/figures/make_fig2_main_evidence.py",
-      "sha256": "0da3d613970168a58c3bacbb3ca8fc9767bb9147028f17179a371d9dd6a01ad5"
+      "sha256": "3e7ffea65b3de296f905d7b943f9ad877f6493be5af7a17025145652a98640c4"
     },
     {
-      "bytes": 6096,
+      "bytes": 6100,
       "path": "paper/figures/make_fig4_control_sensitivity.py",
-      "sha256": "a2ea689406d6b150324bfd38f9e52cf2d664ba76c0ae96dfd9d18b617d9f3007"
+      "sha256": "bea63af20c1703205a47314414ba79b97e5d9f6b65b3996dee4133047a91296c"
     },
     {
       "bytes": 9191,
@@ -282,9 +292,9 @@
       "sha256": "046f23eae7fd6e6676ad9ed331fd8a7319294481a3173d677e25d2b741f31813"
     },
     {
-      "bytes": 25372,
+      "bytes": 28172,
       "path": "paper/figures/source_data/paper_numeric_claim_support.csv",
-      "sha256": "74ab76f50122ee2dc1055342d0cee4fbd150447cfbaaa301bca2a39b0c0cdfe1"
+      "sha256": "ae1e5d4db7a565c6e50f79219d187e0782a4b31f65c2f91eb240f37f6862a275"
     },
     {
       "bytes": 1722,
@@ -332,6 +342,11 @@
       "sha256": "b2fb7f239a5f9f7e0717f19c7fc29165428362faf6540d0e786e00da3f60b212"
     },
     {
+      "bytes": 1005,
+      "path": "paper/figures/source_data/table3_checkpoint_summary.csv",
+      "sha256": "88b15a087d376f1b80ee32f007a644aa7dcb6f688af356a6c60b1412a0883b1f"
+    },
+    {
       "bytes": 417,
       "path": "paper/figures/source_data/table3_rank_movement.csv",
       "sha256": "d0707ec94ffc45713890f83da2e670ccda020b746c662a0f83317d7fec0d5cea"
@@ -362,14 +377,14 @@
       "sha256": "e446940cc8381201232c172453bd7cfb684cb28937ecc0a4583d5363387984be"
     },
     {
-      "bytes": 5388,
+      "bytes": 5571,
       "path": "paper/figures/table_figure_manifest.json",
-      "sha256": "15768d922a37ef3b1c1d9b39d9295775235ee91f83c069285f8641f154a6a005"
+      "sha256": "7026ca9269445cdd9a6eb2bbea080f2bfe6d3d2450e9eff0508a6907305bb45b"
     },
     {
-      "bytes": 1070,
+      "bytes": 1113,
       "path": "paper/sections/figure_control_sensitivity.tex",
-      "sha256": "e82c4123287d5cfed7f9c7e5708f876263661e5a1bb1c0909d4c215734c7957e"
+      "sha256": "4450f9533dc7c6adc64a2d69ada1bcb0d8ecd61e81aef387ec279b1bda5967df"
     },
     {
       "bytes": 467,
@@ -377,9 +392,14 @@
       "sha256": "e3980f9d3077b98bbd7d5c8ca6258c602064d88bdd3d2d09662a0cff552e063f"
     },
     {
-      "bytes": 745,
-      "path": "paper/sections/table_protocol_requirements.tex",
-      "sha256": "90400546809908a3871474eeda10a0becffb8f1cb0ae6cff8f0a0ce867a5b697"
+      "bytes": 1631,
+      "path": "paper/sections/table_checkpoint_summary.tex",
+      "sha256": "54fcc70b493f7cd55bff50cb640c8fd4b79a30aa946aec228152cf81a407dcc3"
+    },
+    {
+      "bytes": 1215,
+      "path": "paper/sections/table_evidence_map.tex",
+      "sha256": "e72381eea67fe7cd8e811d0e8ce2271fb058fe22f4a4e5c1c5769252a6e55e74"
     },
     {
       "bytes": 683,
@@ -402,9 +422,9 @@
       "sha256": "c8876ed2cc73e2c7f88f233555758302a9c3d75abb04c69e090fc2e73a51f02c"
     },
     {
-      "bytes": 27247,
+      "bytes": 28738,
       "path": "scripts/validate_package.py",
-      "sha256": "ccb246c8ee281633f61c80b40f6976ce766ba48d4f0fe9b48e22f8cbb6869d45"
+      "sha256": "1425a87ff6e5dd203ebda1a5fc54dd836749ae2fa2363a08fc9dca5d13c469b8"
     },
     {
       "bytes": 28194,
@@ -507,6 +527,11 @@
       "sha256": "ffd1b36b53d72b807bbee7f0e78816a71451ed46e5236f2ed93292cc51e1df15"
     },
     {
+      "bytes": 10313,
+      "path": "tools/response_effect_shape.py",
+      "sha256": "104290c936642c9e491d515e24c0c221528cbc1ac02af6bbc3b5c2169903aade"
+    },
+    {
       "bytes": 15106,
       "path": "tools/review_evidence_closure.py",
       "sha256": "faddb95577cf53285a32e74f4f5ce953da1c451b7c81b35b988bcce071b0ad83"
@@ -577,9 +602,9 @@
       "sha256": "b0ee40d3285013d47b00b8a87d28d62e7a2080e78dfc40bd8f7a53744b5b1063"
     }
   ],
-  "generated_at": "2026-08-15T09:10:01+00:00",
+  "generated_at": "2026-09-12T09:31:15+00:00",
   "package_dir": "<package-root>",
-  "package_fingerprint": "3ec7cc9f9b326cd7c5450e456bd130af511f76111a25b4429ff77282e3689da3",
+  "package_fingerprint": "a085b69087e35e24af815d55181fd7cc84364adeee672e41dbf4bd5724581826",
   "package_name": "focalswap_reviewer_code",
   "schema": "focalswap.reviewer_artifact.v1",
   "source": "<source-project>"

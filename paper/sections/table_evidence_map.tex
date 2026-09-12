@@ -1,0 +1,21 @@
+\begin{table*}[!t]
+\centering
+\caption{Audit evidence map summarizing calibration and empirical results across
+the evaluated settings.}
+\label{tab:evidence-map}
+\small
+\setlength{\tabcolsep}{3.2pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.16\textwidth}L{0.18\textwidth}L{0.60\textwidth}@{}}
+\toprule
+Setting & Role & Main result \\
+\midrule
+Planted control & Sensitivity calibration & Routing opportunity, signed contribution, and specificity established at dose 1 across three seeds. \\
+GenSAR PerSrc & Released-code calibration & Current-query identity recovered on 8{,}958 native-task rows. \\
+KuaiSAR & Behavioral evidence & 96{,}994 valid episodes; calibrated opportunity remains below threshold. \\
+Qilin & Lexical evidence & BM25 clears p95 routing opportunity; tax$\geq$4 specificity is $+0.084$ over placebo at 6.1\% coverage. \\
+SESRec & Recommendation checkpoint & Positive latest-slot contribution is not established on 16{,}788 rows. \\
+UniSAR S1--S3 & Recommendation checkpoints & All-source contribution reverses across controls on 66{,}139 common rows; positive latest-slot contribution is not established. \\
+\bottomrule
+\end{tabular*}
+\end{table*}

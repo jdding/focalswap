@@ -83,6 +83,14 @@ one-to-one observed-support derangement, no fixed points, and no donor reuse.
 This does not upgrade C2 from a behavioral-category sensitivity control to a
 lexical-semantic match.
 
+`r264_response_effect_shape.csv` and its JSON counterpart extend that
+same-row diagnostic with rank-shift quantiles, Top-5/10/20 membership flips,
+and leave-one-user-out sensitivity. The records are aggregate only and are
+hash-locked to the completed R242/R233 row exports. They support the paper's
+separation of target-rank response from signed ranking contribution; they do
+not introduce a new promotion endpoint or identify the mechanism behind the
+C0--C2 difference.
+
 `unifiedssr_interface_boundary.json` records why the released recommendation
 and query-conditioned search heads do not provide one native scorer for all
 five audit views. It is interface provenance, not a focal-transfer result.

@@ -1,0 +1,5 @@
+checkpoint,latest_c0_estimate_x1e3,latest_c0_ci_low_x1e3,latest_c0_ci_high_x1e3,latest_c0_ci_level,latest_c2_estimate_x1e3,latest_c2_ci_low_x1e3,latest_c2_ci_high_x1e3,latest_c2_ci_level,all_c0_estimate_x1e3,all_c0_ci_low_x1e3,all_c0_ci_high_x1e3,all_c0_ci_level,all_c2_estimate_x1e3,all_c2_ci_low_x1e3,all_c2_ci_high_x1e3,all_c2_ci_level,paired_c0_c2_estimate_x1e3,paired_c0_c2_ci_low_x1e3,paired_c0_c2_ci_high_x1e3,paired_c0_c2_ci_level,latest_c0_rows,latest_c2_rows,all_source_rows
+SESRec,0.138,-0.743,0.936,0.950,,,,,,,,,,,,,,,,,16788,,
+UniSAR S1,-0.213,-0.495,0.072,0.950,-0.408,-0.822,0.009,0.975,5.427,4.183,6.689,0.950,-1.177,-2.074,-0.302,0.975,6.604,5.238,7.951,0.975,157192,87044,66139
+UniSAR S2,0.089,-0.191,0.376,0.950,-0.163,-0.567,0.253,0.975,2.016,0.856,3.138,0.950,-0.755,-1.647,0.131,0.975,2.770,1.582,3.962,0.975,157192,87044,66139
+UniSAR S3,-0.160,-0.426,0.102,0.950,0.043,-0.361,0.462,0.975,3.197,2.040,4.331,0.950,-0.354,-1.171,0.469,0.975,3.551,2.272,4.819,0.975,157192,87044,66139

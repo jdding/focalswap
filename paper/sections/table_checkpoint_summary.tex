@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\centering
+\caption{Checkpoint intervention summary. Entries are signed contribution $\Delta$RR $\times
+10^{-3}$ [user-cluster bootstrap CI]. C0 is the neutral mask; C2 is the
+category/profile-matched replacement drawn from observed search support.
+Latest-slot C0 uses the full checkpoint row set; latest-slot C2 uses its
+87{,}044 donor-eligible rows (55.4\%); and all-source estimates use the same
+66{,}139 C2-eligible rows. C2 and paired C0--C2 intervals are
+Bonferroni-adjusted to 97.5\%. S1--S3 are independently trained UniSAR
+checkpoints. Dashes mark untested combinations; SESRec contributes only its
+available latest-slot C0 comparison.}
+\label{tab:checkpoint-summary}
+\small
+\setlength{\tabcolsep}{2.4pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c c@{}}
+\toprule
+& \multicolumn{2}{c}{Latest-slot} & \multicolumn{3}{c}{All-source on C2 common support} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-6}
+Checkpoint & C0, 95\% CI & C2, 97.5\% CI & C0, 95\% CI & C2, 97.5\% CI & C0--C2, 97.5\% CI \\
+\midrule
+SESRec & $+0.138\;[-0.743,+0.936]$ & -- & -- & -- & -- \\
+UniSAR S1 & $-0.213\;[-0.495,+0.072]$ & $-0.408\;[-0.822,+0.009]$ & $+5.427\;[+4.183,+6.689]$ & $-1.177\;[-2.074,-0.302]$ & $+6.604\;[+5.238,+7.951]$ \\
+UniSAR S2 & $+0.089\;[-0.191,+0.376]$ & $-0.163\;[-0.567,+0.253]$ & $+2.016\;[+0.856,+3.138]$ & $-0.755\;[-1.647,+0.131]$ & $+2.770\;[+1.582,+3.962]$ \\
+UniSAR S3 & $-0.160\;[-0.426,+0.102]$ & $+0.043\;[-0.361,+0.462]$ & $+3.197\;[+2.040,+4.331]$ & $-0.354\;[-1.171,+0.469]$ & $+3.551\;[+2.272,+4.819]$ \\
+\bottomrule
+\end{tabular*}
+\end{table*}
