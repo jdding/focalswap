@@ -22,9 +22,9 @@
       "sha256": "1d0dde41ece0f9620937f1a81a67e295ace0eae180c009d862006e8f3b288458"
     },
     {
-      "bytes": 9685,
+      "bytes": 9712,
       "path": "README.md",
-      "sha256": "0796eafbfcaef1ff2e939216d7b3666d9615d5bbbbff5f935e134b063b1de848"
+      "sha256": "a525855775d1653cb2b646cb64e9b7e0e72f3bc1466b1637d0845b18ca2812e7"
     },
     {
       "bytes": 252,
@@ -34,7 +34,7 @@
     {
       "bytes": 362,
       "path": "REPRO_CHECK.json",
-      "sha256": "3767ac3bcc07a3a79e13b843b058fb92c9ff5f762db0bf2fed194a54439aec57"
+      "sha256": "898fe0e73692e489e35632d61ce2e7ab61c8a12b78d8e8300d73680238473095"
     },
     {
       "bytes": 5791,
@@ -377,9 +377,9 @@
       "sha256": "e446940cc8381201232c172453bd7cfb684cb28937ecc0a4583d5363387984be"
     },
     {
-      "bytes": 5680,
+      "bytes": 5682,
       "path": "paper/figures/table_figure_manifest.json",
-      "sha256": "f1cd1f2eeacfcfe3e21767c8a0bd71da6e6a14c8cf9566ccb1af58ba4688b07d"
+      "sha256": "e32a682f14ea4c4c2f2cccf1bb86fd9fc3e49d5ef2b292d84f955e3e279990d8"
     },
     {
       "bytes": 1113,
@@ -602,9 +602,9 @@
       "sha256": "b0ee40d3285013d47b00b8a87d28d62e7a2080e78dfc40bd8f7a53744b5b1063"
     }
   ],
-  "generated_at": "2026-09-12T09:50:46+00:00",
+  "generated_at": "2026-10-09T03:41:58+00:00",
   "package_dir": "<package-root>",
-  "package_fingerprint": "1702e9564124bf92a7271e4b93fa04dd804250ca9eb94ad7f7543aee91843b75",
+  "package_fingerprint": "c23e2041f727444f836164aacf47311b1cc3ea8ded666bb2ce92a5be9f8fd281",
   "package_name": "focalswap_reviewer_code",
   "schema": "focalswap.reviewer_artifact.v1",
   "source": "<source-project>"

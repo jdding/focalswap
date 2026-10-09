@@ -1,6 +1,6 @@
 [
   {
-    "artifact": "figures/fig1_focalswap_problem_led_image2.png",
+    "artifact": "figures/fig1_focalswap_problem_led_20261009.png",
     "audit_status": "visual_qa_pass",
     "caption_claim": "FocalSwap turns attribution ambiguity into a fixed-row intervention test whose conclusion names the intervention, control, and evidence layer.",
     "claim_id": "attribution_problem_and_control_sensitivity",
