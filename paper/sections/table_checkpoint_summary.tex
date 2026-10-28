@@ -1,15 +1,16 @@
 \begin{table*}[t]
 \centering
-\caption{Checkpoint contribution $\Delta$RR $\times10^{-3}$ [user-cluster bootstrap CI].
-C0: neutral mask; C2: category/profile-matched observed-search replacement.
-All-source columns use the same 66{,}139 rows. Dashes denote untested combinations.}
+\caption{Checkpoint readouts [user-cluster bootstrap CI]: (a) signed
+contribution; (b) supplementary replacement preferences and C1 contribution.
+RR contrasts are shown in $10^{-3}$ units.}
 \label{tab:checkpoint-summary}
 \small
 \setlength{\tabcolsep}{2.4pt}
 \renewcommand{\arraystretch}{1.12}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c c@{}}
 \toprule
-& \multicolumn{2}{c}{Latest-slot} & \multicolumn{3}{c}{All-source on C2 common support} \\
+\multicolumn{6}{l}{(a) Neutral-mask C0 and category/profile-matched observed-search C2} \\
+& \multicolumn{2}{c}{Latest-slot} & \multicolumn{3}{c}{All-source on 66{,}139 C2-eligible rows} \\
 \cmidrule(lr){2-3}\cmidrule(lr){4-6}
 Checkpoint & C0, 95\% CI & C2, 97.5\% CI & C0, 95\% CI & C2, 97.5\% CI & C0--C2, 97.5\% CI \\
 \midrule
@@ -19,4 +20,5 @@ UniSAR S2 & $+0.089\;[-0.191,+0.376]$ & $-0.163\;[-0.567,+0.253]$ & $+2.016\;[+0
 UniSAR S3 & $-0.160\;[-0.426,+0.102]$ & $+0.043\;[-0.361,+0.462]$ & $+3.197\;[+2.040,+4.331]$ & $-0.354\;[-1.171,+0.469]$ & $+3.551\;[+2.272,+4.819]$ \\
 \bottomrule
 \end{tabular*}
+\input{sections/table_checkpoint_supplement}
 \end{table*}

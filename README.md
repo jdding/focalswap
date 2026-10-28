@@ -73,6 +73,9 @@ The exact checks are listed in
    [`table2_audit_surface_scale.csv`](paper/figures/source_data/table2_audit_surface_scale.csv)
    and the checkpoint summary
    [`table3_checkpoint_summary.csv`](paper/figures/source_data/table3_checkpoint_summary.csv).
+   Its supplementary panel is backed by
+   [`table3_checkpoint_supplement.csv`](paper/figures/source_data/table3_checkpoint_supplement.csv),
+   with RR-based replacement preferences and complete C1 intervals.
 4. Inspect the Figure 4 source
    [`fig4_control_sensitivity.csv`](paper/figures/source_data/fig4_control_sensitivity.csv).
 5. Run `bash scripts/run_smoke.sh` to verify that the packaged evidence still
@@ -86,6 +89,7 @@ The exact checks are listed in
 | What do the behavior and lexical surfaces show? | `paper/figures/source_data/table2_audit_surface_scale.csv`, `paper/figures/source_data/table2_cross_regime_gate_readout.csv`, `paper/figures/source_data/fig4_swap_specificity.csv`, `evidence/kuaisar_*`, `evidence/qilin_*` | `tools/calibration_audit.py`, `tools/swap_ladder_category_broken.py`, `tools/row_level_power_bootstrap.py` |
 | What do SESRec and UniSAR checkpoints show under a latest-slot intervention? | `paper/figures/source_data/table4_checkpoint_anchor_readouts.csv`, `evidence/sesrec_corrected_bootstrap.json`, `evidence/unisar_corrected_multiseed_summary.csv` | `tools/sesrec_five_view_readout.py`, `tools/unisar_five_view_readout.py`, `tools/unisar_source_scope_localization.py` |
 | How do response frequency, effect shape, and signed contribution differ by control? | `paper/figures/source_data/fig4_control_sensitivity.csv`, `paper/figures/source_data/table3_rank_movement.csv`, `evidence/unisar_r242_control_ladder_summary.csv`, `evidence/unisar_r242_control_reversal_contrasts.csv`, `evidence/r261_rank_change_*`, `evidence/r264_response_effect_shape.*` | `tools/control_ladder_analysis.py`, `tools/control_reversal_analysis.py`, `tools/rank_change_diagnostics.py`, `tools/response_effect_shape.py` |
+| How do checkpoint replacement preferences compare with signed contribution? | `paper/figures/source_data/table3_checkpoint_supplement.csv`, `evidence/checkpoint_reporting_completion.json`, `evidence/checkpoint_half_tie.csv`, `evidence/sesrec_paired_control.json` | `tools/checkpoint_reporting_completion.py` |
 | Can the protocol return a positive focal readout? | `evidence/r243_full_chain_planted_control.json`, `paper/figures/source_data/r243_full_chain_planted_control.csv` | `tools/full_chain_planted_control.py`, `tools/summarize_planted_control.py` |
 | Is there released-code positive calibration outside the recommendation-side claim? | `evidence/gensar_persrc_calibration.json`, `evidence/gensar_seqrec_boundary.json` | `tools/gensar_persrc_readout_analysis.py` |
 | What happens on a common SESRec/UniSAR surface? | `evidence/common_surface_summary.csv`, `evidence/common_candidate_contract.json`, `evidence/common_surface_integrity.md` | `tools/common_surface_preflight.py`, `tools/unisar_common_surface_readout.py`, `tools/common_surface_summary.py` |

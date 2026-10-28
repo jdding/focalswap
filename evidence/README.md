@@ -91,6 +91,29 @@ separation of target-rank response from signed ranking contribution; they do
 not introduce a new promotion endpoint or identify the mechanism behind the
 C0--C2 difference.
 
+`checkpoint_reporting_completion.json` and `checkpoint_half_tie.csv` add
+RR-based true-over-replacement preferences from the same saved checkpoint
+exports. Exact RR ties receive one half. The supplementary intervals use
+10,000 whole-user bootstrap resamples, a row-weighted mean, and pointwise 95%
+percentile limits. They are descriptive additions, not new prespecified primary
+endpoints. Latest-slot preference tests the focal input; all-source preference
+tests the complete original source state. `checkpoint_c1_all_source.csv`
+preserves the original C1 estimates and intervals, while
+`checkpoint_c1_minus_c2.csv` records the additional paired comparison on the
+same 66,139 rows.
+
+`sesrec_paired_control.json` reports the existing 8,631-row, 2,134-user
+comparison. SESRec exposes one runtime search session, so latest-session and
+complete-search-input interventions coincide. Its L2 donor shares a search-item
+category and does not impose UniSAR C2's profile matching. C0, L2, and their
+paired RR contrast all have intervals crossing zero. This evidence uses a
+different interface and matching condition from the UniSAR all-source analysis.
+
+The supplementary analysis can be rerun without loading a model using
+`tools/checkpoint_reporting_completion.py --help`. It requires the original
+row exports and integrity files; these user-level inputs are not redistributed.
+The source-reference hashes are in `checkpoint_input_reference.json`.
+
 `unifiedssr_interface_boundary.json` records why the released recommendation
 and query-conditioned search heads do not provide one native scorer for all
 five audit views. It is interface provenance, not a focal-transfer result.

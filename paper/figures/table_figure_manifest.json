@@ -1,5 +1,7 @@
 [
   {
+    "additional_artifacts": null,
+    "additional_source_data": null,
     "artifact": "figures/fig1_focalswap_problem_led_20261009.png",
     "audit_status": "visual_qa_pass",
     "caption_claim": "FocalSwap turns attribution ambiguity into a fixed-row intervention test whose conclusion names the intervention, control, and evidence layer.",
@@ -12,6 +14,8 @@
     "visual_grammar": "attribution ambiguity to fixed-row intervention to connected evidence map"
   },
   {
+    "additional_artifacts": null,
+    "additional_source_data": null,
     "artifact": "figures/fig2_main_evidence.pdf",
     "audit_status": "visual_qa_pass",
     "caption_claim": "Opportunity, specificity, and deployable gate evidence remain separated across regimes, with local specificity distinguished from broad evidence.",
@@ -24,6 +28,8 @@
     "visual_grammar": "calibration-margin and point-range evidence grid"
   },
   {
+    "additional_artifacts": null,
+    "additional_source_data": null,
     "artifact": "figures/fig4_swap_specificity.pdf",
     "audit_status": "visual_qa_pass",
     "caption_claim": "Broad matched buckets stay near placebo; tax>=4 is the only Holm-stable row in the ten-bucket family and is a low-coverage local pocket.",
@@ -36,6 +42,8 @@
     "visual_grammar": "point-range placebo-specificity sweep"
   },
   {
+    "additional_artifacts": null,
+    "additional_source_data": null,
     "artifact": "figures/fig4_control_sensitivity.pdf",
     "audit_status": "visual_qa_pass",
     "caption_claim": "Latest-slot contribution intervals cross zero, while the positive all-source C0 contribution is control-sensitive on fixed UniSAR rows.",
@@ -48,6 +56,8 @@
     "visual_grammar": "two-panel forest plot with latest-slot estimates and all-source controls grouped by seed"
   },
   {
+    "additional_artifacts": null,
+    "additional_source_data": null,
     "artifact": "sections/table_evidence_map.tex",
     "audit_status": "visual_qa_pass",
     "caption_claim": "The audit's calibration and empirical conclusions are recoverable before the reader reaches the detailed result sections.",
@@ -60,6 +70,8 @@
     "visual_grammar": "surface-by-role evidence-status map"
   },
   {
+    "additional_artifacts": null,
+    "additional_source_data": null,
     "artifact": "sections/table_audit_surface_scale.tex",
     "audit_status": "visual_qa_pass",
     "caption_claim": "The table reports users, valid post-search recommendation episodes, and analyzed episodes for both datasets.",
@@ -72,15 +84,21 @@
     "visual_grammar": "compact audit-surface scale table"
   },
   {
+    "additional_artifacts": [
+      "sections/table_checkpoint_supplement.tex"
+    ],
+    "additional_source_data": [
+      "figures/source_data/table3_checkpoint_supplement.csv"
+    ],
     "artifact": "sections/table_checkpoint_summary.tex",
     "audit_status": "visual_qa_pass",
-    "caption_claim": "Checkpoint intervention estimates on their stated supports and confidence levels, with C0 and C2 defined in the caption.",
+    "caption_claim": "Signed contributions and supplementary replacement preferences with explicit units, supports, control definitions and confidence levels.",
     "claim_id": "checkpoint_intervention_summary",
     "core_conclusion": "Prespecified latest-slot readouts do not establish positive signed contribution, while all-source contribution conclusions differ between neutral masking and observed-support donors.",
     "id": "table3",
     "script": "sections/table_checkpoint_summary.tex",
     "source_data": "figures/source_data/table3_checkpoint_summary.csv",
-    "statistics": "user-cluster bootstrap intervals; 95% for latest-slot and C0, 97.5% for C2 and paired C0-C2",
+    "statistics": "Panel (a): original user-cluster 95% or 97.5% intervals as labeled. Panel (b): supplementary half-tie pointwise 95% user-cluster intervals and original C1 95% intervals.",
     "visual_grammar": "checkpoint-by-intervention estimate grid"
   }
 ]

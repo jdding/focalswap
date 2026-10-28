@@ -1,0 +1,62 @@
+{
+  "architecture_scope": "SESRec represents one runtime search session; latest-session and complete-search-input interventions coincide. This is an independent architecture control comparison, not a multi-session all-source replication.",
+  "claim_ceiling": "single corrected SESRec checkpoint; architecture transfer only",
+  "control_contract": {
+    "C0": "finite neutral search session under the corrected R230A scorer",
+    "C2": "L2 same-split observed search session sharing at least one search-item category"
+  },
+  "endpoints": [
+    {
+      "ci_high": 0.0008354543746665069,
+      "ci_level": 0.95,
+      "ci_low": -0.0012588860400067987,
+      "delta_rr": -0.00018342204043156975,
+      "endpoint": "C0_neutral_mask",
+      "rows": 8631,
+      "status": "unresolved",
+      "user_clusters": 2134
+    },
+    {
+      "ci_high": 0.0007826744790754735,
+      "ci_level": 0.975,
+      "ci_low": -0.0011346633293536385,
+      "delta_rr": -0.00021259855150026683,
+      "endpoint": "C2_same_category_observed_support",
+      "rows": 8631,
+      "status": "unresolved",
+      "user_clusters": 2134
+    },
+    {
+      "ci_high": 0.0011271765242624374,
+      "ci_level": 0.975,
+      "ci_low": -0.001111719472289926,
+      "delta_rr": 2.9176511068697328e-05,
+      "endpoint": "paired_C0_minus_C2",
+      "rows": 8631,
+      "status": "unresolved",
+      "user_clusters": 2134
+    }
+  ],
+  "response_diagnostics": {
+    "C0_neutral_mask": {
+      "p50_absolute_rank_shift_changed": 2.0,
+      "p90_absolute_rank_shift_changed": 9.0,
+      "rank_changed_fraction": 0.7609778704669216,
+      "rank_changed_rows": 6568,
+      "worse_given_changed_fraction": 0.5239037758830695
+    },
+    "C2_same_category_observed_support": {
+      "p50_absolute_rank_shift_changed": 3.0,
+      "p90_absolute_rank_shift_changed": 10.0,
+      "rank_changed_fraction": 0.7587765033020507,
+      "rank_changed_rows": 6549,
+      "worse_given_changed_fraction": 0.4954954954954955
+    }
+  },
+  "schema": "focalswap.r264.sesrec_paired_control.v1",
+  "source_sha256": {
+    "readout": "1606c87603c3016b32bf9091bf0f3f00a4b8d2ca10022437c4432c132f556cfd",
+    "scores": "7c7591fb379a1f6d6e5c4d549da043c2763fa85b4700d015f0954c473f3d6b0b"
+  },
+  "status": "COMPLETE"
+}

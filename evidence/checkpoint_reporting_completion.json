@@ -1,0 +1,268 @@
+{
+  "analysis_kind": "supplementary_reanalysis_of_existing_exports",
+  "bootstrap_iters": 10000,
+  "bootstrap_unit": "user_cluster",
+  "c1_all_source": [
+    {
+      "checkpoint": "UniSAR S1",
+      "ci_high": -0.0006905501480888,
+      "ci_level": 0.95,
+      "ci_low": -0.0025160710086926,
+      "comparison_population": "C2_common_support",
+      "delta_rr": -0.0016000336465974,
+      "model_seed": 20230601,
+      "rows": 66139,
+      "user_clusters": 2170
+    },
+    {
+      "checkpoint": "UniSAR S2",
+      "ci_high": 0.0008304966646152,
+      "ci_level": 0.95,
+      "ci_low": -0.0009586742466365,
+      "comparison_population": "C2_common_support",
+      "delta_rr": -6.802639909786348e-05,
+      "model_seed": 20230602,
+      "rows": 66139,
+      "user_clusters": 2170
+    },
+    {
+      "checkpoint": "UniSAR S3",
+      "ci_high": 0.0007222228066785,
+      "ci_level": 0.95,
+      "ci_low": -0.0009861325692715,
+      "comparison_population": "C2_common_support",
+      "delta_rr": -0.0001316519628185,
+      "model_seed": 20230603,
+      "rows": 66139,
+      "user_clusters": 2170
+    }
+  ],
+  "c1_minus_c2_all_source": [
+    {
+      "bootstrap_seed": 20261129,
+      "checkpoint": "UniSAR S1",
+      "ci_high": 0.00038584058322759266,
+      "ci_level": 0.95,
+      "ci_low": -0.001218501226196776,
+      "contrast": "signed_contribution_C1_minus_C2",
+      "delta_rr": -0.0004231317751655476,
+      "model_seed": 20230601,
+      "rows": 66139,
+      "user_clusters": 2170
+    },
+    {
+      "bootstrap_seed": 20261139,
+      "checkpoint": "UniSAR S2",
+      "ci_high": 0.0014531610044069825,
+      "ci_level": 0.95,
+      "ci_low": -7.788957482785013e-05,
+      "contrast": "signed_contribution_C1_minus_C2",
+      "delta_rr": 0.0006866826481203096,
+      "model_seed": 20230602,
+      "rows": 66139,
+      "user_clusters": 2170
+    },
+    {
+      "bootstrap_seed": 20261149,
+      "checkpoint": "UniSAR S3",
+      "ci_high": 0.0009052854565186497,
+      "ci_level": 0.95,
+      "ci_low": -0.00045413635718324566,
+      "contrast": "signed_contribution_C1_minus_C2",
+      "delta_rr": 0.0002223736614891567,
+      "model_seed": 20230603,
+      "rows": 66139,
+      "user_clusters": 2170
+    }
+  ],
+  "ci_method": "percentile",
+  "estimator": "row_weighted_mean_with_whole_user_cluster_resampling",
+  "half_tie": [
+    {
+      "bootstrap_seed": 20261028,
+      "checkpoint": "UniSAR S1",
+      "ci_high": 0.4994020880105347,
+      "ci_level": 0.95,
+      "ci_low": 0.49603582262246987,
+      "control": "C2_category_profile",
+      "half_tie": 0.4977023114746565,
+      "losses": 10122,
+      "model_seed": 20230601,
+      "rows": 87044,
+      "scope": "latest_1",
+      "signed_delta_rr": -0.00040770421943920037,
+      "ties": 67200,
+      "user_clusters": 2843,
+      "wins": 9722
+    },
+    {
+      "bootstrap_seed": 20261029,
+      "checkpoint": "UniSAR S1",
+      "ci_high": 0.49279595812796206,
+      "ci_level": 0.95,
+      "ci_low": 0.4869528914445837,
+      "control": "C2_category_profile",
+      "half_tie": 0.4898849392945161,
+      "losses": 15469,
+      "model_seed": 20230601,
+      "rows": 66139,
+      "scope": "all",
+      "signed_delta_rr": -0.0011769018714318732,
+      "ties": 36539,
+      "user_clusters": 2170,
+      "wins": 14131
+    },
+    {
+      "bootstrap_seed": 20261038,
+      "checkpoint": "UniSAR S2",
+      "ci_high": 0.49994957801616835,
+      "ci_level": 0.95,
+      "ci_low": 0.49654822884185357,
+      "control": "C2_category_profile",
+      "half_tie": 0.4982480124994256,
+      "losses": 9609,
+      "model_seed": 20230602,
+      "rows": 87044,
+      "scope": "latest_1",
+      "signed_delta_rr": -0.00016297365689965182,
+      "ties": 68131,
+      "user_clusters": 2843,
+      "wins": 9304
+    },
+    {
+      "bootstrap_seed": 20261039,
+      "checkpoint": "UniSAR S2",
+      "ci_high": 0.49889852701212456,
+      "ci_level": 0.95,
+      "ci_low": 0.49292243087186677,
+      "control": "C2_category_profile",
+      "half_tie": 0.4959479278489242,
+      "losses": 14852,
+      "model_seed": 20230602,
+      "rows": 66139,
+      "scope": "all",
+      "signed_delta_rr": -0.0007547090472181731,
+      "ties": 36971,
+      "user_clusters": 2170,
+      "wins": 14316
+    },
+    {
+      "bootstrap_seed": 20261048,
+      "checkpoint": "UniSAR S3",
+      "ci_high": 0.501260779972952,
+      "ci_level": 0.95,
+      "ci_low": 0.49746490637614793,
+      "control": "C2_category_profile",
+      "half_tie": 0.49933941454896374,
+      "losses": 10068,
+      "model_seed": 20230603,
+      "rows": 87044,
+      "scope": "latest_1",
+      "signed_delta_rr": 4.343366052988113e-05,
+      "ties": 67023,
+      "user_clusters": 2843,
+      "wins": 9953
+    },
+    {
+      "bootstrap_seed": 20261049,
+      "checkpoint": "UniSAR S3",
+      "ci_high": 0.49857119422520446,
+      "ci_level": 0.95,
+      "ci_low": 0.4927915811800685,
+      "control": "C2_category_profile",
+      "half_tie": 0.49569845325753337,
+      "losses": 15067,
+      "model_seed": 20230603,
+      "rows": 66139,
+      "scope": "all",
+      "signed_delta_rr": -0.000354025624307678,
+      "ties": 36574,
+      "user_clusters": 2170,
+      "wins": 14498
+    },
+    {
+      "bootstrap_seed": 20261058,
+      "checkpoint": "SESRec",
+      "ci_high": 0.5064613160472694,
+      "ci_level": 0.95,
+      "ci_low": 0.4868210834835405,
+      "control": "L2_category_overlap",
+      "half_tie": 0.49658208782296376,
+      "losses": 3304,
+      "model_seed": "",
+      "rows": 8631,
+      "scope": "single_session",
+      "signed_delta_rr": -0.00021259855150026677,
+      "ties": 2082,
+      "user_clusters": 2134,
+      "wins": 3245
+    }
+  ],
+  "input_hashes": {
+    "20230601": {
+      "checkpoint_sha256": "67d335cdbc08a652f4eebd0e4f0493c01fa50ff388743a28cf34505ce0443de1",
+      "r233_scores_sha256": "f6380a4ae1a0743031b40a190f3e12da580f00bae903082460b6ae5b97bb7003",
+      "r242_scores_sha256": "296087330378c201179724ac57afc7b77dbe9dd913bc4a5293cc8169c5e1cbcb"
+    },
+    "20230602": {
+      "checkpoint_sha256": "c43bbd4614d51f8aaddc4a5984ad171e7e97d149da62131d9a8975d1c9c9040a",
+      "r233_scores_sha256": "435f984750d86f1b861d9aec930e0761be6ce8baefaba25d41008a166e1a594f",
+      "r242_scores_sha256": "4ad4b3613dfcf7f36e147789966373dd47cb9e8b5df4f9fd6d2b7cdea696508d"
+    },
+    "20230603": {
+      "checkpoint_sha256": "538fa4b84bb46e4cfd97ec5c0a45843b03cf9e5d53bd52a4e539496e0d6a74c2",
+      "r233_scores_sha256": "c5655b6d0e6acdf6e337da805248e0b6310414d6cbfed996c4490d3e379f72cd",
+      "r242_scores_sha256": "4d4c249e6d2e836d072e66bd9fc23816411d07555fd4d2dee998eb4f8f91e8fb"
+    },
+    "SESRec": {
+      "scores_sha256": "7c7591fb379a1f6d6e5c4d549da043c2763fa85b4700d015f0954c473f3d6b0b"
+    }
+  },
+  "interval_scope": "Supplementary half-tie and C1-C2 intervals are pointwise 95%; no multiplicity or prespecification claim.",
+  "new_model_inference": false,
+  "schema": "focalswap.checkpoint_reporting_completion.v1",
+  "sesrec_donor": "L2 shares at least one search-item category; it does not enforce UniSAR C2 profile matching.",
+  "sesrec_paired_control": [
+    {
+      "ci_high": 0.0008354543746665069,
+      "ci_level": 0.95,
+      "ci_low": -0.0012588860400067987,
+      "delta_rr": -0.00018342204043156975,
+      "endpoint": "C0_neutral_mask",
+      "rows": 8631,
+      "status": "unresolved",
+      "user_clusters": 2134
+    },
+    {
+      "ci_high": 0.0007826744790754735,
+      "ci_level": 0.975,
+      "ci_low": -0.0011346633293536385,
+      "delta_rr": -0.00021259855150026683,
+      "endpoint": "C2_same_category_observed_support",
+      "rows": 8631,
+      "status": "unresolved",
+      "user_clusters": 2134
+    },
+    {
+      "ci_high": 0.0011271765242624374,
+      "ci_level": 0.975,
+      "ci_low": -0.001111719472289926,
+      "delta_rr": 2.9176511068697328e-05,
+      "endpoint": "paired_C0_minus_C2",
+      "rows": 8631,
+      "status": "unresolved",
+      "user_clusters": 2134
+    }
+  ],
+  "source_summary_hashes": {
+    "c1": "1948a48f1e604c4e0bb491989497dde6d46f1df017ff47da4969e7b338f04c9d",
+    "sesrec": "0c025c645cbe0f7252325f244ac0a7f44dd1ac5aa511460927510d40d0de317e"
+  },
+  "verification": {
+    "independent_semantic_review": "not_performed",
+    "input_hashes": true,
+    "prior_signed_estimates_reproduced": true,
+    "rr_rank_tie_parity": true,
+    "same_row_support": true
+  }
+}

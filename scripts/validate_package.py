@@ -452,6 +452,50 @@ def main() -> None:
     ) >= 0.000148:
         raise AssertionError("R264 leave-one-user-out sensitivity changed")
 
+    supplement = json.loads(require("evidence/checkpoint_reporting_completion.json").read_text())
+    if supplement["new_model_inference"] or supplement["bootstrap_iters"] != 10000:
+        raise AssertionError("supplementary analysis execution contract changed")
+    half_tie = supplement["half_tie"]
+    if len(half_tie) != 7 or len(supplement["c1_all_source"]) != 3:
+        raise AssertionError("supplementary endpoint inventory changed")
+    for row in half_tie:
+        n = row["rows"]
+        if row["wins"] + row["ties"] + row["losses"] != n:
+            raise AssertionError("replacement outcome counts do not cover the support")
+        close(str(row["half_tie"]), (row["wins"] + .5 * row["ties"]) / n, 1e-12)
+        if row["ci_level"] != .95 or not 0 <= row["ci_low"] <= row["half_tie"] <= row["ci_high"] <= 1:
+            raise AssertionError("supplementary probability interval invalid")
+        expected = {"latest_1": (87044, 2843), "all": (66139, 2170), "single_session": (8631, 2134)}
+        if (n, row["user_clusters"]) != expected[row["scope"]]:
+            raise AssertionError("supplementary denominator changed")
+        if row["scope"] == "all":
+            prior = next(x for x in r264_rows if int(x["model_seed"]) == row["model_seed"] and x["control"] == "C2_observed_support")
+            reconstructed = .5 + float(prior["changed_fraction"]) * (float(prior["worse_given_changed_fraction"]) - .5)
+            close(str(row["half_tie"]), reconstructed, 1e-12)
+            close(str(row["signed_delta_rr"]), float(prior["signed_delta_rr"]), 1e-12)
+    table_supplement = rows("paper/figures/source_data/table3_checkpoint_supplement.csv")
+    if len(table_supplement) != 4:
+        raise AssertionError("supplementary table checkpoint count changed")
+    panel = require("paper/sections/table_checkpoint_supplement.tex").read_text()
+    if "\\rev{" in panel:
+        raise AssertionError("local revision tracking leaked into reviewer table")
+    for row in table_supplement:
+        model = row["checkpoint"]
+        latest = next(x for x in half_tie if x["checkpoint"] == model and x["scope"] != "all")
+        for key in ("half_tie", "ci_low", "ci_high"):
+            close(row["latest_" + key], latest[key], 1e-12)
+            if f"{latest[key]:.4f}" not in panel:
+                raise AssertionError("supplementary TeX does not contain its source value")
+        if model != "SESRec":
+            c1 = next(x for x in supplement["c1_all_source"] if x["checkpoint"] == model)
+            for key in ("delta_rr", "ci_low", "ci_high"):
+                close(row["c1_" + key], c1[key], 1e-12)
+                if f"{c1[key]*1000:+.3f}" not in panel:
+                    raise AssertionError("C1 TeX does not contain its source value")
+    sesrec_pair = json.loads(require("evidence/sesrec_paired_control.json").read_text())
+    if any(x["rows"] != 8631 or x["user_clusters"] != 2134 or not x["ci_low"] < 0 < x["ci_high"] for x in sesrec_pair["endpoints"]):
+        raise AssertionError("SESRec single-session paired-control result changed")
+
     common = rows("evidence/common_surface_summary.csv")
     expected = {(method, str(seed)) for method in ("sesrec", "unisar") for seed in (20230601, 20230602, 20230603)}
     if {(row["method"], row["seed"]) for row in common} != expected:
@@ -592,6 +636,7 @@ def main() -> None:
     for path in [
         "paper/sections/table_audit_surface_scale.tex",
         "paper/sections/table_checkpoint_summary.tex",
+        "paper/sections/table_checkpoint_supplement.tex",
         "paper/sections/table_rank_movement.tex",
         "paper/sections/figure_control_sensitivity.tex",
         "tools/unisar_five_view_readout.py",
@@ -610,6 +655,7 @@ def main() -> None:
         "tools/review_evidence_closure.py",
         "tools/tv_random_baseline.py",
         "tools/rank_change_diagnostics.py",
+        "tools/checkpoint_reporting_completion.py",
         "scripts/check_tool_imports.py",
     ]:
         require(path)
