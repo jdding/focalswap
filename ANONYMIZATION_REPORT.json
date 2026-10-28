@@ -1,7 +1,8 @@
 {
+  "verdict": "pass",
   "blocked": false,
   "finding_count": 0,
   "findings": [],
-  "verdict": "pass",
-  "warnings": 0
+  "warnings": 0,
+  "scope": "identity, local-path, secret, provenance and reviewer-surface checks; canonical metadata naming handled separately"
 }

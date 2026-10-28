@@ -1,0 +1,33 @@
+{
+  "schema": "focalswap.category_retention.v1",
+  "definition": "At least one shared positive first-level item category between original search session and its original C1 donor.",
+  "scope": "all-source C2 common support",
+  "slot_occurrences": {
+    "rows": 66139,
+    "source_occurrences": 973829,
+    "overlap_occurrences": 102899,
+    "overlap_occurrence_fraction": 0.10566434148089654,
+    "both_sides_have_category_fraction": 0.9978445907854459,
+    "overlap_given_both_known_fraction": 0.1058925833307606,
+    "all_slots_retain_category_rows": 210,
+    "all_slots_retain_category_fraction": 0.003175131163156383,
+    "at_least_one_retains_category_fraction": 0.6572219114289602,
+    "no_slot_retains_category_fraction": 0.3427780885710398,
+    "mean_row_retained_slot_fraction": 0.10671398506803369
+  },
+  "whole_history_categories": {
+    "rows": 66139,
+    "rows_with_categories_on_both_sides": 66139,
+    "mean_original_category_union_size": 7.170338227067237,
+    "mean_replacement_category_union_size": 10.575832715946719,
+    "any_history_category_overlap_fraction": 0.8455676680929557,
+    "all_original_categories_still_present_fraction": 0.038131813302287605,
+    "exact_history_category_union_match_fraction": 0.001527086892756165,
+    "mean_original_categories_retained_fraction": 0.4739306689048068,
+    "mean_history_category_jaccard": 0.24752097146786006,
+    "mean_category_prevalence_histogram_overlap": 0.2869313828785925,
+    "definition": "Unions aggregate all replaced source sessions; prevalence counts each category at most once per session and normalizes within the history. Rows with an empty category union on either side are excluded from these fractions."
+  },
+  "C1_donor_map_sha256": "e6e88847510423619a276268465ea626f386f1a5fe68d4dfd65e955b186a4984",
+  "claim_ceiling": "Describes actual first-level category preservation. No semantic-equivalence or unique-mechanism conclusion."
+}

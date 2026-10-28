@@ -1,17 +1,16 @@
 {
-  "package_dir": "<package-root>",
+  "schema": "focalswap.repro_check.v1",
   "smoke": {
     "argv": [
+      "bash",
       "scripts/run_smoke.sh"
     ],
-    "command": "",
-    "cwd": "<package-root>",
-    "duration_sec": 0.905,
-    "mode": "script",
-    "returncode": 0,
     "status": "pass",
-    "stderr_tail": "",
-    "stdout_tail": "FocalSwap reviewer artifact validation passed\n",
-    "timeout_sec": 120
-  }
+    "returncode": 0,
+    "scope": "data-free package validation"
+  },
+  "portable_raw_readout_replay": "all 30 readouts/intervals byte-identical to verified original CSV",
+  "C1_category_replay": "all scopes/history metrics/map summaries exactly reproduced",
+  "full_model_rerun": "requires original third-party inputs; not performed in this writing revision",
+  "payload_manifest_validation": "pass"
 }

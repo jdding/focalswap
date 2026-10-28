@@ -1,0 +1,156 @@
+{
+  "schema": "focalswap.r266.c2_mapping_preflight.v1",
+  "status": "PASS_METADATA_ONLY",
+  "new_model_inference": false,
+  "checkpoint_results_available": false,
+  "mapping_family": "sorted-stratum cyclic-offset derangements; not arbitrary matching algorithms",
+  "original_map_sha256": "56e057b5b66d5fab74b4e24d41da957c3027cfba1aea2cffb94ce271e73816c8",
+  "original_C1_map_sha256": "e6e88847510423619a276268465ea626f386f1a5fe68d4dfd65e955b186a4984",
+  "mapping_records": [
+    {
+      "mapping_seed": 20260921,
+      "donor_map_sha256": "e65955d9b159c055f9616f53c72a8565ab050133ab24068f5841dba6ce37474b",
+      "eligible_source_ids": 45895,
+      "source_ids_changed_from_original": 43533,
+      "source_id_changed_fraction": 0.948534698768929,
+      "occurrence_changed_fraction": 0.9348282127805939,
+      "latest_eligible_rows": 87044,
+      "all_eligible_rows": 66139,
+      "latest_donor_changed_fraction": 0.9307591562887735,
+      "all_rows_any_donor_changed_fraction": 0.9941184475120579,
+      "induced_occurrence_tv": 0.11033572249997395
+    },
+    {
+      "mapping_seed": 20260922,
+      "donor_map_sha256": "3ed43deacc22a9d6e27fa0960922496a67cbe5b4f5698a7c3ed5f4b75b84e194",
+      "eligible_source_ids": 45895,
+      "source_ids_changed_from_original": 43846,
+      "source_id_changed_fraction": 0.9553546137923521,
+      "occurrence_changed_fraction": 0.9389883506411838,
+      "latest_eligible_rows": 87044,
+      "all_eligible_rows": 66139,
+      "latest_donor_changed_fraction": 0.9399154450622673,
+      "all_rows_any_donor_changed_fraction": 0.9940428491510304,
+      "induced_occurrence_tv": 0.1106449360205957
+    },
+    {
+      "mapping_seed": 20260923,
+      "donor_map_sha256": "bdea005773bbf9c4a1dcf573103ef6e99f253adfc9730e9a9faa5f7bb9bf6a37",
+      "eligible_source_ids": 45895,
+      "source_ids_changed_from_original": 43407,
+      "source_id_changed_fraction": 0.9457893016668483,
+      "occurrence_changed_fraction": 0.9191354528935785,
+      "latest_eligible_rows": 87044,
+      "all_eligible_rows": 66139,
+      "latest_donor_changed_fraction": 0.9294264969440743,
+      "all_rows_any_donor_changed_fraction": 0.997732049169174,
+      "induced_occurrence_tv": 0.11034753515132353
+    },
+    {
+      "mapping_seed": 20260924,
+      "donor_map_sha256": "353b4ff4381cd9fdc968e805940e14424f61c14b01e1bfeb312d7bc250947cfd",
+      "eligible_source_ids": 45895,
+      "source_ids_changed_from_original": 43598,
+      "source_id_changed_fraction": 0.9499509750517485,
+      "occurrence_changed_fraction": 0.945135098514038,
+      "latest_eligible_rows": 87044,
+      "all_eligible_rows": 66139,
+      "latest_donor_changed_fraction": 0.9491866182620284,
+      "all_rows_any_donor_changed_fraction": 0.9978530065468181,
+      "induced_occurrence_tv": 0.1106449360205957
+    },
+    {
+      "mapping_seed": 20260925,
+      "donor_map_sha256": "fc54e91f0eae721d1e084ac8aa2a7d4ff4bd5f49a761b5e1d230207e059e31a5",
+      "eligible_source_ids": 45895,
+      "source_ids_changed_from_original": 43309,
+      "source_id_changed_fraction": 0.9436539928096742,
+      "occurrence_changed_fraction": 0.9386610707126156,
+      "latest_eligible_rows": 87044,
+      "all_eligible_rows": 66139,
+      "latest_donor_changed_fraction": 0.930288130141078,
+      "all_rows_any_donor_changed_fraction": 0.9979588442522566,
+      "induced_occurrence_tv": 0.11022107029569846
+    }
+  ],
+  "pairwise_mapping_differences": [
+    {
+      "mapping_a": 20260712,
+      "mapping_b": 20260921,
+      "different_source_id_fraction": 0.948534698768929
+    },
+    {
+      "mapping_a": 20260712,
+      "mapping_b": 20260922,
+      "different_source_id_fraction": 0.9553546137923521
+    },
+    {
+      "mapping_a": 20260712,
+      "mapping_b": 20260923,
+      "different_source_id_fraction": 0.9457893016668483
+    },
+    {
+      "mapping_a": 20260712,
+      "mapping_b": 20260924,
+      "different_source_id_fraction": 0.9499509750517485
+    },
+    {
+      "mapping_a": 20260712,
+      "mapping_b": 20260925,
+      "different_source_id_fraction": 0.9436539928096742
+    },
+    {
+      "mapping_a": 20260921,
+      "mapping_b": 20260922,
+      "different_source_id_fraction": 0.9490358426843882
+    },
+    {
+      "mapping_a": 20260921,
+      "mapping_b": 20260923,
+      "different_source_id_fraction": 0.9413225841594945
+    },
+    {
+      "mapping_a": 20260921,
+      "mapping_b": 20260924,
+      "different_source_id_fraction": 0.9523695391654864
+    },
+    {
+      "mapping_a": 20260921,
+      "mapping_b": 20260925,
+      "different_source_id_fraction": 0.9568144678069507
+    },
+    {
+      "mapping_a": 20260922,
+      "mapping_b": 20260923,
+      "different_source_id_fraction": 0.9562479572938228
+    },
+    {
+      "mapping_a": 20260922,
+      "mapping_b": 20260924,
+      "different_source_id_fraction": 0.9458764571304064
+    },
+    {
+      "mapping_a": 20260922,
+      "mapping_b": 20260925,
+      "different_source_id_fraction": 0.952064495043033
+    },
+    {
+      "mapping_a": 20260923,
+      "mapping_b": 20260924,
+      "different_source_id_fraction": 0.9421069833315175
+    },
+    {
+      "mapping_a": 20260923,
+      "mapping_b": 20260925,
+      "different_source_id_fraction": 0.9514761956640156
+    },
+    {
+      "mapping_a": 20260924,
+      "mapping_b": 20260925,
+      "different_source_id_fraction": 0.950626429894324
+    }
+  ],
+  "unchanged_under_all_five_source_ids": 469,
+  "unchanged_under_all_five_source_id_fraction": 0.010218978102189781,
+  "note": "Actual checkpoint contribution/CI matrix remains unexecuted until the Fudan backend is reachable."
+}

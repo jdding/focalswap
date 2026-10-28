@@ -1,0 +1,41 @@
+{
+  "category_donor_map": {
+    "all_donors_observed_and_nonempty": true,
+    "bijection_on_eligible_support": true,
+    "category_contract_sha256": "fcee7c012b8b36d20060c80466dea4bc095dd920a57bce9d99f03442853a1eed",
+    "category_overlap_failures": 0,
+    "donor_map_sha256": "56e057b5b66d5fab74b4e24d41da957c3027cfba1aea2cffb94ce271e73816c8",
+    "eligible_occurrence_fraction": 0.5378172646690941,
+    "eligible_source_id_fraction": 0.5543409991303507,
+    "eligible_source_ids": 45895,
+    "eligible_source_slot_occurrences": 1439135,
+    "fixed_points": 0,
+    "forbidden_inputs": [
+      "user",
+      "target",
+      "candidate",
+      "rank",
+      "label",
+      "model score"
+    ],
+    "future_label_or_score_used": false,
+    "induced_occurrence_total_variation_on_eligible_support": 0.11082421037637191,
+    "max_donor_reuse": 1,
+    "observed_source_slot_occurrences": 2675881,
+    "profile_mismatch_failures": 0,
+    "route_counts": {
+      "no_category": 36501,
+      "strict_category_profile_cycle": 45895,
+      "strict_profile_singleton": 396
+    },
+    "selection_inputs": [
+      "observed source-session ID",
+      "source item-count bucket",
+      "query token-count bucket",
+      "test-slot occurrence-count bucket",
+      "source first-level item categories",
+      "fixed intervention seed"
+    ],
+    "valid_source_ids": 82792
+  }
+}

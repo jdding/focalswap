@@ -117,3 +117,32 @@ The source-reference hashes are in `checkpoint_input_reference.json`.
 `unifiedssr_interface_boundary.json` records why the released recommendation
 and query-conditioned search heads do not provide one native scorer for all
 five audit views. It is interface provenance, not a focal-transfer result.
+
+## Donor-assignment sensitivity and category preservation
+
+Five alternative cyclic-offset assignments per checkpoint retain the same
+matching buckets and row support. All 15 all-source paired C0-C2 intervals
+are positive. These are within-assignment 97.5% user-cluster intervals,
+retaining the two-scope convention; assignments reuse users and have no joint
+map/checkpoint multiplicity adjustment. The complete 30 readouts, including
+latest-slot results, are in `evidence/donor_mapping_readouts.csv`.
+
+Regenerate Table 3(c) and validate every condition without data or dependencies:
+
+```bash
+python3 tools/donor_mapping_summary.py --input evidence/donor_mapping_readouts.csv --output-tex outputs/table3_sensitivity.tex --output-summary outputs/table3_sensitivity.csv
+```
+
+For raw-score bootstrap replay, supply the original score/integrity exports
+and frozen baseline exports (not redistributed):
+
+```bash
+python3 tools/donor_mapping_analysis.py --run-root <mapping-score-root> --baseline-root <baseline-export-root> --reference-manifest evidence/donor_mapping_reference.json --mapping-manifest evidence/donor_mapping_assignments.json --output-dir <analysis-output>
+```
+
+`tools/category_retention_audit.py --self-test` checks the category measurement
+with NumPy/pandas installed. Its full command accepts `--processed-data-root`,
+`--official-repo`, `--baseline-root`, `--original-c2-integrity
+evidence/original_c2_map.json`, and `--output-dir`. It verifies frozen inputs,
+source functions and the original C1/C2 maps before measurement. The aggregate
+category evidence records the occurrence denominator and history-set definition.

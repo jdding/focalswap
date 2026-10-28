@@ -85,16 +85,19 @@
   },
   {
     "additional_artifacts": [
-      "sections/table_checkpoint_supplement.tex"
+      "sections/table_checkpoint_supplement.tex",
+      "sections/table_checkpoint_sensitivity.tex"
     ],
     "additional_source_data": [
-      "figures/source_data/table3_checkpoint_supplement.csv"
+      "figures/source_data/table3_checkpoint_supplement.csv",
+      "figures/source_data/donor_mapping_readouts.csv",
+      "figures/source_data/table3_donor_sensitivity.csv"
     ],
     "artifact": "sections/table_checkpoint_summary.tex",
     "audit_status": "visual_qa_pass",
     "caption_claim": "Signed contributions and supplementary replacement preferences with explicit units, supports, control definitions and confidence levels.",
     "claim_id": "checkpoint_intervention_summary",
-    "core_conclusion": "Prespecified latest-slot readouts do not establish positive signed contribution, while all-source contribution conclusions differ between neutral masking and observed-support donors.",
+    "core_conclusion": "The original control contrast remains positive across all five alternative C2 donor assignments per checkpoint; latest-slot positive contribution remains unestablished.",
     "id": "table3",
     "script": "sections/table_checkpoint_summary.tex",
     "source_data": "figures/source_data/table3_checkpoint_summary.csv",

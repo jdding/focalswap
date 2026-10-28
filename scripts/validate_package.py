@@ -113,6 +113,17 @@ def main() -> None:
     validate_manifest_if_present()
     validate_python_tools()
 
+    sys.path.insert(0, str(ROOT / "tools"))
+    from donor_mapping_summary import summarize, render_panel
+    sensitivity = summarize(require("evidence/donor_mapping_readouts.csv"))
+    if require("paper/sections/table_checkpoint_sensitivity.tex").read_text() != render_panel(sensitivity):
+        raise AssertionError("donor sensitivity table differs from all assignments")
+    if any(r["paired_positive_intervals"] != 5 or r["c2_positive_intervals"] != 0 for r in sensitivity):
+        raise AssertionError("donor sensitivity conclusion changed")
+    category = json.loads(require("evidence/c1_category_retention.json").read_text())
+    close(str(category["slot_occurrences"]["overlap_occurrence_fraction"]), 0.10566434148089654, 1e-12)
+    close(str(category["whole_history_categories"]["mean_original_categories_retained_fraction"]), 0.4739306689048068, 1e-12)
+
     manifest = json.loads(require("paper/figures/table_figure_manifest.json").read_text())
     expected_manifest_ids = {
         "fig1",

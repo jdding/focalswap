@@ -1,0 +1,21 @@
+{
+  "schema": "focalswap.r242.r233_reference_manifest.v1",
+  "official_unisar_commit": "1a14a246066cd1aa6ee789c57ff2c7499f3d7379",
+  "seeds": {
+    "20230601": {
+      "checkpoint_sha256": "67d335cdbc08a652f4eebd0e4f0493c01fa50ff388743a28cf34505ce0443de1",
+      "r233_integrity_sha256": "206cd2d4817c458a384d1373d29af502661efbe758d60c16fd6e41367fb6da99",
+      "r233_score_sha256": "f6380a4ae1a0743031b40a190f3e12da580f00bae903082460b6ae5b97bb7003"
+    },
+    "20230602": {
+      "checkpoint_sha256": "c43bbd4614d51f8aaddc4a5984ad171e7e97d149da62131d9a8975d1c9c9040a",
+      "r233_integrity_sha256": "7d62220ad650c20f23a1285b0e3cc5412d267bca7ca6be1b84ba503e6e830852",
+      "r233_score_sha256": "435f984750d86f1b861d9aec930e0761be6ce8baefaba25d41008a166e1a594f"
+    },
+    "20230603": {
+      "checkpoint_sha256": "538fa4b84bb46e4cfd97ec5c0a45843b03cf9e5d53bd52a4e539496e0d6a74c2",
+      "r233_integrity_sha256": "9e8627d08d11db981b6befeecb4e8854bf2c9f67fab919fabb5ad64cd3f1cdd1",
+      "r233_score_sha256": "c5655b6d0e6acdf6e337da805248e0b6310414d6cbfed996c4490d3e379f72cd"
+    }
+  }
+}
