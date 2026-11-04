@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the anonymous FocalSwap reviewer artifact."""
+"""Validate the FocalSwap release."""
 
 from __future__ import annotations
 
@@ -103,6 +103,13 @@ def validate_python_tools() -> None:
 
 
 def main() -> None:
+    for path in (
+        "pyproject.toml", "CITATION.cff", "focalswap/__init__.py",
+        "focalswap/audit.py", "focalswap/model.py", "focalswap/__main__.py",
+        "examples/custom_model.py", "examples/custom_dataset.jsonl",
+        "docs/integration.md", "tests/test_audit.py",
+    ):
+        require(path)
     root_git = ROOT / ".git"
     nested_git = [path for path in ROOT.rglob(".git") if path != root_git]
     if nested_git:
@@ -671,7 +678,7 @@ def main() -> None:
     ]:
         require(path)
 
-    print("FocalSwap reviewer artifact validation passed")
+    print("FocalSwap release validation passed")
 
 
 if __name__ == "__main__":

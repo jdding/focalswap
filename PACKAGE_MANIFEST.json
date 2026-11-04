@@ -1,40 +1,40 @@
 {
-  "file_count": 140,
+  "file_count": 150,
   "files": [
     {
-      "bytes": 230,
-      "path": "ANONYMIZATION_REPORT.json",
-      "sha256": "ba9f7e8b512fb03361dc7582450850faab6e67992b347b5855d91c017f252ce5"
+      "bytes": 138,
+      "path": ".gitignore",
+      "sha256": "a7abc66532a903f580b6303e82e4155394345b6723edc4255d9a791cff45248b"
     },
     {
-      "bytes": 159,
-      "path": "ANONYMIZATION_REPORT.md",
-      "sha256": "a276f2e8c63ec770ffc34c539f566eb68bdcb506e1d653775013590d74ebd498"
-    },
-    {
-      "bytes": 1130,
+      "bytes": 4157,
       "path": "ARTIFACT_QUICKSTART.md",
-      "sha256": "3de24b57c9aad0f40ac142d1325d487784621fc1b391fd34ced0cb3b833a5143"
+      "sha256": "277d9836154749647835079cae0e84d4cb408acc4865010455855af4c00e6b0f"
     },
     {
-      "bytes": 1074,
+      "bytes": 643,
+      "path": "CITATION.cff",
+      "sha256": "9ab7b94d6d3ba51f10f5b546f600f656ce2cf9df52c49da773da2cc09da63aea"
+    },
+    {
+      "bytes": 1070,
       "path": "LICENSE",
-      "sha256": "1d0dde41ece0f9620937f1a81a67e295ace0eae180c009d862006e8f3b288458"
+      "sha256": "75566b39dd8c891fcba7408f63b82c17d0437a1a6d02991ed82b4faf5ddc302f"
     },
     {
-      "bytes": 11866,
+      "bytes": 5772,
       "path": "README.md",
-      "sha256": "f20509f98793d9ad66a7695b75bf96145a40376555633a18bdd45481f86552e4"
+      "sha256": "e90a37fdfd6161920109a3ce9898c6cee518fac495891420873464dd218668f8"
     },
     {
-      "bytes": 426,
-      "path": "README_REVIEWER.md",
-      "sha256": "9132cdc8e8b768bae6e6d682aea9035586b3c1c10bc8e12afbf229e008938fbd"
+      "bytes": 826,
+      "path": "RELEASE_CHECK.json",
+      "sha256": "d3ee3da4d565a6e68cf1c226288592ebb49a2451d237ee09b4c966f992b551a6"
     },
     {
-      "bytes": 544,
-      "path": "REPRO_CHECK.json",
-      "sha256": "3bbd37fd7dd835e7bf50dc545e70d45af0701d03dd32ee918c7c3251da10d48c"
+      "bytes": 6461,
+      "path": "docs/integration.md",
+      "sha256": "03eb805ad8c5c23941d58d9c5531523bf1ae689aaf2111b29f30fc779ac2d623"
     },
     {
       "bytes": 8865,
@@ -125,6 +125,11 @@
       "bytes": 2433,
       "path": "evidence/kuaisar_swap_ladder_metrics.csv",
       "sha256": "ad85627095eb1d1951f2762ef4218190821602e8cb544842a617ab4d1e23a26e"
+    },
+    {
+      "bytes": 926,
+      "path": "evidence/native_checkpoint_utility.json",
+      "sha256": "7001d3a52e51f1c106fa943880862ea31521ca3d1e4606a2b4b342ef913cabd8"
     },
     {
       "bytes": 1361,
@@ -282,9 +287,44 @@
       "sha256": "2cd17d318036112d0cf895253fbc34046a101f9064bcc863ab2a2c4c46de574e"
     },
     {
-      "bytes": 827,
-      "path": "impact_report.json",
-      "sha256": "8f9ab9b15a55419ef3b171656d0fe0d50ab78ac63531a5a33216ad92061e217a"
+      "bytes": 535,
+      "path": "examples/audit_rankings.py",
+      "sha256": "53c2fcc240425e37f61d6ae7eb9b9aec9027253fd934616445eda4ec70c05f22"
+    },
+    {
+      "bytes": 2099,
+      "path": "examples/custom_dataset.jsonl",
+      "sha256": "eab71cf8395dfc422aee3f63c6ec89dc0949c1f97572ce5e324b976bf52bb79b"
+    },
+    {
+      "bytes": 3301,
+      "path": "examples/custom_model.py",
+      "sha256": "aeab74aac78142303787b3726011fea9e76e1461a78df795fbba7c8669150ea9"
+    },
+    {
+      "bytes": 226,
+      "path": "focalswap/__init__.py",
+      "sha256": "1cc7c18092d5fca1f4da9f458040fa0bb26fc6de5a818e2e2307ad626f783cf9"
+    },
+    {
+      "bytes": 2750,
+      "path": "focalswap/__main__.py",
+      "sha256": "d01d7be761b45ee9f2487195e042aa6428ab5c0bd36d26e40e4062ee756f241f"
+    },
+    {
+      "bytes": 11522,
+      "path": "focalswap/audit.py",
+      "sha256": "1d16236b36bd95935408e6780c2763b868c8a03697392536128209bfd1679274"
+    },
+    {
+      "bytes": 5307,
+      "path": "focalswap/model.py",
+      "sha256": "b0e23c1e3e1b096ae42ccbd362f5df62e071eabde66b745404999165c1d4d702"
+    },
+    {
+      "bytes": 1139,
+      "path": "paper/figures/focalswap_figure_style.py",
+      "sha256": "ef405aa8266cf3d49a9684ccb407f0195556130376c2801a89fcf6638f41ac42"
     },
     {
       "bytes": 7645,
@@ -297,9 +337,9 @@
       "sha256": "bea63af20c1703205a47314414ba79b97e5d9f6b65b3996dee4133047a91296c"
     },
     {
-      "bytes": 9191,
+      "bytes": 7100,
       "path": "paper/figures/make_fig4_swap_specificity.py",
-      "sha256": "3260b27aaab97543076ac7ecbfbf98e843710a8c9479e1d56b54c9c595554068"
+      "sha256": "f78217c0faac3817d352cd614e63d2097d79830c7652c9a612698a8d2ce8f75f"
     },
     {
       "bytes": 10310,
@@ -472,14 +512,14 @@
       "sha256": "54399e4d94e166d9c2c8a54104bdfc4359fd8e482ae0ccddda2af520b4b1c8b9"
     },
     {
-      "bytes": 888,
+      "bytes": 748,
       "path": "paper/sections/table_checkpoint_supplement.tex",
-      "sha256": "8a6ff0f365e7e4a1e1d15a0e508e917974c9eebd09553dfdacaf9e495c9b62e4"
+      "sha256": "ddd7753054071cd574a2a711d4560dfa58bb61eb64d67da255e0c9378c2abf96"
     },
     {
-      "bytes": 1179,
+      "bytes": 1352,
       "path": "paper/sections/table_evidence_map.tex",
-      "sha256": "12b4b41c4b56edb45ba2e7b32698d919447f3a13dbcb2c951efb69c7e99cc4af"
+      "sha256": "6a6b3dea9163dfef900dfa0087a906b9043091e5d0439f52e8c8bae9e61030ed"
     },
     {
       "bytes": 683,
@@ -487,9 +527,14 @@
       "sha256": "e1ffe79b93f3856b80cbd7ed71b548c780266ef88be44e059cb4bfa3a7610871"
     },
     {
-      "bytes": 81,
+      "bytes": 591,
+      "path": "pyproject.toml",
+      "sha256": "00f286248af603c98862ee75884f8a549637152c4ea84550f4d3a5d32026f192"
+    },
+    {
+      "bytes": 107,
       "path": "requirements.txt",
-      "sha256": "e783d28f43a604beabdde12d19188397c636a8fda485beb5c23b0aff846e1941"
+      "sha256": "08bde896c6c89ae1ad6e7f861c2d23e53c5598d57fe77845fee9c1bfb3cdb29d"
     },
     {
       "bytes": 558,
@@ -502,9 +547,14 @@
       "sha256": "c8876ed2cc73e2c7f88f233555758302a9c3d75abb04c69e090fc2e73a51f02c"
     },
     {
-      "bytes": 32783,
+      "bytes": 33067,
       "path": "scripts/validate_package.py",
-      "sha256": "d454c1957eeeda70c4cc6e3848c3fb345179aea0cb125ee55408bf0ea004f12c"
+      "sha256": "2116b6446d2ff5c2880e8ae061d21a0d4d97a4f829c6f10ee28ade84e48e9990"
+    },
+    {
+      "bytes": 9535,
+      "path": "tests/test_audit.py",
+      "sha256": "0d250fee509e75140d49edc3184cb10b2c1756285a055934cf0cfb57ac58a15b"
     },
     {
       "bytes": 28194,
@@ -701,11 +751,5 @@
       "path": "tools/unisar_source_scope_localization.py",
       "sha256": "b0ee40d3285013d47b00b8a87d28d62e7a2080e78dfc40bd8f7a53744b5b1063"
     }
-  ],
-  "generated_at": "2026-10-28T16:48:15.213394+00:00",
-  "package_dir": "<package-root>",
-  "package_fingerprint": "2fc8310d2ea1d9c4c23c7212130d87c3785a985040ea207a59b60e8d6ffac5e0",
-  "package_name": "focalswap_reviewer_code",
-  "schema": "focalswap.reviewer_artifact.v1",
-  "source": "<source-project>"
+  ]
 }

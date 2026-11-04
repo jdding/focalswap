@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use FocalSwap, please cite the WSDM 2027 paper below."
+title: "FocalSwap"
+version: 0.1.0
+date-released: 2026-11-04
+type: software
+license: MIT
+repository-code: "https://github.com/jdding/focalswap"
+authors:
+  - family-names: Ding
+    given-names: Jiandong
+    affiliation: "Huawei Technologies Co., Ltd."
+preferred-citation:
+  type: conference-paper
+  title: "Do Search-Augmented Recommenders Use the Latest Search Episode?"
+  authors:
+    - family-names: Ding
+      given-names: Jiandong
+  collection-title: "Proceedings of the 20th ACM International Conference on Web Search and Data Mining"
+  year: 2027

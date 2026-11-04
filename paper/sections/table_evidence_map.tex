@@ -8,13 +8,13 @@ the evaluated settings.}
 \renewcommand{\arraystretch}{1.05}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}L{0.16\textwidth}L{0.18\textwidth}L{0.60\textwidth}@{}}
 \toprule
-Setting & Role & Main result \\
+Setting & Role & Main finding \\
 \midrule
-Planted control & Sensitivity calibration & Routing opportunity, signed contribution, and specificity established at dose 1 across three seeds. \\
-GenSAR PerSrc & Released-code calibration & Current-query identity recovered on 8{,}958 native-task rows. \\
-KuaiSAR & Behavioral evidence & 96{,}994 valid episodes; calibrated opportunity remains below threshold. \\
-Qilin & Lexical evidence & BM25 clears p95 routing opportunity; tax$\geq$4 specificity is $+0.084$ over placebo at 6.1\% coverage. \\
-SESRec; UniSAR S1--S3 & Recommendation checkpoints & UniSAR all-source contribution is control-sensitive on 66{,}139 common rows across three checkpoints and five alternative donor assignments; positive latest-slot contribution is not established. \\
+Planted control & Sensitivity calibration & The audit recovers routing opportunity, positive contribution, and focal specificity at the strongest planted signal across all three seeds. \\
+GenSAR PerSrc & Released-code calibration & The original query raises mean reciprocal rank relative to a matched query on 8{,}958 source-item examples. \\
+KuaiSAR & Behavioral evidence & The behavioral proxy falls below the shuffled-search threshold for routing opportunity. \\
+Qilin & Lexical evidence & BM25 detects routing opportunity at the 95th-percentile threshold. The focal query exceeds placebo by $0.084$ in half-tie rate on 6.1\% of rows. \\
+SESRec; UniSAR S1--S3 & Recommendation checkpoints & In UniSAR, masking all search inputs yields a positive contribution on 66{,}139 shared rows. Matched replacements yield smaller estimates. The primary tests leave positive latest-slot contribution unresolved in both models. \\
 \bottomrule
 \end{tabular*}
 \end{table*}

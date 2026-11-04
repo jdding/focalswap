@@ -1,211 +1,143 @@
-# FocalSwap Reviewer Artifact
+# FocalSwap
 
-Reviewer access: https://anonymous.4open.science/r/focalswap-5D6D/
+**A counterfactual audit framework for search-augmented recommenders.**
 
-This repository accompanies the anonymous WSDM submission **Do
-Search-Augmented Recommenders Use the Latest Search Episode?** The paper asks a
-narrower question than ordinary
-ranking evaluation: when search signals help a recommender, can the gain be
-attributed to the immediately preceding search episode?
+FocalSwap asks how the latest search episode and accumulated search state
+contribute to a recommendation. It freezes the target, candidates, pre-search
+history, and scorer, then compares the original search input with neutral masks
+and matched observed searches.
 
-FocalSwap audits that question by keeping the target, candidate set, history,
-and scorer fixed while intervening on the focal search input. It reports
-ranking utility, target-rank response, signed contribution, matched focal
-specificity, and downstream routing as separate claims.
+The framework accompanies **Do Search-Augmented Recommenders Use the Latest
+Search Episode?**, accepted at **WSDM 2027**, by Jiandong Ding, Huawei Technologies
+Co., Ltd.
 
-## What Reviewers Can Verify
+## Install and run
 
-The package supports three paper-level conclusions:
+Use Python 3.10 or newer. The core framework runs on CPU with NumPy.
 
-1. **The protocol is capable of a positive focal readout.** A planted control
-   clears the attribution gates at its highest dose. A released GenSAR
-   source-item task also recovers current-query identity. These are protocol
-   calibrations, not recommendation-side positive evidence.
-2. **Behavioral, lexical, and checkpoint evidence do not collapse into one
-   verdict.** KuaiSAR and Qilin provide bounded surface-level results, while the
-   checkpoints trained using released SESRec and UniSAR implementations test
-   the latest-slot intervention directly.
-3. **Signed search contribution is control-sensitive.** On the same 66,139 UniSAR rows
-   and three retained checkpoints, an all-source neutral mask yields positive
-   RR contributions, whereas an observed-support donor matched by category and
-   source profile does not. Neutral masks change 59.7--61.7% of target ranks
-   and matched donors change 44.1--44.8%, with different effect shape and
-   directional balance. Positive latest-slot contribution is not established.
-
-The repository lets reviewers trace these statements to compact source tables,
-inspect the corresponding implementations, and run a data-free consistency
-check. It intentionally does not redistribute third-party datasets,
-checkpoints, model repositories, raw user logs, or the submission PDF.
-
-## Quick Validation
-
-**Requirement:** Python 3.10 or newer. From the repository root, run:
-
-```bash
-bash scripts/run_smoke.sh
-```
-
-The command uses only the Python standard library and normally finishes in
-under five seconds. It verifies the package manifest, paper-facing source-data
-contracts, claim-sensitive evidence invariants, Python syntax, and local import
-closure.
-
-Expected output:
-
-```text
-FocalSwap reviewer artifact validation passed
-```
-
-No installation, network access, private data, checkpoint, or GPU is required.
-The exact checks are listed in
-[`ARTIFACT_QUICKSTART.md`](ARTIFACT_QUICKSTART.md).
-
-## Recommended Five-Minute Review Path
-
-1. Open
-   [`paper/figures/table_figure_manifest.json`](paper/figures/table_figure_manifest.json)
-   to map every paper figure and table to its packaged source data and claim.
-2. Read
-   [`r242_control_contract.json`](paper/figures/source_data/r242_control_contract.json)
-   for the canonical latest-slot versus all-source intervention scopes and the
-   C0--C3 controls.
-3. Inspect the audit-surface scale table
-   [`table2_audit_surface_scale.csv`](paper/figures/source_data/table2_audit_surface_scale.csv)
-   and the checkpoint summary
-   [`table3_checkpoint_summary.csv`](paper/figures/source_data/table3_checkpoint_summary.csv).
-   Its supplementary panel is backed by
-   [`table3_checkpoint_supplement.csv`](paper/figures/source_data/table3_checkpoint_supplement.csv),
-   with RR-based replacement preferences and complete C1 intervals.
-4. Inspect the Figure 4 source
-   [`fig4_control_sensitivity.csv`](paper/figures/source_data/fig4_control_sensitivity.csv).
-5. Run `bash scripts/run_smoke.sh` to verify that the packaged evidence still
-   satisfies the paper's registered contracts.
-
-## Evidence-to-Code Map
-
-| Paper-facing question | Primary evidence | Main implementation |
-| --- | --- | --- |
-| How are fixed rows and controlled views constructed? | `paper/figures/source_data/kuaisar_g1_contract.json`, `paper/figures/source_data/r242_control_contract.json` | `tools/controlled_view_ranking.py`, `tools/focal_source_views.py` |
-| What do the behavior and lexical surfaces show? | `paper/figures/source_data/table2_audit_surface_scale.csv`, `paper/figures/source_data/table2_cross_regime_gate_readout.csv`, `paper/figures/source_data/fig4_swap_specificity.csv`, `evidence/kuaisar_*`, `evidence/qilin_*` | `tools/calibration_audit.py`, `tools/swap_ladder_category_broken.py`, `tools/row_level_power_bootstrap.py` |
-| What do SESRec and UniSAR checkpoints show under a latest-slot intervention? | `paper/figures/source_data/table4_checkpoint_anchor_readouts.csv`, `evidence/sesrec_corrected_bootstrap.json`, `evidence/unisar_corrected_multiseed_summary.csv` | `tools/sesrec_five_view_readout.py`, `tools/unisar_five_view_readout.py`, `tools/unisar_source_scope_localization.py` |
-| How do response frequency, effect shape, and signed contribution differ by control? | `paper/figures/source_data/fig4_control_sensitivity.csv`, `paper/figures/source_data/table3_rank_movement.csv`, `evidence/unisar_r242_control_ladder_summary.csv`, `evidence/unisar_r242_control_reversal_contrasts.csv`, `evidence/r261_rank_change_*`, `evidence/r264_response_effect_shape.*` | `tools/control_ladder_analysis.py`, `tools/control_reversal_analysis.py`, `tools/rank_change_diagnostics.py`, `tools/response_effect_shape.py` |
-| How do checkpoint replacement preferences compare with signed contribution? | `paper/figures/source_data/table3_checkpoint_supplement.csv`, `evidence/checkpoint_reporting_completion.json`, `evidence/checkpoint_half_tie.csv`, `evidence/sesrec_paired_control.json` | `tools/checkpoint_reporting_completion.py` |
-| Can the protocol return a positive focal readout? | `evidence/r243_full_chain_planted_control.json`, `paper/figures/source_data/r243_full_chain_planted_control.csv` | `tools/full_chain_planted_control.py`, `tools/summarize_planted_control.py` |
-| Is there released-code positive calibration outside the recommendation-side claim? | `evidence/gensar_persrc_calibration.json`, `evidence/gensar_seqrec_boundary.json` | `tools/gensar_persrc_readout_analysis.py` |
-| What happens on a common SESRec/UniSAR surface? | `evidence/common_surface_summary.csv`, `evidence/common_candidate_contract.json`, `evidence/common_surface_integrity.md` | `tools/common_surface_preflight.py`, `tools/unisar_common_surface_readout.py`, `tools/common_surface_summary.py` |
-| Which methods do not expose a valid same-scorer audit interface? | `evidence/unifiedssr_interface_boundary.json`, `evidence/runtime_boundary_dependence_bootstrap.csv` | `tools/official_adapter.py` |
-
-The planted control is a protocol calibration, not a real-system result. The
-GenSAR record is a current-query calibration on its native source-item
-prediction task, not recommendation-side `SeqRecWithSrcHis` focal evidence.
-The common-surface experiment is a controlled comparison, not an official
-leaderboard reproduction.
-
-## Reproduction Levels
-
-### Level 1: Data-Free Validation
-
-```bash
-bash scripts/run_smoke.sh
-```
-
-No network access, private data, checkpoint, GPU, or third-party Python package
-is required.
-
-### Level 2: Figure Regeneration
-
-Figures 2 and 4 can be regenerated directly from the packaged source CSVs:
-
-```bash
+```sh
+git clone https://github.com/jdding/focalswap.git
+cd focalswap
 python3 -m venv .venv
 source .venv/bin/activate
-python3 -m pip install "matplotlib>=3.7" "numpy>=1.24"
-python3 paper/figures/make_fig2_main_evidence.py
-python3 paper/figures/make_fig4_control_sensitivity.py
-python3 paper/figures/make_fig4_swap_specificity.py
+python -m pip install -e .
+python examples/custom_model.py
 ```
 
-The scripts write PDF and PNG outputs under `paper/figures/`. To import every
-packaged analysis module, install `requirements.txt` and run:
+This example loads a synthetic dataset, calls a deterministic recommender,
+constructs matched donors, and audits both the latest search slot and all search
+inputs. It writes scores, a donor map, and an aggregate report under
+`outputs/custom_model/`.
 
-```bash
-python3 -m pip install -r requirements.txt
-python3 scripts/check_tool_imports.py
+Replay the exported scores through the installed CLI.
+
+```sh
+focalswap outputs/custom_model/readouts.jsonl \
+  --output outputs/custom_model/replay.json \
+  --bootstrap-iterations 1000 --family-size 2
 ```
 
-### Level 3: Full Checkpoint Readouts
+The CLI and Python API produce the same estimates and intervals for the same
+settings. The example uses 1,000 bootstrap draws to keep the walkthrough quick.
+The default is 10,000 draws.
 
-The `tools/` directory contains the audit, adapter, bootstrap, and readout
-implementations used for the registered surfaces. Full executions require the
-corresponding third-party dataset, released repository, processed-data
-contract, and checkpoint. These assets are not redistributed here. After
-installing the optional dependencies, each command-line entry point documents
-its inputs with `--help`.
+## Use your dataset and model
 
-## Repository Layout
+The [data and model integration guide](docs/integration.md) defines the row
+format, scoring callback, and search interventions. Start with
+[the model example](examples/custom_model.py) and replace its `predict(row)`
+function with your model's scorer. Return one score per candidate in the given
+order, with larger scores ranking higher.
 
-- `evidence/`: sanitized aggregate evidence, bootstrap summaries, control
-  diagnostics, positive calibrations, and interface-boundary records.
-- `paper/figures/source_data/`: authoritative CSV/JSON sources for paper
-  figures, tables, and numeric claims.
-- `paper/sections/`: reviewer-visible LaTeX table and figure-panel sources; the
-  manuscript and submission PDF are intentionally absent.
-- `paper/figures/`: deterministic plotting scripts and the editable Figure 1
-  source.
-- `tools/`: audit and released-checkpoint readout implementations.
-- `scripts/`: package validation and import checks.
-- `PACKAGE_MANIFEST.json`: SHA-256 hash and byte-size ledger for every packaged
-  file.
-- `ANONYMIZATION_REPORT.md`, `REPRO_CHECK.json`: release-time anonymity and
-  smoke-test records.
+```python
+from focalswap import analyze, collect_scores
 
-## Data and Release Boundary
-
-The artifact does not redistribute third-party datasets, released-model
-repositories, checkpoints, or row-level user logs. Full checkpoint reruns
-therefore require obtaining the datasets and released code from their original
-providers. The included derived tables are sufficient to verify the numbers,
-ordered gate logic, seed variation, intervention-control sensitivity,
-current-query calibration, reverse-source diagnostics, and common-surface
-claim boundary reported by the paper.
-
-Some evidence files retain identifiers such as `r242`, `r243`, or `r250`.
-These immutable provenance labels bind derived tables to audited runs; they are
-not methods, metrics, or alternative claim vocabularies. Reader-facing
-terminology is fixed by `r242_control_contract.json`.
-
-## Artifact Integrity
-
-`PACKAGE_MANIFEST.json` is the terminal file ledger. The smoke test replays its
-hashes and validates the claim-sensitive invariants. `ANONYMIZATION_REPORT.md`
-records that the reviewer artifact passed the strict identity/secret scan, and
-`REPRO_CHECK.json` records the release-time smoke result.
-
-## Donor-assignment sensitivity and category preservation
-
-Five alternative cyclic-offset assignments per checkpoint retain the same
-matching buckets and row support. All 15 all-source paired C0-C2 intervals
-are positive. These are within-assignment 97.5% user-cluster intervals,
-retaining the two-scope convention; assignments reuse users and have no joint
-map/checkpoint multiplicity adjustment. The complete 30 readouts, including
-latest-slot results, are in `evidence/donor_mapping_readouts.csv`.
-
-Regenerate Table 3(c) and validate every condition without data or dependencies:
-
-```bash
-python3 tools/donor_mapping_summary.py --input evidence/donor_mapping_readouts.csv --output-tex outputs/table3_sensitivity.tex --output-summary outputs/table3_sensitivity.csv
+readouts = collect_scores(
+    rows=my_rows,
+    scorer=my_model_score,
+    interventions={
+        "latest_slot": {"C0": mask_latest, "C2": replace_latest},
+        "all_source": {"C0": mask_all, "C2": replace_all},
+    },
+)
+report = analyze(readouts, seed=2026, bootstrap_iterations=10000, family_size=2)
 ```
 
-For raw-score bootstrap replay, supply the original score/integrity exports
-and frozen baseline exports (not redistributed):
+Intervention functions return a replacement search list. Returning `None` marks
+that row ineligible for the control. The collector changes only the search
+field and checks that scoring leaves the supplied row intact. Freeze your model
+and preprocessing before collecting scores. For neural scorers, use evaluation
+mode and disable gradient tracking.
 
-```bash
-python3 tools/donor_mapping_analysis.py --run-root <mapping-score-root> --baseline-root <baseline-export-root> --reference-manifest evidence/donor_mapping_reference.json --mapping-manifest evidence/donor_mapping_assignments.json --output-dir <analysis-output>
+You can also export scores or target ranks from an existing evaluation pipeline
+and run `focalswap readouts.jsonl --output audit.json`. This path works with models
+and data formats that stay outside the Python package.
+
+## Read the audit
+
+Every scope reports the evaluated rows, eligible users, coverage, Full-input RR,
+and each control's RR. It also reports
+
+- **Signed contribution**, the mean original RR minus control RR.
+- **Rank response**, the fraction of rows whose target rank changes.
+- **Replacement preference**, the fraction of within-row wins plus half of ties.
+- **Paired control contrasts**, contribution differences on the same eligible rows.
+
+Candidate-score ties use midpoint ranks. Intervals resample whole users while
+retaining the row-weighted mean. `--family-size N` applies a Bonferroni adjustment
+for a declared family of N tests. Reports record the confidence level, seed,
+resampling settings, and coverage. Comparisons with fewer than two users retain
+point estimates and mark their intervals unavailable.
+
+Neutral masking and observed-search replacements answer different questions.
+Choose matching fields from pre-outcome inputs, inspect donor coverage, and
+interpret each estimate under its named control. A confidence interval crossing
+zero leaves the direction unresolved. See the integration guide for the exact
+report fields and donor construction rules.
+
+## Reproduce the paper
+
+On 66,139 identical rows across three UniSAR checkpoints, all-source masking
+yields positive RR contributions while matched replacements yield smaller
+estimates. The adjusted paired contrasts are positive, including under five
+alternative donor assignments per checkpoint. The paper also reports SESRec,
+GenSAR calibration, planted controls, and KuaiSAR/Qilin proxy analyses.
+
+The [paper reproduction guide](ARTIFACT_QUICKSTART.md) covers aggregate checks,
+Table 3(c), Figures 2–4, and the original SESRec/UniSAR adapters. These adapters
+preserve the paper's model-specific preprocessing and experimental contracts.
+
+```sh
+bash scripts/run_smoke.sh
+python -m unittest discover -s tests -v
 ```
 
-`tools/category_retention_audit.py --self-test` checks the category measurement
-with NumPy/pandas installed. Its full command accepts `--processed-data-root`,
-`--official-repo`, `--baseline-root`, `--original-c2-integrity
-evidence/original_c2_map.json`, and `--output-dir`. It verifies frozen inputs,
-source functions and the original C1/C2 maps before measurement. The aggregate
-category evidence records the occurrence denominator and history-set definition.
+[The evidence guide](evidence/README.md) describes the included aggregate results.
+Original checkpoint experiments additionally need the datasets, model code, and
+compatible weights described in the reproduction guide. All data in the generic
+integration example are synthetic.
+
+## Cite
+
+The paper is accepted at WSDM 2027. The citation will be updated with the
+publisher DOI and final pagination when available.
+
+```bibtex
+@inproceedings{ding2027focalswap,
+  author = {Ding, Jiandong},
+  title = {Do Search-Augmented Recommenders Use the Latest Search Episode?},
+  booktitle = {Proceedings of the 20th ACM International Conference on Web Search and Data Mining},
+  year = {2027}
+}
+```
+
+Machine-readable citation information is in [CITATION.cff](CITATION.cff).
+
+## Contents and license
+
+`focalswap/` contains the reusable API and CLI. `examples/` and `docs/` describe
+integration. `tools/`, `evidence/`, and `paper/` support the paper experiments.
+The package manifest records file hashes for the release.
+
+Code is available under [the MIT license](LICENSE). Third-party datasets and
+model implementations retain their providers' terms.

@@ -1,0 +1,34 @@
+{
+  "schema": "focalswap.native_checkpoint_utility.v1",
+  "scope": "Full-input performance on each model’s native test rows and candidate pools.",
+  "rows": [
+    {
+      "model": "SESRec",
+      "rows": 16788,
+      "full_rr": 0.042319281132298554,
+      "full_ndcg10": 0.03263713092451849
+    },
+    {
+      "model": "UniSAR",
+      "seed": 20230601,
+      "rows": 157192,
+      "full_rr": 0.3416865849695814
+    },
+    {
+      "model": "UniSAR",
+      "seed": 20230602,
+      "rows": 157192,
+      "full_rr": 0.35424913382435025
+    },
+    {
+      "model": "UniSAR",
+      "seed": 20230603,
+      "rows": 157192,
+      "full_rr": 0.3403464340647659
+    }
+  ],
+  "source_sha256": {
+    "r230a_sesrec_corrected_five_view_readout.json": "1606c87603c3016b32bf9091bf0f3f00a4b8d2ca10022437c4432c132f556cfd",
+    "unisar_corrected_multiseed_summary.csv": "8c2bca600ca1f51f735a960061931b44819ff890cde72ce98dbb552315a545cb"
+  }
+}

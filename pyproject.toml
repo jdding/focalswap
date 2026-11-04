@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "focalswap"
+version = "0.1.0"
+description = "Fixed-row counterfactual audits for search-augmented recommendation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Jiandong Ding"}]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.7"]
+
+[project.scripts]
+focalswap = "focalswap.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/jdding/focalswap"
+
+[tool.setuptools]
+packages = ["focalswap"]

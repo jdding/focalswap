@@ -18,10 +18,7 @@ from focalswap_figure_style import FONT, TITLE_COLOR, apply_figure_style
 
 
 FIG_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = FIG_DIR.parents[1]
-DATA_DIR = FIG_DIR / "source_data"
-RAW_SOURCE_REL = "qilin_sarcheck/reports/r179_qilin_bucket_multiplicity.csv"
-RAW = PROJECT_ROOT / RAW_SOURCE_REL
+DATA_PATH = FIG_DIR / "source_data" / "fig4_swap_specificity.csv"
 
 COLORS = {
     "ink": "#111827",
@@ -76,77 +73,26 @@ def setup_style() -> None:
     apply_figure_style(COLORS["grid"])
 
 
-def to_float(row: dict[str, str], key: str) -> float:
-    return float(row[key])
-
-
 def load_rows() -> list[dict[str, object]]:
-    with RAW.open(newline="") as f:
-        rows = list(csv.DictReader(f))
-    by_match = {r["bucket"]: r for r in rows}
-    ordered: list[dict[str, object]] = []
-    for key in ORDER:
-        if key not in by_match:
-            continue
-        r = by_match[key]
-        ordered.append(
+    with DATA_PATH.open(newline="", encoding="utf-8") as source:
+        by_match = {row["match"]: row for row in csv.DictReader(source)}
+    if set(by_match) != set(ORDER):
+        raise ValueError("Expected all ten Qilin comparison buckets.")
+
+    rows = []
+    for match in ORDER:
+        row = by_match[match]
+        rows.append(
             {
-                "match": r["bucket"],
-                "n": int(r["matched_rows"]),
-                "coverage": to_float(r, "eligible_coverage"),
-                "half_tie": to_float(r, "half_tie"),
-                "half_tie_ci": [to_float(r, "half_tie_ci_low"), to_float(r, "half_tie_ci_high")],
-                "random_placebo_half_tie_same_subset": to_float(r, "random_placebo_half_tie_same_subset"),
-                "delta_vs_random_placebo": to_float(r, "matched_minus_random_delta"),
-                "delta_vs_random_placebo_ci": [to_float(r, "delta_ci_low"), to_float(r, "delta_ci_high")],
-                "holm_p": to_float(r, "holm_p"),
-                "bh_p": to_float(r, "bh_p"),
-                "low_coverage": r["low_coverage"] == "True",
+                "match": match,
+                "coverage": float(row["coverage"]),
+                "half_tie": float(row["half_tie"]),
+                "half_tie_ci": (float(row["half_tie_low"]), float(row["half_tie_high"])),
+                "delta_vs_random_placebo": float(row["delta_vs_random_placebo"]),
+                "delta_vs_random_placebo_ci": (float(row["delta_low"]), float(row["delta_high"])),
             }
         )
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    out = DATA_DIR / "fig4_swap_specificity.csv"
-    with out.open("w", newline="") as f:
-        fields = [
-            "match",
-            "label",
-            "n",
-            "coverage",
-            "half_tie",
-            "half_tie_low",
-            "half_tie_high",
-            "random_placebo_half_tie_same_subset",
-            "delta_vs_random_placebo",
-            "delta_low",
-            "delta_high",
-            "holm_p",
-            "bh_p",
-            "low_coverage",
-            "raw_source",
-        ]
-        writer = csv.DictWriter(f, fieldnames=fields)
-        writer.writeheader()
-        for r in ordered:
-            writer.writerow(
-                {
-                    "match": r["match"],
-                    "label": LABELS[r["match"]],
-                    "n": r["n"],
-                    "coverage": r["coverage"],
-                    "half_tie": r["half_tie"],
-                    "half_tie_low": r["half_tie_ci"][0],
-                    "half_tie_high": r["half_tie_ci"][1],
-                    "random_placebo_half_tie_same_subset": r["random_placebo_half_tie_same_subset"],
-                    "delta_vs_random_placebo": r["delta_vs_random_placebo"],
-                    "delta_low": r["delta_vs_random_placebo_ci"][0],
-                    "delta_high": r["delta_vs_random_placebo_ci"][1],
-                    "holm_p": r["holm_p"],
-                    "bh_p": r["bh_p"],
-                    "low_coverage": r["low_coverage"],
-                    "raw_source": RAW_SOURCE_REL,
-                }
-            )
-    return ordered
+    return rows
 
 
 def panel_label(ax, label: str, title: str) -> None:

@@ -1,0 +1,28 @@
+{
+  "version": "0.1.0",
+  "date": "2026-11-04",
+  "python": "3.11",
+  "tests": {
+    "unit_tests": 10,
+    "installed_custom_model": "pass",
+    "installed_cli_replay_matches_api": "pass",
+    "bootstrap_parity_with_paper": "pass",
+    "table3c_numeric_parity": "pass",
+    "figures_2_to_4_regenerated": "pass",
+    "citation_cff_schema": "pass",
+    "ruff": "pass",
+    "installed_wheel_custom_model": "pass"
+  },
+  "privacy": {
+    "scope": "release files, source paths, endpoints, credentials, tooling traces, invisible Unicode",
+    "findings": 0,
+    "example_data": "synthetic",
+    "aggregate_cli_output": "no user or row identifiers",
+    "files_scanned": 151
+  },
+  "text_review": {
+    "readme_invisible_characters": 0,
+    "readme_formulaic_phrase_hits": 0,
+    "manual_code_and_documentation_review": "pass"
+  }
+}
