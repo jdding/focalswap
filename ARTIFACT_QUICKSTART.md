@@ -90,8 +90,8 @@ python3 tools/sesrec_five_view_readout.py \
   --finite-neutral-controls --device cpu
 ```
 
-Inspect the adapter's `read_jsonl` and `build_rows` functions before preparing
-episode inputs. Original metrics and denominators are recorded in
+Inspect the adapter's `build_maps` and `build_candidate_lists` functions before
+preparing episode inputs. Original metrics and denominators are recorded in
 `evidence/sesrec_corrected_bootstrap.json`. Third-party code, raw interaction
 data, checkpoints and user-level exports must be obtained or recreated
 separately. The aggregate tables support the checks and plotting commands above.
